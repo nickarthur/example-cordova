@@ -10,6 +10,11 @@ $ cordova platform add ios
 $ cordova run ios
 ```
 
+1. Set up podfile
+2. pod install
+3. open xcode and fix PODS_ROOT
+4.
+
 ### Android
 ```
 $ cordova platform add android

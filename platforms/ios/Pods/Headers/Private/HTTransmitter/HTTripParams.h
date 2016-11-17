@@ -1,0 +1,1 @@
+../../../HTTransmitter/HTTransmitter/HTTripParams.h

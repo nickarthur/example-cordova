@@ -1,0 +1,1 @@
+../../../HTTransmitter/HTTransmitter/Internal/MQTT/Subscription/HTMQTTSubscription.h
