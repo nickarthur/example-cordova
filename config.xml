@@ -23,4 +23,6 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+
+    <preference name="HYPERTRACK_PK" value="pk_12345abcd" />
 </widget>

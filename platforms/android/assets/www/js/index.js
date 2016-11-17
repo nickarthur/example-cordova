@@ -17,6 +17,7 @@
  * under the License.
  */
 var app = {
+
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
@@ -28,6 +29,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+        this.configure();
     },
 
     // Update DOM on a Received Event
@@ -40,7 +42,67 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    }
+    },
+
+    configure: function() {
+        console.log('plugins', cordova.plugins);
+        var hypertrack = cordova.plugins.HyperTrack;
+        console.log('hypertrack', hypertrack);
+
+        hypertrack.helloWorld("arjun", this.success, this.error);
+    },
+
+    // success callback
+    success: function(text) {
+        console.log("success handler");
+        console.log(text);
+    },
+
+    // error callback
+    error: function(text) {
+        console.log("error handler");
+        console.log(text);
+    },
+
+    helloWorld: function(text) {
+        var hypertrack = cordova.plugins.HyperTrack;
+        hypertrack.helloWorld(text, app.success, app.error);
+    },
+
+    startTrip: function(driverID, taskIDs) {
+        var hypertrack = cordova.plugins.HyperTrack;
+        hypertrack.startTrip(driverID, taskIDs, app.success, app.error);
+    },
+
+    completeTask: function(taskID) {
+        var hypertrack = cordova.plugins.HyperTrack;
+        hypertrack.completeTask(taskID, app.success, app.error);
+    },
+
+    endTrip: function() {
+        var hypertrack = cordova.plugins.HyperTrack;
+        hypertrack.endTrip(app.success, app.error);
+    },
 };
 
 app.initialize();
+
+helloWorldButton = function() {
+    app.configure();
+}
+
+startTripButton = function() {
+    app.startTrip(driverID, [taskID]);
+}
+
+completeTaskButton = function() {
+    app.completeTask(taskID);
+}
+
+endTripButton = function() {
+    app.endTrip();
+}
+
+document.getElementById("helloWorldButton").addEventListener("click", helloWorldButton);
+// document.getElementById("completeTaskButton").addEventListener("click", completeTaskButton);
+// document.getElementById("endTripButton").addEventListener("click", endTripButton);
