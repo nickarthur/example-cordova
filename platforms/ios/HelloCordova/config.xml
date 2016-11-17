@@ -46,4 +46,7 @@
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
     <preference name="HYPERTRACK_PK" value="pk_12345abcd" />
+    <feature name="HyperTrack">
+        <param name="ios-package" value="HyperTrackWrapper" />
+    </feature>
 </widget>

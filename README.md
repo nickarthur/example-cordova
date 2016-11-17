@@ -12,8 +12,10 @@ $ cordova run ios
 
 1. Set up podfile
 2. pod install
-3. open xcode and fix PODS_ROOT
-4.
+3. open xcode and fix PODS_ROOT $(SRCROOT)/Pods (recursvie)
+4. add linker libraries
+5. fix library search path $(SRCROOT)/build (recursive)
+6. link binary with libraries - sqlite3
 
 ### Android
 ```

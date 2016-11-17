@@ -1,0 +1,1675 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0040E3C57AAD2B448E0289E1C5E55ED9 /* HTVehicleType.m in Sources */ = {isa = PBXBuildFile; fileRef = 1289CE5AC31B901C0421CF76A2C65503 /* HTVehicleType.m */; };
+		004D8C82075DDE6E8DDC7DC1422C91CF /* HTDatabaseDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E2620EF462A37C31C2A06E3CC0D6CC /* HTDatabaseDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0105047FC86CEB8A844D73A6966C885F /* HTRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 606A2A7F5EC42A13A557C409AA4E1FFE /* HTRestClient.m */; };
+		02BD0FA2D2CFB1DF314CBEF8DF8A04DA /* HTRestClientGetProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0153CB362B7B52F6EC8DD059EB1D5F82 /* HTRestClientGetProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04494D620B44B786A9EB43A75A10974A /* HTBatteryStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 344C39483B5637DABDF25A6732E5C66F /* HTBatteryStats.m */; };
+		05D8C73A535E0977B9371E1AAB8F99BF /* MQTTCoreDataPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0EB0E46FA8DF4032E65D569793FAFD /* MQTTCoreDataPersistence.m */; };
+		060A999485BBE44D8BAC4338C3A218C1 /* HTMQTTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC1D4583E5AE7A9AFFACC8E2905C211 /* HTMQTTClient.m */; };
+		077AEBEB846F30A5F43822C466ADD175 /* HTLocationTable.h in Headers */ = {isa = PBXBuildFile; fileRef = CEFFCFDFA2B46B1F11764C0FE9CAD889 /* HTLocationTable.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		07FBDC3EF3041619D9EFE3917D08BE70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9389CE5220898E4FEB297FF1DAD4BA34 /* Foundation.framework */; };
+		091F7768D7CB566E2EFF771032E5624F /* HTMQTTSubscription.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B2AE8044394073E86CD622AB6C4D8B /* HTMQTTSubscription.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		092A1E1302DD230CAD2A412866FBC08B /* HTLogMessageTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FE9BCCAD3DF3397D87C90A190009714 /* HTLogMessageTable.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0AEE58DE13A5B6947F129D41295272F4 /* MQTTSessionLegacy.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A9D37BBC9C18B482C6878A6F41E9097 /* MQTTSessionLegacy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0CAF782F90A47143596792F874450F9A /* HTDispatchQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 05867E7BA7656C2B4BEA805E65FC5866 /* HTDispatchQueue.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0E074172EB9166D599D4D5FE5BC5CC36 /* HTTripParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F45CF4C270E582AF4CD72D2EFA5B7CB /* HTTripParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10F3F57C05865013DBE678DFA636C24D /* HTGPSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 57236896BDE57C1F77AAE571A0376168 /* HTGPSLog.m */; };
+		12091BB825675D490414CB3EB42FE797 /* MQTTPersistence.h in Headers */ = {isa = PBXBuildFile; fileRef = C1C5BFBF7FF7720D5034E255BA7AE874 /* MQTTPersistence.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12B5AD89FB8E9C1BE5D576246ED485CF /* HTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F109900773C1928A815B9933AB4026D /* HTLocationManager.m */; };
+		153191FD42625E1C7AB35FB32AEA28E8 /* MQTTTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FF3CD85EAE106BA218405A5F97348EB /* MQTTTransport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15787D0F6912F306F2BAA4DA9B5161B8 /* HTNetworkRequestDataSourceProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 91471AC0A7667F62BCAADB1F1A66F664 /* HTNetworkRequestDataSourceProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		15C0B4C216C946219E401F1BBBFB92F8 /* Pods-ExampleHyperTrack-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D76C0E0B0131E764BF51DDF4F77F9AC /* Pods-ExampleHyperTrack-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16E63B75118F09285D426CFB7838C96E /* HTSQLiteStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = 131644821254E1735650EC0728C1BB93 /* HTSQLiteStatement.m */; };
+		1746817166D536BA0C36DF69473B0C8B /* HTJobIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1A178234B119CE1C40923F87BCADA3 /* HTJobIDGenerator.m */; };
+		17CAE96ACA09C7AA5AEE652467D1ABF2 /* HTTaskParams.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EAA79C2C8F40C6C93468011F9F1B61 /* HTTaskParams.m */; };
+		183DA5706C3A65D3E3ADC624BE6F0887 /* MQTTCFSocketDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 744D3C33B354DDF19492DF91E8F576C8 /* MQTTCFSocketDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A27892BE998828492DCEC7F09CDC194 /* HTJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD21A464811F6C6D938A6764453C43 /* HTJob.m */; };
+		1BAEC75B5451DF2D8980DCC3B778ACCB /* MQTTSSLSecurityPolicyTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = 4228776FF7D32E5C849B40B4DF3C820D /* MQTTSSLSecurityPolicyTransport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EE65765BAD34E14B5474325BE7ECFD7 /* MQTTTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = B414D4A913B85C6304D6DDB508C3A880 /* MQTTTransport.m */; };
+		202713CB8C2C1B482B293BB85DC38446 /* HTTransmitter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F212D7DDC905ECA5C4FC0EDCD7674EC /* HTTransmitter-dummy.m */; };
+		211F435ADFB497007FB50309209C2AF4 /* HTMQTTSubscriptionIDGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = A59F38C65FA5C162DC4A24DBDA83454A /* HTMQTTSubscriptionIDGenerator.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2160A7AC59639EEBE0753EC4BA5CC90F /* HTPlace.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E7CCC4518A13A545B06D5A4048467F5 /* HTPlace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2344A1FE0DBD0429B67876075CC3F7B8 /* MQTTCoreDataPersistence.h in Headers */ = {isa = PBXBuildFile; fileRef = 6591ED508AD23DE49EBB87E36F397429 /* MQTTCoreDataPersistence.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24965E3B44217761FE694C2D762ED981 /* HTTransmitterJobSchedulerListener.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0838F7ED930F42F16AB2E2C50D3C12 /* HTTransmitterJobSchedulerListener.m */; };
+		25D8CF404A538A9786C6DE0E23FC8082 /* MQTTSSLSecurityPolicyEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 145928A694B5837FEEABA65FFB59F11F /* MQTTSSLSecurityPolicyEncoder.m */; };
+		284C036DC527DC7C0FF4828D2FBFD259 /* MQTTSSLSecurityPolicyTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA2922DA7062AA819D113947D5B2AF2 /* MQTTSSLSecurityPolicyTransport.m */; };
+		29DB7FC216641555CD3D79FACAD4FB33 /* HTLocationDataSourceProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 77BDFF8E9694A4DE2BE1C3CD2A4192D6 /* HTLocationDataSourceProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2B0B48E4378E5F3959CC3A22399F61BD /* MQTTSessionLegacy.m in Sources */ = {isa = PBXBuildFile; fileRef = 553CE8ED36686AF0498F439AE50AD000 /* MQTTSessionLegacy.m */; };
+		2CB9A31E490D528B8127D32575AF1E08 /* HTShiftParams.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD8D05DD992DCE885C7C8D98C152291 /* HTShiftParams.m */; };
+		2CFB8092F8647A00F4161826D9E6D6BA /* HTDatabaseDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED2E9DF3D1826AF77243C7129D3E1FC /* HTDatabaseDataSource.m */; };
+		2FAB413C062CF10E91EB7D7A9920239E /* HTHTTPLogDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 781E3958FAEC52D6A181761DCA7DEEC7 /* HTHTTPLogDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31AFD916BA07A237BF4006E6BC005232 /* HTHTTPLogDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC784B5ABE833E53B083313619DABA8 /* HTHTTPLogDataSource.m */; };
+		320F57C2DA603FEB5841F066A7C6BCA4 /* HTSocketPublishable.h in Headers */ = {isa = PBXBuildFile; fileRef = 5361678FF55B04B4ABEEE6AFEF9EA042 /* HTSocketPublishable.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		32FB728680A5BF8F9ABCF2E477ACB0EB /* HTLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A1AF3A172BFF493B621706BCABD6F /* HTLocation.m */; };
+		36DA8EB532FED6F0ABC4068C8B12CBFD /* HTDriver.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D6343AAF0FB8861C76943F8C67E0F80 /* HTDriver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38621EEF39368CD7BBE2F6C4E4C3E17A /* HTConnectionStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = A7FB387ECCBD2ED2F074203184C5631E /* HTConnectionStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388675BF9B68DD7D3A8A414C2C9C9C71 /* MQTTDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4724454E3FF2967F9E59A823491525 /* MQTTDecoder.m */; };
+		3A14F4A50D1079994A0950031F602690 /* HTSQLiteDatabaseResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 2385E07825184E5FE7D662FD38A0C2FB /* HTSQLiteDatabaseResult.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3A95186F67195E4D9418F9C13EB6582A /* HTLocationRequestIDGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = C757BB952021A978C5499E6A8815780E /* HTLocationRequestIDGenerator.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3B2C726E9DFDCB5BC62B8F79A35974DC /* HyperTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 8666EF75458252FD37CFB0F6799A441D /* HyperTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F0EAB8DBA635C2F6ADBA13B274F8232 /* HTTransmitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8442C767D4DB93FABBC4E9C3C33C11 /* HTTransmitterClient.m */; };
+		3F7A7582B5EB29430D4A3A654C0D1868 /* HTTransmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6305D8E98BAF33389DAEC0215AA1D35E /* HTTransmitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F807AD2BBBCD03CE12B6EE31CFD2806 /* HTActiveDriver.h in Headers */ = {isa = PBXBuildFile; fileRef = F58ED41EB27911004431487B590399D5 /* HTActiveDriver.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		407C60A78F777669095C14570C2690E1 /* HyperTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 6493BA96BEC0A64DABA56783F6C0FCB9 /* HyperTrack.m */; };
+		40A017B5DB62D33AFBB9837F003D1D8D /* HTSQLiteDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B1DE7AB27359D7807628BF2A81B2F2 /* HTSQLiteDatabase.m */; };
+		40F11C127226A503558AEAB641BC60F2 /* HTResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C53A59F8DBF9E59E0C2A0551CAE4E9 /* HTResponse.m */; };
+		421DE5BB471D7CBA0E9D62CF4DD8B46A /* HTNetworkJobScheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = 370A3F77EF1057EA024E098618E47E41 /* HTNetworkJobScheduler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		45559D48F3CD3FF70F509168CE6CA693 /* HTLocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5218B36D32A9B17CF587641C8D2B2A43 /* HTLocationRequest.m */; };
+		46BBD18946138C5AD7D478208BE2CFF4 /* HTLogMessageTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BFA548FDE2485BFA1FFB1CE69B3C3F /* HTLogMessageTable.m */; };
+		4708F51B1B514A386E87704356653D11 /* NSDictionary+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 0244AC2076C5E2D1C98D048E0F1E7FF7 /* NSDictionary+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4824A03AF1B7E641DC818240D44DCF85 /* HTJobSchedulerDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 02004DFF404CDA6704A0663DBAB5FEAD /* HTJobSchedulerDefines.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		49465854678A153B479B96B574AFCE6E /* MQTTSSLSecurityPolicyDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F43829079BEF769FB23FA521748078C /* MQTTSSLSecurityPolicyDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A94817757BC65616041EC719081EF0E /* MQTTCFSocketEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = D1554C1E33FC6771ABBC8DB9A15953CB /* MQTTCFSocketEncoder.m */; };
+		4A9F2F12CEB28781A56F4A1A160A4317 /* HTShiftParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 86EA73E51D937AEF1EEBE46291FD1A61 /* HTShiftParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4BEC17E7F80E7A32A95BDD6D367F296F /* HTWeakStrongMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C22957B43982C89E8981EB92E583A1C /* HTWeakStrongMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C49B7E6FD965A6A46C542DAD455245A /* HTVehicleType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5291F7C45B86040E23603CE6A44B9682 /* HTVehicleType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E434BDE3231EE878A229E6F4AB7EC3A /* MQTTSSLSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 007EBF01E99B25526C343B8B307C8179 /* MQTTSSLSecurityPolicy.m */; };
+		4F64F578FC0C26C871D803BBCE1AE4C4 /* HTReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 776DA14A8ACDA90088A1D4893BFE6FC1 /* HTReachability.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		512B1FD390A7BA11C7E5DD1C6777E3B7 /* HTTransmitterClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A487522AD5018E9294F4E0100BA80958 /* HTTransmitterClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51A5B12609C611FFA6F7C0BE5E74FF2D /* NSError+HTTransmitterClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 432C2BC0D50A5616D25C8BBF21A658E4 /* NSError+HTTransmitterClient.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		52928B948555496B2D0C9F702CA671A5 /* MQTTDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = BCE6D60D04B232AFB989CB2A2CE010F6 /* MQTTDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		557920E1D75269B6DEE73B1390AC5388 /* NSDateFormatter+HTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 059D7635EC66AE6BD22E9248E821D477 /* NSDateFormatter+HTExtension.m */; };
+		563480F7BB438F06CBC47851DC7CD82E /* HTDeviceStats.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B67868C8CFC274DF2C47ECAEE5610A /* HTDeviceStats.m */; };
+		57B7DB0992A72C9833F1485DC8D13B3D /* HTLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E98CC1DD5D2333AEC9EC5309950A1AD /* HTLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		588D764FF78A7F1BE97B1E54712673B9 /* HTCommon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D8090E4E4BBC93C005E62CCEBE7F8 /* HTCommon-dummy.m */; };
+		5902C60EC52582B08384E362DA820575 /* MQTTCFSocketEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 5394D57D7A5ECD9994272189E94DFEB9 /* MQTTCFSocketEncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59B6D748D374C7AF2A2188E78A15B71A /* HTRestClientDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 18144C60D72AAB7C9718E3121E8248F8 /* HTRestClientDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59E5EF79F2A3025D9CBD7234BA02E0D9 /* HTLocationStats.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BC993BD9DC1FCD0B29C942EFF54335B /* HTLocationStats.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5A185A3292DCF6B81552E339F46B47C5 /* MQTTInMemoryPersistence.h in Headers */ = {isa = PBXBuildFile; fileRef = 16A1776F25316BD93AEB7CFFBAB3E695 /* MQTTInMemoryPersistence.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A2A4CB5859FD51A109DF96E060D4F9F /* HTLocationRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E4688E9B7056C2F8ABDCF0488EAD9BF /* HTLocationRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5B81F688EA405123237D63E71B034F45 /* HTLocationBatchManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 623356E6B8F26E3BA6C035C0DF40609F /* HTLocationBatchManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5C42FD0BE1D53C93151513D4AA604B55 /* MQTTClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D6F49A7B77F3A102E9F51877FEFE2C7F /* MQTTClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F2C60C3F76267FBA7BE84177A93959D /* HTCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2BBADC3871F6F7ADFF19E7A3D68CEF /* HTCommon.framework */; };
+		61596194DC8F5D3403EA1EEE69A3608C /* HTDatabaseDataSourceDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 59198ECC62A24720A9A1C528EC683551 /* HTDatabaseDataSourceDefines.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		61EFC44B1B18444606FAE39302C89556 /* HTError.h in Headers */ = {isa = PBXBuildFile; fileRef = AA50FD8BDAE54B207622891B62D05A67 /* HTError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62433E52A20BE2B469F57F8FD28F871B /* MQTTSSLSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A3AE90754831D85F896B5171F377343 /* MQTTSSLSecurityPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63317E194FD128239C724E49FD97CD47 /* HTConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DFE96D7F64F62E032D7CA3211E7548B /* HTConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63FB2C94849BC47985B728126D1151F0 /* HTSQLiteStatement.h in Headers */ = {isa = PBXBuildFile; fileRef = 555A613B85E48BD77723CAF4CEE491DE /* HTSQLiteStatement.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		645A5FD1B21CEAD381A04B14076B44D1 /* MQTTCFSocketDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A534DC91A1D3155C0FD69D6FFAA3BFCD /* MQTTCFSocketDecoder.m */; };
+		64D6111B7833A1CACCE7A9C0AC8B2F53 /* HTMQTTClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 544B991A50C243B4B15CD1622E270BE9 /* HTMQTTClient.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6505FB3E88B049D685CA959191974D57 /* HTDriverStatsCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A5F1042ECD0FD77AFF59C20D6906A3 /* HTDriverStatsCollector.m */; };
+		6544ED844087A394141F4AF11AF138CB /* NSArray+HTExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7F348248FFBEF905232E9557DB6EF8 /* NSArray+HTExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		658A6F11F1E2160B132A30D619D98F01 /* HTGPSLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 2154BC75FC428DFC6945EC5BB84C1C26 /* HTGPSLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		664BDEBAD079B9886C7193B42CE055A8 /* HTNetworkRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 73E94C3F3437A146A7792A959D608059 /* HTNetworkRequestManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		684406982D4E7E9BD751406A8A58FE2A /* NSError+HTTransmitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B3957160499EDC544BF714578403861E /* NSError+HTTransmitterClient.m */; };
+		687D98AB3D91F7B314C28C19104B2CA5 /* HTSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = ACA85CEA08FA8229B073DD8C22FB69D0 /* HTSocket.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		69224D1ECCBCD21BD80486E3F03A890D /* HTJobScheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = F3B3625A7A1C400CC08F8F38243EFEC4 /* HTJobScheduler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		69D15F147271A3C58A82E6F5BA5A46E7 /* HTLocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 596C09B4D72B08D4A7310E83300EFD86 /* HTLocationService.m */; };
+		6AFF6C2F9C2903635FF682DE7625B05A /* HTNetworkJobScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A36BB718C224118660211DFEFBF5EC /* HTNetworkJobScheduler.m */; };
+		6B6F41DF4E8EC458A5B2B081C21CF147 /* HTTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 805BCD29DBD6C153378C9B8677D593C1 /* HTTask.m */; };
+		6D25AA987880814B300CE0084ACBED51 /* HTSQLiteDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E42A6C435510B6447330221B05D4B79 /* HTSQLiteDatabase.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6D492EBDC44CE772D63D9F86B2052153 /* MQTTCFSocketTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = 4672E1B28C977EAA1D6015F4F22D12A0 /* MQTTCFSocketTransport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EAABC77B9DFFEFEC25560E400709B63 /* HTNetworkRequestDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 8988123C13FAF7C18E567D3CFCCCB9A9 /* HTNetworkRequestDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		700805B3847E0A6C2591060C55410212 /* NSError+HTNetworkRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DF535DFD389E75CA1719D55AC9F165E8 /* NSError+HTNetworkRequestManager.m */; };
+		745B7D6AF4D01CB27E2EAEA77A42221F /* HTBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FCA0B73EC0356E0F97AEB46FF8FD40E /* HTBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75FE733E28205F7872AD916D2F1F7C2D /* HTRadioStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 182E157605CF9066C3220A412A55D7A9 /* HTRadioStats.m */; };
+		7B7812A5942BAD34B3857B65691236D4 /* HTScheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D412EB9803028CB58AFC410AA8AE629 /* HTScheduler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7CCE648E30196D0AF743DB961ECB212A /* HTLocationService.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FE5270A1532F2A25A19353D121C0060 /* HTLocationService.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7F249FD9DF264D43CEFF947F099788FF /* MQTTSessionSynchron.h in Headers */ = {isa = PBXBuildFile; fileRef = BB7A63CBB39AB73E46BA5F9F9E75C819 /* MQTTSessionSynchron.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80B926C2D488CABAB3A7E7DD2A1B4B3C /* MQTTSession.m in Sources */ = {isa = PBXBuildFile; fileRef = BD81F608E0E0B6CA522EBB0B3588A861 /* MQTTSession.m */; };
+		8241E5D9965B449900C6E00766AF01F5 /* HTTaskParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D8C57387BF6451122F454247631B23C /* HTTaskParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82B9733319B51E85DCE013996C96B7A8 /* HTNetworkRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BE3CFB850AB1F4B1FDBEDD78BEEA3F /* HTNetworkRequestManager.m */; };
+		856C4D2F4A3A3D1E95666B40DC794BEF /* HTLocationDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 81A9616C237E0F78BFB65CE7C0318C8D /* HTLocationDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		85B6A14AB1FCFA0F8F1AB26867C97275 /* HTLocationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 772991D7982C1EE83F9E1518751A6D70 /* HTLocationDataSource.m */; };
+		86232D62B891018504C2178E0AFC4534 /* HTLocationStats.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A9C8ECE16084CA20FE561A411C8297 /* HTLocationStats.m */; };
+		866BB414828861B35A64DB03DF29C711 /* NSDateFormatter+HTExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C5B6E8070D468A2BB9378C7C175BBCB /* NSDateFormatter+HTExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		86ABFC092BE5233937B206584949A349 /* HTDriverStatsCollector.h in Headers */ = {isa = PBXBuildFile; fileRef = D46B46AA57BA95F781BCBDA1BFB9B02E /* HTDriverStatsCollector.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8877B7AFD0D0F893C2340AC4CD21F6C2 /* HTUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = AD5A0271E10BEF765B991A7A05BE5115 /* HTUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89110451A1E03D20A7C6BA8006A2D70A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9389CE5220898E4FEB297FF1DAD4BA34 /* Foundation.framework */; };
+		89A769675F88D5654E3494966A4A2327 /* HTLoggerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 60FEAC677206C5413751F12167958CFE /* HTLoggerProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C96AE19F60D269E18372E9F75B93CAD /* HTResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = FEBCE0E71551E999AD8A78642321654F /* HTResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C99DEF73843116D7F9518D04C09F0CD /* HTBatteryStats.h in Headers */ = {isa = PBXBuildFile; fileRef = AD50EC86B09E82DC7EE2D2E47B4BB5F0 /* HTBatteryStats.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8CE70248BD94C31B09D66F7164D46F36 /* NSError+HTNetworkRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A73D27AC97D369E72AF6E364C306714 /* NSError+HTNetworkRequestManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8DBF1A57100C384D77DD38AF82C4C505 /* HTSQLiteDatabaseResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7842AEA84C0950A9F193F23DAD5A6838 /* HTSQLiteDatabaseResult.m */; };
+		926912C9AF373DFB9433D71B4ABFA59C /* HTMotionActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D67BC23083CDAC3ED0D6FE456A9D82C7 /* HTMotionActivityManager.m */; };
+		93EC013E080A54B1C88603F3FEC54692 /* HTMQTTSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FC28BB67305DBB14F8C19035E6355B /* HTMQTTSubscription.m */; };
+		94CA761CFA6A9715B1B0DF0FFDC87D45 /* HTTransmitterJobSchedulerListener.h in Headers */ = {isa = PBXBuildFile; fileRef = D61F9A3144728FAE54DCB2790A2D0500 /* HTTransmitterJobSchedulerListener.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		95B9788ED456646C951FD4CD0BAE9A6A /* HTMQTTDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1F8292A49E7107A848925550A51B91 /* HTMQTTDefines.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9729D963A1496E7D81BC2B7A45F240B3 /* MQTTSSLSecurityPolicyEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 355516DCCE4AA155C99D518980F93331 /* MQTTSSLSecurityPolicyEncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97661830DFC631CB9F9940929F69AEFB /* HTDriverStats.h in Headers */ = {isa = PBXBuildFile; fileRef = 1549DBC4510DDAF170F12BE232897402 /* HTDriverStats.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9968A90DE50D5B7342F27CB1B18DE2DC /* HTMQTTSubscriptionIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5746119C2D9512D63A9888775E9F5018 /* HTMQTTSubscriptionIDGenerator.m */; };
+		9A96B3294D6AAB97DA3547667E2D5FCD /* MQTTMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB68DB6F5010007B4E1C6AB4F60136 /* MQTTMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AD1A88B9AEC10E8C95D37D140CACCEB /* HTRestClientPostProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E2724EDA4A8B757D31B950B493C8B25 /* HTRestClientPostProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AE29169DE4869D4B06D4299C86A6648 /* MQTTMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3F575121B2F8E93536168DEF5569A7 /* MQTTMessage.m */; };
+		9B988B3E9648D12EB4B88545919A16B9 /* HTNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034515F9712C1B3CCCE9988E880293F /* HTNetworkRequest.m */; };
+		9B9E9A508C4DFC6588632B1FDF5D0D45 /* HTNetworkRequestProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 7390CB7D789DD514D0902CD26F058280 /* HTNetworkRequestProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9D18E51497C9D4D1F843EC633B41E1EC /* HTSQLiteDatabase+HTTransmitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A947461FFDBACE99D30DADCD72DF7927 /* HTSQLiteDatabase+HTTransmitterClient.m */; };
+		9D460FC7953C052EF57FD98F8105A6DB /* MQTTClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68EE901FCA53CFFB20EB6224D3E57330 /* MQTTClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9DBE2648235DED82897791686C1261C5 /* HTLocationManagerDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 3077D849F867E1374818A8CAEDEFEEA3 /* HTLocationManagerDefines.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A6380B7806BF3586763A0EB4A08107B5 /* MQTTSessionSynchron.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B5FF17CCE0BA3B3306000EE20D83BC /* MQTTSessionSynchron.m */; };
+		A7CA3BB9EC8F8CCBB1E93A951A44C348 /* MQTTSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E39B2DE31EBAA089CCC50C4DE14F10E5 /* MQTTSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9150BEF3CD99F071156A1E7EB740359 /* HTTripParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 37920810FBD1431625D9549558D0BE53 /* HTTripParams.m */; };
+		AA8D0EECD337ECAB26368D8A243CFFCC /* HTJob.h in Headers */ = {isa = PBXBuildFile; fileRef = 15E8C714F9B9B4154EF6685F26CDF5E9 /* HTJob.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AA95FEBC61093A3B810280F25B71333C /* HTTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = BD34EA20B13F5991D6364C08DC31C1DE /* HTTrip.m */; };
+		AB6DD4376EBF0E82C7530D9EBD7C537F /* NSError+HTLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C4A10519152EF184BFD30CBF3DDD4DD /* NSError+HTLocationManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AC1293E7E35BC22B1C1AACD5B862A3DD /* HTLogDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D9A8A2FEEB485EE8416FE4A5007F2504 /* HTLogDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC834B3407C69733F38E2563E7D506AC /* HTGetLogsDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E5B95AE629423D782CD203B48D8E0AD /* HTGetLogsDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AD487F9E090458985C3A0A627AA1C8A8 /* HTDeviceStats.h in Headers */ = {isa = PBXBuildFile; fileRef = D79B73F0E0C71B085B3ECE01D5011C58 /* HTDeviceStats.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B14D4CCD97C0693C65EC44CA4A04399E /* HTSDKControlsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A52C808392FF17AAF34D9FA04635897 /* HTSDKControlsManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B3459B83F0EE92F2EC7DEEAB1D226EA9 /* HTDriverStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0FF11974B0AF832A2838A87E616C10 /* HTDriverStats.m */; };
+		B34DA88F0DAF313F71495AF2AEE04022 /* MQTTSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BFF4167A2637119E361EAEE48856D2 /* MQTTSessionManager.m */; };
+		B408164B2A56E54EA34B505F692BE75E /* HTLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E8BEEA8A2CD61AC3865DAC73F3A920F2 /* HTLogger.m */; };
+		B432F3B7428B67CE93FED357F0E9B9ED /* HTLocationBatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B60AC5859A19922608F86B211FF832 /* HTLocationBatchManager.m */; };
+		B5326FE31ADD2A34DC34D6F4633ACE82 /* HTError.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3E46E9D29F90A5D4D8BB6BAECD16CF /* HTError.m */; };
+		B59AECD18C11DA98676D802BB20A5DE1 /* HTLocationRequestIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EF18B2A2B211FE1E3EAB975A81F5323 /* HTLocationRequestIDGenerator.m */; };
+		B79ED5F4FB223D0B4F8AC3FA2285F266 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8846DBF5A94E53D30EE828BC5166EC82 /* NSDictionary+Extension.m */; };
+		B83B67EC84F0C82A2F82513992A9F0F6 /* HTNetworkRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 083B83A5A3C38F5EDB7F7DE42027ABB1 /* HTNetworkRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BC512A8994DBFF6465CB3914D94AE299 /* HTLocationTable.m in Sources */ = {isa = PBXBuildFile; fileRef = B961C0487D4B1EC436E20DBB8C675A3C /* HTLocationTable.m */; };
+		BCBC48DA6BAE6204B36FE6DEFC9260AF /* HTSDKControls.h in Headers */ = {isa = PBXBuildFile; fileRef = 266FB0B711BC4E0D3D55532984AD87DC /* HTSDKControls.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BCC61284E95B584BD364FE0E2E69ED07 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D392320558BBB63D3913AE930590BA9 /* SystemConfiguration.framework */; };
+		BCFD895DFEC8604B83947D17B7FE518A /* MQTTCFSocketTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4158D91574CBDD5E538B3E879405BB84 /* MQTTCFSocketTransport.m */; };
+		BDDE3DE56359D28C1157BCABFBE6CE7A /* HTTrip.h in Headers */ = {isa = PBXBuildFile; fileRef = 32F65421BD25BE9E41662100C6ECA5DC /* HTTrip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE32EB5A0CBE26A27CC6FFEF1C71AA20 /* HTJobProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 1213AB0B67ED9AA16698912698C12469 /* HTJobProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BFDDE4CCC3E4F9B13277B665CB846478 /* NSArray+HTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92745BB86A7D3B557505A4A022B227 /* NSArray+HTExtension.m */; };
+		C0863115F38DEB42CCF019EC53014A3E /* HTRadioStats.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA4D2B5E957524D9CB2339BE6749538 /* HTRadioStats.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C27E7AA69B22A5BF80777F6C2B420839 /* HTMotionActivityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = ADE7385478DFA03C20E061A952573621 /* HTMotionActivityManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C380266079D436B77613263D186CEAE7 /* HTLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 051C01D162F9C94E1B39C5EDB0DFFC53 /* HTLocationManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C8C20BBFC1D338C14F518362C025B281 /* HTJobScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F1C72445C06C28B9F7838017D441FD /* HTJobScheduler.m */; };
+		C906306E4F39277DE02D77F0E8635CCB /* NSDate+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1D898652D50F0D92E73764BA8CB871 /* NSDate+Extention.m */; };
+		C9AAA6F4C951562656EBEEF21AABE9D5 /* HTResponse_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F0913A2BD31747B12466705D6DEE9B15 /* HTResponse_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CC567FC2B401ED53F5C606C2CCE0CDDE /* NSDate+Extention.h in Headers */ = {isa = PBXBuildFile; fileRef = A9C899C598C548920C3501242174F446 /* NSDate+Extention.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCDA093B47241324D2EE285B0AEABBDD /* HTConnectionStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D2000CACC02D825E37FA53B1314AE8 /* HTConnectionStatus.m */; };
+		CD6A73478372971DCDE77892E0231936 /* HTRestClientGetImageProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B37B3CF2A504917B308CF0DEFEBD22D3 /* HTRestClientGetImageProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDCC88907E6933858E15D10B6DD1B3ED /* HTSQLiteDatabase+HTTransmitterClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D3505CBE876776C10459C14DF5E4C3D1 /* HTSQLiteDatabase+HTTransmitterClient.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D3F97D247C51398D64A8027E0F54414D /* HTPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = E4317BB3DC4FA542794F4A89B5AEAFD9 /* HTPlace.m */; };
+		D73E02ECAFA9FCF8098EDA7100507DA2 /* HTUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D6C76B3C32EA784818FDA18817AC45 /* HTUtility.m */; };
+		DA2F54636542B315D82B976AA14D321D /* HTJobScheduler_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = E2349A713A7100FBDDB502FEE89F0817 /* HTJobScheduler_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DB2AD13C4510DC821AAB4A92F9F01F2C /* HTTaskDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EDC8908AFFDD6BB486240E1A6DE328 /* HTTaskDisplay.m */; };
+		DD8B3ADB12E15B6506F526AF8B21988A /* HTReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5699DCF8AE6B4646F35BB007ECBF75 /* HTReachability.m */; };
+		DF26D8C112361980AEBBCF63CCE85F31 /* HTRestClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D63D2919ADC0A0B2CF871D7739B8B8F /* HTRestClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0731057480DF84AD5C5AD6570DF557E /* HTNetworkRequestDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3973414663789195C445BE1123EC23 /* HTNetworkRequestDataSource.m */; };
+		E174EDD255679EE19FDA6002175EE129 /* HTSocketSubscribable.h in Headers */ = {isa = PBXBuildFile; fileRef = 8241878FC5F8F17B5D0C44149BF39F22 /* HTSocketSubscribable.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E1D7052C50B1187C238490E48D169733 /* HTDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = BCB6E3B99D0DF117E1F3EB6C0711EA52 /* HTDatabase.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E20BF1BE0F2B9401F6AE0BC6CBB6B41E /* NSError+HTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1104DF0D8B628E38DCD7AF0BEDF41F /* NSError+HTLocationManager.m */; };
+		E30531E0D3D493AB5966CE3C31BDE3B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9389CE5220898E4FEB297FF1DAD4BA34 /* Foundation.framework */; };
+		E33BEF13B98051C3D52FB0DC6BE35064 /* MQTTLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 5671AA318CD5AE3B4D1B88859ECAC121 /* MQTTLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E731D2753C54D62A8F9A1C7DE0C9E9F4 /* HTTransmitter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80D1B1BA15AE1908E4A0BBF6634B57CE /* HTTransmitter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E85E65D19E81EC24802ECFD4A81F7BED /* HTCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8B1AF19E06BD7908F74769A7043AF4 /* HTCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA016ACFBE852E4A4972B362DA99AB17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9389CE5220898E4FEB297FF1DAD4BA34 /* Foundation.framework */; };
+		EA9BDEBE3DD9B05A1B5CE439FD47D1FA /* HTCommon-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DFF5A63FE99BDA93D92F784454D004F0 /* HTCommon-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB4F2389AF9B59A8A30EDB4937FD0770 /* MQTTClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936E717F0DB050A8FD144FFD8B127DE3 /* MQTTClient.framework */; };
+		EB7C523E2313076B9EF1B2BC93117AE6 /* HTTransmitterConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = F177D1B73AA85574F363B194588F97AE /* HTTransmitterConstants.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EC9565048E9F9A49808FCC0452624554 /* HTDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = D0532DEC609CA9EC14F00E8A9E036CE9 /* HTDriver.m */; };
+		ED7C378B05074F3FC4A8CE12A7B55969 /* HTTaskDisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = 71A878C7E2BF247CF1403D168D3A14FA /* HTTaskDisplay.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED97858B7291965C5750763D5BF03BF9 /* HTSDKControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 701629DA809E847FCB28475C48FEA4E4 /* HTSDKControls.m */; };
+		EFFAADFCB8AD36A5EFA94D79F0C808F0 /* HTNetworkRequestManagerDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 984D14C56AE4BBCC2C90D00ECC7DEFA0 /* HTNetworkRequestManagerDefines.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F06944130540E855EAA79B212006C730 /* HTNetworkRequestTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BFAF2E94BA34EB4E4E5C3705F3EAC2C /* HTNetworkRequestTable.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F11C1D09080EA416A4C378497F01DDD5 /* MQTTClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 739223F50BDE997D38CDD307794E97AB /* MQTTClient-dummy.m */; };
+		F2D4ACF777AD7749F1AC6611EEE32045 /* HTTransmitterConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E8B15241DAF0CAA6411ED45D5076F4 /* HTTransmitterConstants.m */; };
+		F3534541645181403FE3D43A1B38F479 /* Pods-ExampleHyperTrack-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3AA859D6F24A92FDFCA5B994AF7C55 /* Pods-ExampleHyperTrack-dummy.m */; };
+		F4FDFFC16EF12872F1998D8D742ED1B3 /* HTLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = B8CC098E3EFB5F376DAD90FEA93E7EEF /* HTLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F65A0D44FE4D6B76B2D2B1ED434DE664 /* HTActiveDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 723CAAF6E02B897823DA8B90B465BF6B /* HTActiveDriver.m */; };
+		F6959D20E272CAA4DF0EF53EB864589B /* HTJobIDGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 8723B1D55A515F17FF20032DB9481EDB /* HTJobIDGenerator.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FA93493D3736B540BB281E3DBC2BB4E6 /* HTNetworkRequestTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B08BF849174AD966CCBB0D2210A79 /* HTNetworkRequestTable.m */; };
+		FAF4E4D696AB036B333C6BFC478C8562 /* HTDispatchQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C2F21F157ECA05A9431630F0E7071 /* HTDispatchQueue.m */; };
+		FBB2474CD87893FB44AFD29CA5FDB340 /* HTTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E56A3ACCC0B9178F16A8243759D4C7 /* HTTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD242C17C055DBEADA79065E596A3412 /* HTSDKControlsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9F0CC38AD2EDC1E5B3FD23981B2F8 /* HTSDKControlsManager.m */; };
+		FD9B62119F09036D31EFDB7647981311 /* MQTTInMemoryPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C986FF7236BCF4FDFCCEB6D590E8FFC /* MQTTInMemoryPersistence.m */; };
+		FDBC0F6CFA8DBB7AC9C332E20CA1DC8E /* MQTTSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 40E39DF0DEB0A15DB9550345376A0615 /* MQTTSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF9F9122F64EBE63386B39DE95F63F95 /* MQTTSSLSecurityPolicyDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3248B59F5ABB54BE8BDD179BDC5425EE /* MQTTSSLSecurityPolicyDecoder.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		251834B1B763A09D8517716ED693A3B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34A293283E43943122C07142865E3394;
+			remoteInfo = HTTransmitter;
+		};
+		28C32C8917C812788FD03EC5152FF513 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A880C8DA8488A0A998688DD3E9ED07A;
+			remoteInfo = HTCommon;
+		};
+		44E54CF3616EEA39854F545D0B3C986D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 997ED2786DE9E4782515D3BD0F710F77;
+			remoteInfo = MQTTClient;
+		};
+		809053C81089811224D0BCCBF6A1816D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 997ED2786DE9E4782515D3BD0F710F77;
+			remoteInfo = MQTTClient;
+		};
+		F8132E1BF280712DA6D965C9C6D41AE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A880C8DA8488A0A998688DD3E9ED07A;
+			remoteInfo = HTCommon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		007EBF01E99B25526C343B8B307C8179 /* MQTTSSLSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTSSLSecurityPolicy.m; path = MQTTClient/MQTTClient/MQTTSSLSecurityPolicy.m; sourceTree = "<group>"; };
+		0153CB362B7B52F6EC8DD059EB1D5F82 /* HTRestClientGetProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTRestClientGetProtocol.h; path = HTCommon/HTRestClientGetProtocol.h; sourceTree = "<group>"; };
+		02004DFF404CDA6704A0663DBAB5FEAD /* HTJobSchedulerDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTJobSchedulerDefines.h; path = HTTransmitter/Internal/JobScheduler/HTJobSchedulerDefines.h; sourceTree = "<group>"; };
+		0244AC2076C5E2D1C98D048E0F1E7FF7 /* NSDictionary+Extension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Extension.h"; path = "HTCommon/NSDictionary+Extension.h"; sourceTree = "<group>"; };
+		03E15D82C8D2679A6A9E7F18BC2CC5BF /* HTTransmitter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HTTransmitter.modulemap; sourceTree = "<group>"; };
+		051C01D162F9C94E1B39C5EDB0DFFC53 /* HTLocationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTLocationManager.h; path = HTTransmitter/Internal/LocationManager/HTLocationManager.h; sourceTree = "<group>"; };
+		05867E7BA7656C2B4BEA805E65FC5866 /* HTDispatchQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTDispatchQueue.h; path = HTTransmitter/Internal/Classes/HTDispatchQueue.h; sourceTree = "<group>"; };
+		059D7635EC66AE6BD22E9248E821D477 /* NSDateFormatter+HTExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDateFormatter+HTExtension.m"; path = "HTCommon/Internal/NSDateFormatter+HTExtension.m"; sourceTree = "<group>"; };
+		06A36BB718C224118660211DFEFBF5EC /* HTNetworkJobScheduler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTNetworkJobScheduler.m; path = HTTransmitter/Internal/JobScheduler/HTNetworkJobScheduler.m; sourceTree = "<group>"; };
+		06BFF4167A2637119E361EAEE48856D2 /* MQTTSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTSessionManager.m; path = MQTTClient/MQTTClient/MQTTSessionManager.m; sourceTree = "<group>"; };
+		06ECB7081E957AB12717BBE8D6DA615C /* Pods-ExampleHyperTrack-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExampleHyperTrack-acknowledgements.markdown"; sourceTree = "<group>"; };
+		083B83A5A3C38F5EDB7F7DE42027ABB1 /* HTNetworkRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTNetworkRequest.h; path = HTTransmitter/Internal/RequestManager/Request/HTNetworkRequest.h; sourceTree = "<group>"; };
+		09B2AE8044394073E86CD622AB6C4D8B /* HTMQTTSubscription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMQTTSubscription.h; path = HTTransmitter/Internal/MQTT/Subscription/HTMQTTSubscription.h; sourceTree = "<group>"; };
+		0AC784B5ABE833E53B083313619DABA8 /* HTHTTPLogDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTHTTPLogDataSource.m; path = HTCommon/HTHTTPLogDataSource.m; sourceTree = "<group>"; };
+		0B3973414663789195C445BE1123EC23 /* HTNetworkRequestDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTNetworkRequestDataSource.m; path = HTTransmitter/Internal/RequestManager/HTNetworkRequestDataSource.m; sourceTree = "<group>"; };
+		0BFAF2E94BA34EB4E4E5C3705F3EAC2C /* HTNetworkRequestTable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTNetworkRequestTable.h; path = HTTransmitter/Internal/RequestManager/HTNetworkRequestTable.h; sourceTree = "<group>"; };
+		0D6A1AF3A172BFF493B621706BCABD6F /* HTLocation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTLocation.m; path = HTCommon/HTLocation.m; sourceTree = "<group>"; };
+		0D76C0E0B0131E764BF51DDF4F77F9AC /* Pods-ExampleHyperTrack-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExampleHyperTrack-umbrella.h"; sourceTree = "<group>"; };
+		0E5B95AE629423D782CD203B48D8E0AD /* HTGetLogsDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTGetLogsDataSource.h; path = HTTransmitter/Internal/DatabaseLogger/HTGetLogsDataSource.h; sourceTree = "<group>"; };
+		0E98CC1DD5D2333AEC9EC5309950A1AD /* HTLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTLocation.h; path = HTCommon/HTLocation.h; sourceTree = "<group>"; };
+		109B08BF849174AD966CCBB0D2210A79 /* HTNetworkRequestTable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTNetworkRequestTable.m; path = HTTransmitter/Internal/RequestManager/HTNetworkRequestTable.m; sourceTree = "<group>"; };
+		11873B78DF812AF9A0658E423850A53F /* Pods-ExampleHyperTrack.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ExampleHyperTrack.modulemap"; sourceTree = "<group>"; };
+		1213AB0B67ED9AA16698912698C12469 /* HTJobProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTJobProtocol.h; path = HTTransmitter/Internal/JobScheduler/Job/HTJobProtocol.h; sourceTree = "<group>"; };
+		1289CE5AC31B901C0421CF76A2C65503 /* HTVehicleType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTVehicleType.m; path = HTCommon/HTVehicleType.m; sourceTree = "<group>"; };
+		131644821254E1735650EC0728C1BB93 /* HTSQLiteStatement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTSQLiteStatement.m; path = HTTransmitter/Internal/SQLite/HTSQLiteStatement.m; sourceTree = "<group>"; };
+		13E4B99174C7E5599FD524AFC05632C3 /* Pods-ExampleHyperTrack-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExampleHyperTrack-acknowledgements.plist"; sourceTree = "<group>"; };
+		145928A694B5837FEEABA65FFB59F11F /* MQTTSSLSecurityPolicyEncoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTSSLSecurityPolicyEncoder.m; path = MQTTClient/MQTTClient/MQTTSSLSecurityPolicyEncoder.m; sourceTree = "<group>"; };
+		1549DBC4510DDAF170F12BE232897402 /* HTDriverStats.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTDriverStats.h; path = HTTransmitter/Internal/Stats/HTDriverStats.h; sourceTree = "<group>"; };
+		15E8C714F9B9B4154EF6685F26CDF5E9 /* HTJob.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTJob.h; path = HTTransmitter/Internal/JobScheduler/Job/HTJob.h; sourceTree = "<group>"; };
+		16A1776F25316BD93AEB7CFFBAB3E695 /* MQTTInMemoryPersistence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTInMemoryPersistence.h; path = MQTTClient/MQTTClient/MQTTInMemoryPersistence.h; sourceTree = "<group>"; };
+		18144C60D72AAB7C9718E3121E8248F8 /* HTRestClientDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTRestClientDefines.h; path = HTCommon/HTRestClientDefines.h; sourceTree = "<group>"; };
+		182E157605CF9066C3220A412A55D7A9 /* HTRadioStats.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTRadioStats.m; path = HTTransmitter/Internal/Stats/HTRadioStats.m; sourceTree = "<group>"; };
+		1AA4D2B5E957524D9CB2339BE6749538 /* HTRadioStats.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTRadioStats.h; path = HTTransmitter/Internal/Stats/HTRadioStats.h; sourceTree = "<group>"; };
+		1C8B1AF19E06BD7908F74769A7043AF4 /* HTCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTCommon.h; path = HTCommon/HTCommon.h; sourceTree = "<group>"; };
+		1D2BBADC3871F6F7ADFF19E7A3D68CEF /* HTCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D392320558BBB63D3913AE930590BA9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		1E4688E9B7056C2F8ABDCF0488EAD9BF /* HTLocationRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTLocationRequest.h; path = HTTransmitter/Internal/LocationManager/HTLocationRequest.h; sourceTree = "<group>"; };
+		1EF18B2A2B211FE1E3EAB975A81F5323 /* HTLocationRequestIDGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTLocationRequestIDGenerator.m; path = HTTransmitter/Internal/LocationManager/HTLocationRequestIDGenerator.m; sourceTree = "<group>"; };
+		2154BC75FC428DFC6945EC5BB84C1C26 /* HTGPSLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTGPSLog.h; path = HTCommon/HTGPSLog.h; sourceTree = "<group>"; };
+		21E8B15241DAF0CAA6411ED45D5076F4 /* HTTransmitterConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTTransmitterConstants.m; path = HTTransmitter/Internal/Classes/HTTransmitterConstants.m; sourceTree = "<group>"; };
+		2385E07825184E5FE7D662FD38A0C2FB /* HTSQLiteDatabaseResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTSQLiteDatabaseResult.h; path = HTTransmitter/Internal/SQLite/HTSQLiteDatabaseResult.h; sourceTree = "<group>"; };
+		26311E744DEF1BFC946015D9CC39DD32 /* MQTTClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MQTTClient-prefix.pch"; sourceTree = "<group>"; };
+		266FB0B711BC4E0D3D55532984AD87DC /* HTSDKControls.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTSDKControls.h; path = HTTransmitter/Internal/SDKControls/HTSDKControls.h; sourceTree = "<group>"; };
+		2A3AE90754831D85F896B5171F377343 /* MQTTSSLSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTSSLSecurityPolicy.h; path = MQTTClient/MQTTClient/MQTTSSLSecurityPolicy.h; sourceTree = "<group>"; };
+		2C22957B43982C89E8981EB92E583A1C /* HTWeakStrongMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTWeakStrongMacros.h; path = HTCommon/HTWeakStrongMacros.h; sourceTree = "<group>"; };
+		2C8442C767D4DB93FABBC4E9C3C33C11 /* HTTransmitterClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTTransmitterClient.m; path = HTTransmitter/HTTransmitterClient.m; sourceTree = "<group>"; };
+		2D412EB9803028CB58AFC410AA8AE629 /* HTScheduler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTScheduler.h; path = HTTransmitter/Internal/JobScheduler/HTScheduler.h; sourceTree = "<group>"; };
+		2DFE96D7F64F62E032D7CA3211E7548B /* HTConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTConstants.h; path = HTCommon/HTConstants.h; sourceTree = "<group>"; };
+		2E7CCC4518A13A545B06D5A4048467F5 /* HTPlace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTPlace.h; path = HTCommon/HTPlace.h; sourceTree = "<group>"; };
+		3077D849F867E1374818A8CAEDEFEEA3 /* HTLocationManagerDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTLocationManagerDefines.h; path = HTTransmitter/Internal/LocationManager/HTLocationManagerDefines.h; sourceTree = "<group>"; };
+		3248B59F5ABB54BE8BDD179BDC5425EE /* MQTTSSLSecurityPolicyDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTSSLSecurityPolicyDecoder.m; path = MQTTClient/MQTTClient/MQTTSSLSecurityPolicyDecoder.m; sourceTree = "<group>"; };
+		32F65421BD25BE9E41662100C6ECA5DC /* HTTrip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTTrip.h; path = HTTransmitter/HTTrip.h; sourceTree = "<group>"; };
+		344C39483B5637DABDF25A6732E5C66F /* HTBatteryStats.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTBatteryStats.m; path = HTTransmitter/Internal/Stats/HTBatteryStats.m; sourceTree = "<group>"; };
+		34A5F1042ECD0FD77AFF59C20D6906A3 /* HTDriverStatsCollector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTDriverStatsCollector.m; path = HTTransmitter/Internal/Stats/HTDriverStatsCollector.m; sourceTree = "<group>"; };
+		34D270FDC693737917727BF2BE7C9ED9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		355516DCCE4AA155C99D518980F93331 /* MQTTSSLSecurityPolicyEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTSSLSecurityPolicyEncoder.h; path = MQTTClient/MQTTClient/MQTTSSLSecurityPolicyEncoder.h; sourceTree = "<group>"; };
+		36BE3CFB850AB1F4B1FDBEDD78BEEA3F /* HTNetworkRequestManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTNetworkRequestManager.m; path = HTTransmitter/Internal/RequestManager/HTNetworkRequestManager.m; sourceTree = "<group>"; };
+		370A3F77EF1057EA024E098618E47E41 /* HTNetworkJobScheduler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTNetworkJobScheduler.h; path = HTTransmitter/Internal/JobScheduler/HTNetworkJobScheduler.h; sourceTree = "<group>"; };
+		378A25D733D34515C0CA358B0FC6E978 /* HTTransmitter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HTTransmitter.xcconfig; sourceTree = "<group>"; };
+		37920810FBD1431625D9549558D0BE53 /* HTTripParams.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTTripParams.m; path = HTTransmitter/HTTripParams.m; sourceTree = "<group>"; };
+		38E56A3ACCC0B9178F16A8243759D4C7 /* HTTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTTask.h; path = HTCommon/HTTask.h; sourceTree = "<group>"; };
+		3D6343AAF0FB8861C76943F8C67E0F80 /* HTDriver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTDriver.h; path = HTCommon/HTDriver.h; sourceTree = "<group>"; };
+		3EB9F0CC38AD2EDC1E5B3FD23981B2F8 /* HTSDKControlsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTSDKControlsManager.m; path = HTTransmitter/Internal/SDKControls/HTSDKControlsManager.m; sourceTree = "<group>"; };
+		3ED2E9DF3D1826AF77243C7129D3E1FC /* HTDatabaseDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTDatabaseDataSource.m; path = HTTransmitter/Internal/DatabaseLogger/HTDatabaseDataSource.m; sourceTree = "<group>"; };
+		3F43829079BEF769FB23FA521748078C /* MQTTSSLSecurityPolicyDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTSSLSecurityPolicyDecoder.h; path = MQTTClient/MQTTClient/MQTTSSLSecurityPolicyDecoder.h; sourceTree = "<group>"; };
+		3FF3CD85EAE106BA218405A5F97348EB /* MQTTTransport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTTransport.h; path = MQTTClient/MQTTClient/MQTTTransport.h; sourceTree = "<group>"; };
+		40E39DF0DEB0A15DB9550345376A0615 /* MQTTSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTSession.h; path = MQTTClient/MQTTClient/MQTTSession.h; sourceTree = "<group>"; };
+		4158D91574CBDD5E538B3E879405BB84 /* MQTTCFSocketTransport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTCFSocketTransport.m; path = MQTTClient/MQTTClient/MQTTCFSocketTransport.m; sourceTree = "<group>"; };
+		41F1C72445C06C28B9F7838017D441FD /* HTJobScheduler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTJobScheduler.m; path = HTTransmitter/Internal/JobScheduler/HTJobScheduler.m; sourceTree = "<group>"; };
+		4228776FF7D32E5C849B40B4DF3C820D /* MQTTSSLSecurityPolicyTransport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTSSLSecurityPolicyTransport.h; path = MQTTClient/MQTTClient/MQTTSSLSecurityPolicyTransport.h; sourceTree = "<group>"; };
+		432C2BC0D50A5616D25C8BBF21A658E4 /* NSError+HTTransmitterClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+HTTransmitterClient.h"; path = "HTTransmitter/Internal/Extension/NSError+HTTransmitterClient.h"; sourceTree = "<group>"; };
+		4672E1B28C977EAA1D6015F4F22D12A0 /* MQTTCFSocketTransport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTCFSocketTransport.h; path = MQTTClient/MQTTClient/MQTTCFSocketTransport.h; sourceTree = "<group>"; };
+		4882E527D3C0BDAA626488878C204DFF /* Pods_ExampleHyperTrack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleHyperTrack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		493B4F6A7018C584C84AF23A88B93A2D /* HTCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A73D27AC97D369E72AF6E364C306714 /* NSError+HTNetworkRequestManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+HTNetworkRequestManager.h"; path = "HTTransmitter/Internal/Extension/NSError+HTNetworkRequestManager.h"; sourceTree = "<group>"; };
+		4E2724EDA4A8B757D31B950B493C8B25 /* HTRestClientPostProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTRestClientPostProtocol.h; path = HTCommon/HTRestClientPostProtocol.h; sourceTree = "<group>"; };
+		4E42A6C435510B6447330221B05D4B79 /* HTSQLiteDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTSQLiteDatabase.h; path = HTTransmitter/Internal/SQLite/HTSQLiteDatabase.h; sourceTree = "<group>"; };
+		4EECE5E66A391B8D60D8514A33AEAEAF /* HTCommon.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HTCommon.xcconfig; sourceTree = "<group>"; };
+		4F109900773C1928A815B9933AB4026D /* HTLocationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTLocationManager.m; path = HTTransmitter/Internal/LocationManager/HTLocationManager.m; sourceTree = "<group>"; };
+		4FE5270A1532F2A25A19353D121C0060 /* HTLocationService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTLocationService.h; path = HTTransmitter/Internal/LocationService/HTLocationService.h; sourceTree = "<group>"; };
+		51D6C76B3C32EA784818FDA18817AC45 /* HTUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTUtility.m; path = HTCommon/HTUtility.m; sourceTree = "<group>"; };
+		5218B36D32A9B17CF587641C8D2B2A43 /* HTLocationRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTLocationRequest.m; path = HTTransmitter/Internal/LocationManager/HTLocationRequest.m; sourceTree = "<group>"; };
+		5291F7C45B86040E23603CE6A44B9682 /* HTVehicleType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTVehicleType.h; path = HTCommon/HTVehicleType.h; sourceTree = "<group>"; };
+		5361678FF55B04B4ABEEE6AFEF9EA042 /* HTSocketPublishable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTSocketPublishable.h; path = HTTransmitter/Internal/MQTT/HTSocketPublishable.h; sourceTree = "<group>"; };
+		5394D57D7A5ECD9994272189E94DFEB9 /* MQTTCFSocketEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTCFSocketEncoder.h; path = MQTTClient/MQTTClient/MQTTCFSocketEncoder.h; sourceTree = "<group>"; };
+		544B991A50C243B4B15CD1622E270BE9 /* HTMQTTClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMQTTClient.h; path = HTTransmitter/Internal/MQTT/HTMQTTClient.h; sourceTree = "<group>"; };
+		553CE8ED36686AF0498F439AE50AD000 /* MQTTSessionLegacy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTSessionLegacy.m; path = MQTTClient/MQTTClient/MQTTSessionLegacy.m; sourceTree = "<group>"; };
+		555A613B85E48BD77723CAF4CEE491DE /* HTSQLiteStatement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTSQLiteStatement.h; path = HTTransmitter/Internal/SQLite/HTSQLiteStatement.h; sourceTree = "<group>"; };
+		5671AA318CD5AE3B4D1B88859ECAC121 /* MQTTLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTLog.h; path = MQTTClient/MQTTClient/MQTTLog.h; sourceTree = "<group>"; };
+		57236896BDE57C1F77AAE571A0376168 /* HTGPSLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTGPSLog.m; path = HTCommon/HTGPSLog.m; sourceTree = "<group>"; };
+		5746119C2D9512D63A9888775E9F5018 /* HTMQTTSubscriptionIDGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMQTTSubscriptionIDGenerator.m; path = HTTransmitter/Internal/MQTT/Subscription/HTMQTTSubscriptionIDGenerator.m; sourceTree = "<group>"; };
+		59198ECC62A24720A9A1C528EC683551 /* HTDatabaseDataSourceDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTDatabaseDataSourceDefines.h; path = HTTransmitter/Internal/DatabaseLogger/HTDatabaseDataSourceDefines.h; sourceTree = "<group>"; };
+		596C09B4D72B08D4A7310E83300EFD86 /* HTLocationService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTLocationService.m; path = HTTransmitter/Internal/LocationService/HTLocationService.m; sourceTree = "<group>"; };
+		5A9D37BBC9C18B482C6878A6F41E9097 /* MQTTSessionLegacy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTSessionLegacy.h; path = MQTTClient/MQTTClient/MQTTSessionLegacy.h; sourceTree = "<group>"; };
+		5C1F8292A49E7107A848925550A51B91 /* HTMQTTDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMQTTDefines.h; path = HTTransmitter/Internal/MQTT/HTMQTTDefines.h; sourceTree = "<group>"; };
+		5E2456F332B32EC348FE9600055AD588 /* MQTTClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MQTTClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FCF82E0FF0B769BAE8CAF0546DE4F5A /* HTCommon-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HTCommon-prefix.pch"; sourceTree = "<group>"; };
+		6034515F9712C1B3CCCE9988E880293F /* HTNetworkRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTNetworkRequest.m; path = HTTransmitter/Internal/RequestManager/Request/HTNetworkRequest.m; sourceTree = "<group>"; };
+		606A2A7F5EC42A13A557C409AA4E1FFE /* HTRestClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTRestClient.m; path = HTCommon/HTRestClient.m; sourceTree = "<group>"; };
+		60FEAC677206C5413751F12167958CFE /* HTLoggerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTLoggerProtocol.h; path = HTCommon/HTLoggerProtocol.h; sourceTree = "<group>"; };
+		623356E6B8F26E3BA6C035C0DF40609F /* HTLocationBatchManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTLocationBatchManager.h; path = HTTransmitter/Internal/LocationService/HTLocationBatchManager.h; sourceTree = "<group>"; };
+		6305D8E98BAF33389DAEC0215AA1D35E /* HTTransmitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTTransmitter.h; path = HTTransmitter/HTTransmitter.h; sourceTree = "<group>"; };
+		6493BA96BEC0A64DABA56783F6C0FCB9 /* HyperTrack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyperTrack.m; path = HTCommon/HyperTrack.m; sourceTree = "<group>"; };
+		64B60AC5859A19922608F86B211FF832 /* HTLocationBatchManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTLocationBatchManager.m; path = HTTransmitter/Internal/LocationService/HTLocationBatchManager.m; sourceTree = "<group>"; };
+		6591ED508AD23DE49EBB87E36F397429 /* MQTTCoreDataPersistence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTCoreDataPersistence.h; path = MQTTClient/MQTTClient/MQTTCoreDataPersistence.h; sourceTree = "<group>"; };
+		65E2620EF462A37C31C2A06E3CC0D6CC /* HTDatabaseDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTDatabaseDataSource.h; path = HTTransmitter/Internal/DatabaseLogger/HTDatabaseDataSource.h; sourceTree = "<group>"; };
+		68EE901FCA53CFFB20EB6224D3E57330 /* MQTTClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MQTTClient-umbrella.h"; sourceTree = "<group>"; };
+		6D0FF11974B0AF832A2838A87E616C10 /* HTDriverStats.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTDriverStats.m; path = HTTransmitter/Internal/Stats/HTDriverStats.m; sourceTree = "<group>"; };
+		6D1104DF0D8B628E38DCD7AF0BEDF41F /* NSError+HTLocationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+HTLocationManager.m"; path = "HTTransmitter/Internal/Extension/NSError+HTLocationManager.m"; sourceTree = "<group>"; };
+		6D3E46E9D29F90A5D4D8BB6BAECD16CF /* HTError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTError.m; path = HTCommon/HTError.m; sourceTree = "<group>"; };
+		6D63D2919ADC0A0B2CF871D7739B8B8F /* HTRestClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTRestClient.h; path = HTCommon/HTRestClient.h; sourceTree = "<group>"; };
+		6FAA7AF9BE87C1D336217F0C546A10B3 /* MQTTClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MQTTClient.modulemap; sourceTree = "<group>"; };
+		6FE4151A99456B729DFB080DCDBE5C0B /* HTTransmitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTTransmitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		701629DA809E847FCB28475C48FEA4E4 /* HTSDKControls.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTSDKControls.m; path = HTTransmitter/Internal/SDKControls/HTSDKControls.m; sourceTree = "<group>"; };
+		71A878C7E2BF247CF1403D168D3A14FA /* HTTaskDisplay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTTaskDisplay.h; path = HTCommon/HTTaskDisplay.h; sourceTree = "<group>"; };
+		723CAAF6E02B897823DA8B90B465BF6B /* HTActiveDriver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTActiveDriver.m; path = HTTransmitter/Internal/LocationService/HTActiveDriver.m; sourceTree = "<group>"; };
+		7390CB7D789DD514D0902CD26F058280 /* HTNetworkRequestProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTNetworkRequestProtocol.h; path = HTTransmitter/Internal/RequestManager/Request/HTNetworkRequestProtocol.h; sourceTree = "<group>"; };
+		739223F50BDE997D38CDD307794E97AB /* MQTTClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MQTTClient-dummy.m"; sourceTree = "<group>"; };
+		73E94C3F3437A146A7792A959D608059 /* HTNetworkRequestManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTNetworkRequestManager.h; path = HTTransmitter/Internal/RequestManager/HTNetworkRequestManager.h; sourceTree = "<group>"; };
+		744D3C33B354DDF19492DF91E8F576C8 /* MQTTCFSocketDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTCFSocketDecoder.h; path = MQTTClient/MQTTClient/MQTTCFSocketDecoder.h; sourceTree = "<group>"; };
+		772991D7982C1EE83F9E1518751A6D70 /* HTLocationDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTLocationDataSource.m; path = HTTransmitter/Internal/LocationDataSource/HTLocationDataSource.m; sourceTree = "<group>"; };
+		776DA14A8ACDA90088A1D4893BFE6FC1 /* HTReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTReachability.h; path = HTTransmitter/Internal/Classes/HTReachability.h; sourceTree = "<group>"; };
+		77BDFF8E9694A4DE2BE1C3CD2A4192D6 /* HTLocationDataSourceProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTLocationDataSourceProtocol.h; path = HTTransmitter/Internal/LocationDataSource/HTLocationDataSourceProtocol.h; sourceTree = "<group>"; };
+		781E3958FAEC52D6A181761DCA7DEEC7 /* HTHTTPLogDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTHTTPLogDataSource.h; path = HTCommon/HTHTTPLogDataSource.h; sourceTree = "<group>"; };
+		7842AEA84C0950A9F193F23DAD5A6838 /* HTSQLiteDatabaseResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTSQLiteDatabaseResult.m; path = HTTransmitter/Internal/SQLite/HTSQLiteDatabaseResult.m; sourceTree = "<group>"; };
+		7B3F575121B2F8E93536168DEF5569A7 /* MQTTMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTMessage.m; path = MQTTClient/MQTTClient/MQTTMessage.m; sourceTree = "<group>"; };
+		7C4A10519152EF184BFD30CBF3DDD4DD /* NSError+HTLocationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+HTLocationManager.h"; path = "HTTransmitter/Internal/Extension/NSError+HTLocationManager.h"; sourceTree = "<group>"; };
+		7C986FF7236BCF4FDFCCEB6D590E8FFC /* MQTTInMemoryPersistence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTInMemoryPersistence.m; path = MQTTClient/MQTTClient/MQTTInMemoryPersistence.m; sourceTree = "<group>"; };
+		7D8C57387BF6451122F454247631B23C /* HTTaskParams.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTTaskParams.h; path = HTTransmitter/HTTaskParams.h; sourceTree = "<group>"; };
+		7E62BC035163F590D23B7B70EA968833 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F1A178234B119CE1C40923F87BCADA3 /* HTJobIDGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTJobIDGenerator.m; path = HTTransmitter/Internal/JobScheduler/Job/HTJobIDGenerator.m; sourceTree = "<group>"; };
+		7F212D7DDC905ECA5C4FC0EDCD7674EC /* HTTransmitter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HTTransmitter-dummy.m"; sourceTree = "<group>"; };
+		7FCA0B73EC0356E0F97AEB46FF8FD40E /* HTBlocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTBlocks.h; path = HTCommon/HTBlocks.h; sourceTree = "<group>"; };
+		805BCD29DBD6C153378C9B8677D593C1 /* HTTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTTask.m; path = HTCommon/HTTask.m; sourceTree = "<group>"; };
+		80D1B1BA15AE1908E4A0BBF6634B57CE /* HTTransmitter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HTTransmitter-umbrella.h"; sourceTree = "<group>"; };
+		80EDC8908AFFDD6BB486240E1A6DE328 /* HTTaskDisplay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTTaskDisplay.m; path = HTCommon/HTTaskDisplay.m; sourceTree = "<group>"; };
+		81A9616C237E0F78BFB65CE7C0318C8D /* HTLocationDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTLocationDataSource.h; path = HTTransmitter/Internal/LocationDataSource/HTLocationDataSource.h; sourceTree = "<group>"; };
+		8241878FC5F8F17B5D0C44149BF39F22 /* HTSocketSubscribable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTSocketSubscribable.h; path = HTTransmitter/Internal/MQTT/HTSocketSubscribable.h; sourceTree = "<group>"; };
+		83ADF0B3664778F8FE8EBA16BFEC9AE8 /* Pods-ExampleHyperTrack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleHyperTrack.release.xcconfig"; sourceTree = "<group>"; };
+		8666EF75458252FD37CFB0F6799A441D /* HyperTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyperTrack.h; path = HTCommon/HyperTrack.h; sourceTree = "<group>"; };
+		86EA73E51D937AEF1EEBE46291FD1A61 /* HTShiftParams.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTShiftParams.h; path = HTTransmitter/HTShiftParams.h; sourceTree = "<group>"; };
+		8723B1D55A515F17FF20032DB9481EDB /* HTJobIDGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTJobIDGenerator.h; path = HTTransmitter/Internal/JobScheduler/Job/HTJobIDGenerator.h; sourceTree = "<group>"; };
+		8846DBF5A94E53D30EE828BC5166EC82 /* NSDictionary+Extension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+Extension.m"; path = "HTCommon/NSDictionary+Extension.m"; sourceTree = "<group>"; };
+		8988123C13FAF7C18E567D3CFCCCB9A9 /* HTNetworkRequestDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTNetworkRequestDataSource.h; path = HTTransmitter/Internal/RequestManager/HTNetworkRequestDataSource.h; sourceTree = "<group>"; };
+		8A3AA859D6F24A92FDFCA5B994AF7C55 /* Pods-ExampleHyperTrack-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExampleHyperTrack-dummy.m"; sourceTree = "<group>"; };
+		8A52C808392FF17AAF34D9FA04635897 /* HTSDKControlsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTSDKControlsManager.h; path = HTTransmitter/Internal/SDKControls/HTSDKControlsManager.h; sourceTree = "<group>"; };
+		8C4724454E3FF2967F9E59A823491525 /* MQTTDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTDecoder.m; path = MQTTClient/MQTTClient/MQTTDecoder.m; sourceTree = "<group>"; };
+		8C5B6E8070D468A2BB9378C7C175BBCB /* NSDateFormatter+HTExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDateFormatter+HTExtension.h"; path = "HTCommon/Internal/NSDateFormatter+HTExtension.h"; sourceTree = "<group>"; };
+		8C7C2F21F157ECA05A9431630F0E7071 /* HTDispatchQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTDispatchQueue.m; path = HTTransmitter/Internal/Classes/HTDispatchQueue.m; sourceTree = "<group>"; };
+		8D92745BB86A7D3B557505A4A022B227 /* NSArray+HTExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+HTExtension.m"; path = "HTTransmitter/Internal/Extension/NSArray+HTExtension.m"; sourceTree = "<group>"; };
+		8FE9BCCAD3DF3397D87C90A190009714 /* HTLogMessageTable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTLogMessageTable.h; path = HTTransmitter/Internal/DatabaseLogger/HTLogMessageTable.h; sourceTree = "<group>"; };
+		90BFA548FDE2485BFA1FFB1CE69B3C3F /* HTLogMessageTable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTLogMessageTable.m; path = HTTransmitter/Internal/DatabaseLogger/HTLogMessageTable.m; sourceTree = "<group>"; };
+		91471AC0A7667F62BCAADB1F1A66F664 /* HTNetworkRequestDataSourceProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTNetworkRequestDataSourceProtocol.h; path = HTTransmitter/Internal/RequestManager/HTNetworkRequestDataSourceProtocol.h; sourceTree = "<group>"; };
+		936E717F0DB050A8FD144FFD8B127DE3 /* MQTTClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MQTTClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9389CE5220898E4FEB297FF1DAD4BA34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		984D14C56AE4BBCC2C90D00ECC7DEFA0 /* HTNetworkRequestManagerDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTNetworkRequestManagerDefines.h; path = HTTransmitter/Internal/RequestManager/HTNetworkRequestManagerDefines.h; sourceTree = "<group>"; };
+		9AF4E0760F5D3D62255A87A4B61F7D82 /* MQTTClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MQTTClient.xcconfig; sourceTree = "<group>"; };
+		9BC993BD9DC1FCD0B29C942EFF54335B /* HTLocationStats.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTLocationStats.h; path = HTTransmitter/Internal/Stats/HTLocationStats.h; sourceTree = "<group>"; };
+		9CDD21A464811F6C6D938A6764453C43 /* HTJob.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTJob.m; path = HTTransmitter/Internal/JobScheduler/Job/HTJob.m; sourceTree = "<group>"; };
+		9F45CF4C270E582AF4CD72D2EFA5B7CB /* HTTripParams.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTTripParams.h; path = HTTransmitter/HTTripParams.h; sourceTree = "<group>"; };
+		A1336AFE371EE91F5E686260FDF0C3A2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A487522AD5018E9294F4E0100BA80958 /* HTTransmitterClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTTransmitterClient.h; path = HTTransmitter/HTTransmitterClient.h; sourceTree = "<group>"; };
+		A4EAA79C2C8F40C6C93468011F9F1B61 /* HTTaskParams.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTTaskParams.m; path = HTTransmitter/HTTaskParams.m; sourceTree = "<group>"; };
+		A534DC91A1D3155C0FD69D6FFAA3BFCD /* MQTTCFSocketDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTCFSocketDecoder.m; path = MQTTClient/MQTTClient/MQTTCFSocketDecoder.m; sourceTree = "<group>"; };
+		A59F38C65FA5C162DC4A24DBDA83454A /* HTMQTTSubscriptionIDGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMQTTSubscriptionIDGenerator.h; path = HTTransmitter/Internal/MQTT/Subscription/HTMQTTSubscriptionIDGenerator.h; sourceTree = "<group>"; };
+		A7FB387ECCBD2ED2F074203184C5631E /* HTConnectionStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTConnectionStatus.h; path = HTCommon/HTConnectionStatus.h; sourceTree = "<group>"; };
+		A947461FFDBACE99D30DADCD72DF7927 /* HTSQLiteDatabase+HTTransmitterClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "HTSQLiteDatabase+HTTransmitterClient.m"; path = "HTTransmitter/Internal/Extension/HTSQLiteDatabase+HTTransmitterClient.m"; sourceTree = "<group>"; };
+		A9C899C598C548920C3501242174F446 /* NSDate+Extention.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+Extention.h"; path = "HTCommon/NSDate+Extention.h"; sourceTree = "<group>"; };
+		AA50FD8BDAE54B207622891B62D05A67 /* HTError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTError.h; path = HTCommon/HTError.h; sourceTree = "<group>"; };
+		ACA85CEA08FA8229B073DD8C22FB69D0 /* HTSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTSocket.h; path = HTTransmitter/Internal/MQTT/HTSocket.h; sourceTree = "<group>"; };
+		AD50EC86B09E82DC7EE2D2E47B4BB5F0 /* HTBatteryStats.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTBatteryStats.h; path = HTTransmitter/Internal/Stats/HTBatteryStats.h; sourceTree = "<group>"; };
+		AD5A0271E10BEF765B991A7A05BE5115 /* HTUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTUtility.h; path = HTCommon/HTUtility.h; sourceTree = "<group>"; };
+		ADE7385478DFA03C20E061A952573621 /* HTMotionActivityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMotionActivityManager.h; path = HTTransmitter/Internal/LocationService/HTMotionActivityManager.h; sourceTree = "<group>"; };
+		B37B3CF2A504917B308CF0DEFEBD22D3 /* HTRestClientGetImageProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTRestClientGetImageProtocol.h; path = HTCommon/HTRestClientGetImageProtocol.h; sourceTree = "<group>"; };
+		B3957160499EDC544BF714578403861E /* NSError+HTTransmitterClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+HTTransmitterClient.m"; path = "HTTransmitter/Internal/Extension/NSError+HTTransmitterClient.m"; sourceTree = "<group>"; };
+		B414D4A913B85C6304D6DDB508C3A880 /* MQTTTransport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTTransport.m; path = MQTTClient/MQTTClient/MQTTTransport.m; sourceTree = "<group>"; };
+		B57AE8459F4C0CDE46C7F479AC59DCC6 /* Pods-ExampleHyperTrack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExampleHyperTrack.debug.xcconfig"; sourceTree = "<group>"; };
+		B8CC098E3EFB5F376DAD90FEA93E7EEF /* HTLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTLogger.h; path = HTCommon/HTLogger.h; sourceTree = "<group>"; };
+		B961C0487D4B1EC436E20DBB8C675A3C /* HTLocationTable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTLocationTable.m; path = HTTransmitter/Internal/LocationDataSource/HTLocationTable.m; sourceTree = "<group>"; };
+		BB7A63CBB39AB73E46BA5F9F9E75C819 /* MQTTSessionSynchron.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTSessionSynchron.h; path = MQTTClient/MQTTClient/MQTTSessionSynchron.h; sourceTree = "<group>"; };
+		BC0838F7ED930F42F16AB2E2C50D3C12 /* HTTransmitterJobSchedulerListener.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTTransmitterJobSchedulerListener.m; path = HTTransmitter/Internal/JobScheduler/HTTransmitterJobSchedulerListener.m; sourceTree = "<group>"; };
+		BCB6E3B99D0DF117E1F3EB6C0711EA52 /* HTDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTDatabase.h; path = HTTransmitter/Internal/SQLite/HTDatabase.h; sourceTree = "<group>"; };
+		BCE6D60D04B232AFB989CB2A2CE010F6 /* MQTTDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTDecoder.h; path = MQTTClient/MQTTClient/MQTTDecoder.h; sourceTree = "<group>"; };
+		BD34EA20B13F5991D6364C08DC31C1DE /* HTTrip.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTTrip.m; path = HTTransmitter/HTTrip.m; sourceTree = "<group>"; };
+		BD81F608E0E0B6CA522EBB0B3588A861 /* MQTTSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTSession.m; path = MQTTClient/MQTTClient/MQTTSession.m; sourceTree = "<group>"; };
+		BDD8D05DD992DCE885C7C8D98C152291 /* HTShiftParams.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTShiftParams.m; path = HTTransmitter/HTShiftParams.m; sourceTree = "<group>"; };
+		C1C5BFBF7FF7720D5034E255BA7AE874 /* MQTTPersistence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTPersistence.h; path = MQTTClient/MQTTClient/MQTTPersistence.h; sourceTree = "<group>"; };
+		C718D1C60F007EC165C795D346A477BE /* HTCommon.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HTCommon.modulemap; sourceTree = "<group>"; };
+		C757BB952021A978C5499E6A8815780E /* HTLocationRequestIDGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTLocationRequestIDGenerator.h; path = HTTransmitter/Internal/LocationManager/HTLocationRequestIDGenerator.h; sourceTree = "<group>"; };
+		C8B67868C8CFC274DF2C47ECAEE5610A /* HTDeviceStats.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTDeviceStats.m; path = HTTransmitter/Internal/Stats/HTDeviceStats.m; sourceTree = "<group>"; };
+		CAFACDC606665183E69200C848A6B43A /* HTTransmitter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HTTransmitter-prefix.pch"; sourceTree = "<group>"; };
+		CB67A58FD0C0B7134250C912F6704217 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEFFCFDFA2B46B1F11764C0FE9CAD889 /* HTLocationTable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTLocationTable.h; path = HTTransmitter/Internal/LocationDataSource/HTLocationTable.h; sourceTree = "<group>"; };
+		D0532DEC609CA9EC14F00E8A9E036CE9 /* HTDriver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTDriver.m; path = HTCommon/HTDriver.m; sourceTree = "<group>"; };
+		D0A9C8ECE16084CA20FE561A411C8297 /* HTLocationStats.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTLocationStats.m; path = HTTransmitter/Internal/Stats/HTLocationStats.m; sourceTree = "<group>"; };
+		D1554C1E33FC6771ABBC8DB9A15953CB /* MQTTCFSocketEncoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTCFSocketEncoder.m; path = MQTTClient/MQTTClient/MQTTCFSocketEncoder.m; sourceTree = "<group>"; };
+		D1C53A59F8DBF9E59E0C2A0551CAE4E9 /* HTResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTResponse.m; path = HTTransmitter/HTResponse.m; sourceTree = "<group>"; };
+		D2D2000CACC02D825E37FA53B1314AE8 /* HTConnectionStatus.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTConnectionStatus.m; path = HTCommon/HTConnectionStatus.m; sourceTree = "<group>"; };
+		D3505CBE876776C10459C14DF5E4C3D1 /* HTSQLiteDatabase+HTTransmitterClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "HTSQLiteDatabase+HTTransmitterClient.h"; path = "HTTransmitter/Internal/Extension/HTSQLiteDatabase+HTTransmitterClient.h"; sourceTree = "<group>"; };
+		D3B1DE7AB27359D7807628BF2A81B2F2 /* HTSQLiteDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTSQLiteDatabase.m; path = HTTransmitter/Internal/SQLite/HTSQLiteDatabase.m; sourceTree = "<group>"; };
+		D46B46AA57BA95F781BCBDA1BFB9B02E /* HTDriverStatsCollector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTDriverStatsCollector.h; path = HTTransmitter/Internal/Stats/HTDriverStatsCollector.h; sourceTree = "<group>"; };
+		D61F9A3144728FAE54DCB2790A2D0500 /* HTTransmitterJobSchedulerListener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTTransmitterJobSchedulerListener.h; path = HTTransmitter/Internal/JobScheduler/HTTransmitterJobSchedulerListener.h; sourceTree = "<group>"; };
+		D67BC23083CDAC3ED0D6FE456A9D82C7 /* HTMotionActivityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMotionActivityManager.m; path = HTTransmitter/Internal/LocationService/HTMotionActivityManager.m; sourceTree = "<group>"; };
+		D6F49A7B77F3A102E9F51877FEFE2C7F /* MQTTClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTClient.h; path = MQTTClient/MQTTClient/MQTTClient.h; sourceTree = "<group>"; };
+		D79B73F0E0C71B085B3ECE01D5011C58 /* HTDeviceStats.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTDeviceStats.h; path = HTTransmitter/Internal/Stats/HTDeviceStats.h; sourceTree = "<group>"; };
+		D7DB68DB6F5010007B4E1C6AB4F60136 /* MQTTMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTMessage.h; path = MQTTClient/MQTTClient/MQTTMessage.h; sourceTree = "<group>"; };
+		D7FC28BB67305DBB14F8C19035E6355B /* HTMQTTSubscription.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMQTTSubscription.m; path = HTTransmitter/Internal/MQTT/Subscription/HTMQTTSubscription.m; sourceTree = "<group>"; };
+		D8B5FF17CCE0BA3B3306000EE20D83BC /* MQTTSessionSynchron.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTSessionSynchron.m; path = MQTTClient/MQTTClient/MQTTSessionSynchron.m; sourceTree = "<group>"; };
+		D9A8A2FEEB485EE8416FE4A5007F2504 /* HTLogDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTLogDataSource.h; path = HTCommon/HTLogDataSource.h; sourceTree = "<group>"; };
+		DB0EB0E46FA8DF4032E65D569793FAFD /* MQTTCoreDataPersistence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTCoreDataPersistence.m; path = MQTTClient/MQTTClient/MQTTCoreDataPersistence.m; sourceTree = "<group>"; };
+		DB5699DCF8AE6B4646F35BB007ECBF75 /* HTReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTReachability.m; path = HTTransmitter/Internal/Classes/HTReachability.m; sourceTree = "<group>"; };
+		DCEB597719258A5C6B90C14973C2BFD1 /* Pods-ExampleHyperTrack-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExampleHyperTrack-frameworks.sh"; sourceTree = "<group>"; };
+		DD7F348248FFBEF905232E9557DB6EF8 /* NSArray+HTExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+HTExtension.h"; path = "HTTransmitter/Internal/Extension/NSArray+HTExtension.h"; sourceTree = "<group>"; };
+		DF535DFD389E75CA1719D55AC9F165E8 /* NSError+HTNetworkRequestManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+HTNetworkRequestManager.m"; path = "HTTransmitter/Internal/Extension/NSError+HTNetworkRequestManager.m"; sourceTree = "<group>"; };
+		DFF5A63FE99BDA93D92F784454D004F0 /* HTCommon-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HTCommon-umbrella.h"; sourceTree = "<group>"; };
+		E2349A713A7100FBDDB502FEE89F0817 /* HTJobScheduler_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTJobScheduler_Private.h; path = HTTransmitter/Internal/JobScheduler/HTJobScheduler_Private.h; sourceTree = "<group>"; };
+		E39B2DE31EBAA089CCC50C4DE14F10E5 /* MQTTSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTSessionManager.h; path = MQTTClient/MQTTClient/MQTTSessionManager.h; sourceTree = "<group>"; };
+		E4317BB3DC4FA542794F4A89B5AEAFD9 /* HTPlace.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTPlace.m; path = HTCommon/HTPlace.m; sourceTree = "<group>"; };
+		E8BEEA8A2CD61AC3865DAC73F3A920F2 /* HTLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTLogger.m; path = HTCommon/HTLogger.m; sourceTree = "<group>"; };
+		EBA2922DA7062AA819D113947D5B2AF2 /* MQTTSSLSecurityPolicyTransport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTSSLSecurityPolicyTransport.m; path = MQTTClient/MQTTClient/MQTTSSLSecurityPolicyTransport.m; sourceTree = "<group>"; };
+		ECC1D4583E5AE7A9AFFACC8E2905C211 /* HTMQTTClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTMQTTClient.m; path = HTTransmitter/Internal/MQTT/HTMQTTClient.m; sourceTree = "<group>"; };
+		EE1D898652D50F0D92E73764BA8CB871 /* NSDate+Extention.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Extention.m"; path = "HTCommon/NSDate+Extention.m"; sourceTree = "<group>"; };
+		F0913A2BD31747B12466705D6DEE9B15 /* HTResponse_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTResponse_Private.h; path = HTTransmitter/Internal/Classes/HTResponse_Private.h; sourceTree = "<group>"; };
+		F177D1B73AA85574F363B194588F97AE /* HTTransmitterConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTTransmitterConstants.h; path = HTTransmitter/Internal/Classes/HTTransmitterConstants.h; sourceTree = "<group>"; };
+		F3B3625A7A1C400CC08F8F38243EFEC4 /* HTJobScheduler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTJobScheduler.h; path = HTTransmitter/Internal/JobScheduler/HTJobScheduler.h; sourceTree = "<group>"; };
+		F58D8090E4E4BBC93C005E62CCEBE7F8 /* HTCommon-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HTCommon-dummy.m"; sourceTree = "<group>"; };
+		F58ED41EB27911004431487B590399D5 /* HTActiveDriver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTActiveDriver.h; path = HTTransmitter/Internal/LocationService/HTActiveDriver.h; sourceTree = "<group>"; };
+		F7D8DB49ED982E0B9E7517FBE1AB686F /* Pods-ExampleHyperTrack-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExampleHyperTrack-resources.sh"; sourceTree = "<group>"; };
+		FEBCE0E71551E999AD8A78642321654F /* HTResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTResponse.h; path = HTTransmitter/HTResponse.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		692CBE96971A03CA43A032646BF58DA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E30531E0D3D493AB5966CE3C31BDE3B8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CB729BF026067252D78FABBBB4325F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89110451A1E03D20A7C6BA8006A2D70A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EAE478FC937DC3590BE61B2FD1538DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA016ACFBE852E4A4972B362DA99AB17 /* Foundation.framework in Frameworks */,
+				5F2C60C3F76267FBA7BE84177A93959D /* HTCommon.framework in Frameworks */,
+				EB4F2389AF9B59A8A30EDB4937FD0770 /* MQTTClient.framework in Frameworks */,
+				BCC61284E95B584BD364FE0E2E69ED07 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A741A8DA6BAB392B1EFE609FB50B39B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07FBDC3EF3041619D9EFE3917D08BE70 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21F7D672B9D3E24F92B417594EF4500E /* Min */ = {
+			isa = PBXGroup;
+			children = (
+				744D3C33B354DDF19492DF91E8F576C8 /* MQTTCFSocketDecoder.h */,
+				A534DC91A1D3155C0FD69D6FFAA3BFCD /* MQTTCFSocketDecoder.m */,
+				5394D57D7A5ECD9994272189E94DFEB9 /* MQTTCFSocketEncoder.h */,
+				D1554C1E33FC6771ABBC8DB9A15953CB /* MQTTCFSocketEncoder.m */,
+				4672E1B28C977EAA1D6015F4F22D12A0 /* MQTTCFSocketTransport.h */,
+				4158D91574CBDD5E538B3E879405BB84 /* MQTTCFSocketTransport.m */,
+				D6F49A7B77F3A102E9F51877FEFE2C7F /* MQTTClient.h */,
+				6591ED508AD23DE49EBB87E36F397429 /* MQTTCoreDataPersistence.h */,
+				DB0EB0E46FA8DF4032E65D569793FAFD /* MQTTCoreDataPersistence.m */,
+				BCE6D60D04B232AFB989CB2A2CE010F6 /* MQTTDecoder.h */,
+				8C4724454E3FF2967F9E59A823491525 /* MQTTDecoder.m */,
+				16A1776F25316BD93AEB7CFFBAB3E695 /* MQTTInMemoryPersistence.h */,
+				7C986FF7236BCF4FDFCCEB6D590E8FFC /* MQTTInMemoryPersistence.m */,
+				5671AA318CD5AE3B4D1B88859ECAC121 /* MQTTLog.h */,
+				D7DB68DB6F5010007B4E1C6AB4F60136 /* MQTTMessage.h */,
+				7B3F575121B2F8E93536168DEF5569A7 /* MQTTMessage.m */,
+				C1C5BFBF7FF7720D5034E255BA7AE874 /* MQTTPersistence.h */,
+				40E39DF0DEB0A15DB9550345376A0615 /* MQTTSession.h */,
+				BD81F608E0E0B6CA522EBB0B3588A861 /* MQTTSession.m */,
+				5A9D37BBC9C18B482C6878A6F41E9097 /* MQTTSessionLegacy.h */,
+				553CE8ED36686AF0498F439AE50AD000 /* MQTTSessionLegacy.m */,
+				BB7A63CBB39AB73E46BA5F9F9E75C819 /* MQTTSessionSynchron.h */,
+				D8B5FF17CCE0BA3B3306000EE20D83BC /* MQTTSessionSynchron.m */,
+				2A3AE90754831D85F896B5171F377343 /* MQTTSSLSecurityPolicy.h */,
+				007EBF01E99B25526C343B8B307C8179 /* MQTTSSLSecurityPolicy.m */,
+				3F43829079BEF769FB23FA521748078C /* MQTTSSLSecurityPolicyDecoder.h */,
+				3248B59F5ABB54BE8BDD179BDC5425EE /* MQTTSSLSecurityPolicyDecoder.m */,
+				355516DCCE4AA155C99D518980F93331 /* MQTTSSLSecurityPolicyEncoder.h */,
+				145928A694B5837FEEABA65FFB59F11F /* MQTTSSLSecurityPolicyEncoder.m */,
+				4228776FF7D32E5C849B40B4DF3C820D /* MQTTSSLSecurityPolicyTransport.h */,
+				EBA2922DA7062AA819D113947D5B2AF2 /* MQTTSSLSecurityPolicyTransport.m */,
+				3FF3CD85EAE106BA218405A5F97348EB /* MQTTTransport.h */,
+				B414D4A913B85C6304D6DDB508C3A880 /* MQTTTransport.m */,
+			);
+			name = Min;
+			sourceTree = "<group>";
+		};
+		30F39D5A17C2613703E4A8A992D4765E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				493B4F6A7018C584C84AF23A88B93A2D /* HTCommon.framework */,
+				6FE4151A99456B729DFB080DCDBE5C0B /* HTTransmitter.framework */,
+				5E2456F332B32EC348FE9600055AD588 /* MQTTClient.framework */,
+				4882E527D3C0BDAA626488878C204DFF /* Pods_ExampleHyperTrack.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E8B8D554D2CE8EF675D59E48822A56D /* Pods-ExampleHyperTrack */ = {
+			isa = PBXGroup;
+			children = (
+				7E62BC035163F590D23B7B70EA968833 /* Info.plist */,
+				11873B78DF812AF9A0658E423850A53F /* Pods-ExampleHyperTrack.modulemap */,
+				06ECB7081E957AB12717BBE8D6DA615C /* Pods-ExampleHyperTrack-acknowledgements.markdown */,
+				13E4B99174C7E5599FD524AFC05632C3 /* Pods-ExampleHyperTrack-acknowledgements.plist */,
+				8A3AA859D6F24A92FDFCA5B994AF7C55 /* Pods-ExampleHyperTrack-dummy.m */,
+				DCEB597719258A5C6B90C14973C2BFD1 /* Pods-ExampleHyperTrack-frameworks.sh */,
+				F7D8DB49ED982E0B9E7517FBE1AB686F /* Pods-ExampleHyperTrack-resources.sh */,
+				0D76C0E0B0131E764BF51DDF4F77F9AC /* Pods-ExampleHyperTrack-umbrella.h */,
+				B57AE8459F4C0CDE46C7F479AC59DCC6 /* Pods-ExampleHyperTrack.debug.xcconfig */,
+				83ADF0B3664778F8FE8EBA16BFEC9AE8 /* Pods-ExampleHyperTrack.release.xcconfig */,
+			);
+			name = "Pods-ExampleHyperTrack";
+			path = "Target Support Files/Pods-ExampleHyperTrack";
+			sourceTree = "<group>";
+		};
+		40FA706154571B67DEED6E22F64EF728 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				03E15D82C8D2679A6A9E7F18BC2CC5BF /* HTTransmitter.modulemap */,
+				378A25D733D34515C0CA358B0FC6E978 /* HTTransmitter.xcconfig */,
+				7F212D7DDC905ECA5C4FC0EDCD7674EC /* HTTransmitter-dummy.m */,
+				CAFACDC606665183E69200C848A6B43A /* HTTransmitter-prefix.pch */,
+				80D1B1BA15AE1908E4A0BBF6634B57CE /* HTTransmitter-umbrella.h */,
+				A1336AFE371EE91F5E686260FDF0C3A2 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HTTransmitter";
+			sourceTree = "<group>";
+		};
+		4E93D03634FD85F184D1D690944C400F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				34D270FDC693737917727BF2BE7C9ED9 /* Info.plist */,
+				6FAA7AF9BE87C1D336217F0C546A10B3 /* MQTTClient.modulemap */,
+				9AF4E0760F5D3D62255A87A4B61F7D82 /* MQTTClient.xcconfig */,
+				739223F50BDE997D38CDD307794E97AB /* MQTTClient-dummy.m */,
+				26311E744DEF1BFC946015D9CC39DD32 /* MQTTClient-prefix.pch */,
+				68EE901FCA53CFFB20EB6224D3E57330 /* MQTTClient-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MQTTClient";
+			sourceTree = "<group>";
+		};
+		633A61A8E0A7C32B5CEADA6F4A11202C /* HTCommon */ = {
+			isa = PBXGroup;
+			children = (
+				7FCA0B73EC0356E0F97AEB46FF8FD40E /* HTBlocks.h */,
+				1C8B1AF19E06BD7908F74769A7043AF4 /* HTCommon.h */,
+				A7FB387ECCBD2ED2F074203184C5631E /* HTConnectionStatus.h */,
+				D2D2000CACC02D825E37FA53B1314AE8 /* HTConnectionStatus.m */,
+				2DFE96D7F64F62E032D7CA3211E7548B /* HTConstants.h */,
+				3D6343AAF0FB8861C76943F8C67E0F80 /* HTDriver.h */,
+				D0532DEC609CA9EC14F00E8A9E036CE9 /* HTDriver.m */,
+				AA50FD8BDAE54B207622891B62D05A67 /* HTError.h */,
+				6D3E46E9D29F90A5D4D8BB6BAECD16CF /* HTError.m */,
+				2154BC75FC428DFC6945EC5BB84C1C26 /* HTGPSLog.h */,
+				57236896BDE57C1F77AAE571A0376168 /* HTGPSLog.m */,
+				781E3958FAEC52D6A181761DCA7DEEC7 /* HTHTTPLogDataSource.h */,
+				0AC784B5ABE833E53B083313619DABA8 /* HTHTTPLogDataSource.m */,
+				0E98CC1DD5D2333AEC9EC5309950A1AD /* HTLocation.h */,
+				0D6A1AF3A172BFF493B621706BCABD6F /* HTLocation.m */,
+				D9A8A2FEEB485EE8416FE4A5007F2504 /* HTLogDataSource.h */,
+				B8CC098E3EFB5F376DAD90FEA93E7EEF /* HTLogger.h */,
+				E8BEEA8A2CD61AC3865DAC73F3A920F2 /* HTLogger.m */,
+				60FEAC677206C5413751F12167958CFE /* HTLoggerProtocol.h */,
+				2E7CCC4518A13A545B06D5A4048467F5 /* HTPlace.h */,
+				E4317BB3DC4FA542794F4A89B5AEAFD9 /* HTPlace.m */,
+				6D63D2919ADC0A0B2CF871D7739B8B8F /* HTRestClient.h */,
+				606A2A7F5EC42A13A557C409AA4E1FFE /* HTRestClient.m */,
+				18144C60D72AAB7C9718E3121E8248F8 /* HTRestClientDefines.h */,
+				B37B3CF2A504917B308CF0DEFEBD22D3 /* HTRestClientGetImageProtocol.h */,
+				0153CB362B7B52F6EC8DD059EB1D5F82 /* HTRestClientGetProtocol.h */,
+				4E2724EDA4A8B757D31B950B493C8B25 /* HTRestClientPostProtocol.h */,
+				38E56A3ACCC0B9178F16A8243759D4C7 /* HTTask.h */,
+				805BCD29DBD6C153378C9B8677D593C1 /* HTTask.m */,
+				71A878C7E2BF247CF1403D168D3A14FA /* HTTaskDisplay.h */,
+				80EDC8908AFFDD6BB486240E1A6DE328 /* HTTaskDisplay.m */,
+				AD5A0271E10BEF765B991A7A05BE5115 /* HTUtility.h */,
+				51D6C76B3C32EA784818FDA18817AC45 /* HTUtility.m */,
+				5291F7C45B86040E23603CE6A44B9682 /* HTVehicleType.h */,
+				1289CE5AC31B901C0421CF76A2C65503 /* HTVehicleType.m */,
+				2C22957B43982C89E8981EB92E583A1C /* HTWeakStrongMacros.h */,
+				8666EF75458252FD37CFB0F6799A441D /* HyperTrack.h */,
+				6493BA96BEC0A64DABA56783F6C0FCB9 /* HyperTrack.m */,
+				A9C899C598C548920C3501242174F446 /* NSDate+Extention.h */,
+				EE1D898652D50F0D92E73764BA8CB871 /* NSDate+Extention.m */,
+				8C5B6E8070D468A2BB9378C7C175BBCB /* NSDateFormatter+HTExtension.h */,
+				059D7635EC66AE6BD22E9248E821D477 /* NSDateFormatter+HTExtension.m */,
+				0244AC2076C5E2D1C98D048E0F1E7FF7 /* NSDictionary+Extension.h */,
+				8846DBF5A94E53D30EE828BC5166EC82 /* NSDictionary+Extension.m */,
+				C647880438F5F4128DC0F4BBF8B19759 /* Support Files */,
+			);
+			path = HTCommon;
+			sourceTree = "<group>";
+		};
+		65938431F7C0868A9BA482BC82C9D6E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D2BBADC3871F6F7ADFF19E7A3D68CEF /* HTCommon.framework */,
+				936E717F0DB050A8FD144FFD8B127DE3 /* MQTTClient.framework */,
+				D2B88941349AA1034A3D05937F49106D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				65938431F7C0868A9BA482BC82C9D6E0 /* Frameworks */,
+				D9A2DB73A2299349447B4F0036BA6D07 /* Pods */,
+				30F39D5A17C2613703E4A8A992D4765E /* Products */,
+				C27D40ECD59007A76E6E848345D65FFE /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		80214DE31C004B6D88B7C10B6CA32A82 /* MQTTClient */ = {
+			isa = PBXGroup;
+			children = (
+				8F0DB663732BE3A6D999C8E923B38890 /* Manager */,
+				21F7D672B9D3E24F92B417594EF4500E /* Min */,
+				4E93D03634FD85F184D1D690944C400F /* Support Files */,
+			);
+			path = MQTTClient;
+			sourceTree = "<group>";
+		};
+		8F0DB663732BE3A6D999C8E923B38890 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E39B2DE31EBAA089CCC50C4DE14F10E5 /* MQTTSessionManager.h */,
+				06BFF4167A2637119E361EAEE48856D2 /* MQTTSessionManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		BC235098F46CA7D995D3B71041E3E8B4 /* HTTransmitter */ = {
+			isa = PBXGroup;
+			children = (
+				F58ED41EB27911004431487B590399D5 /* HTActiveDriver.h */,
+				723CAAF6E02B897823DA8B90B465BF6B /* HTActiveDriver.m */,
+				AD50EC86B09E82DC7EE2D2E47B4BB5F0 /* HTBatteryStats.h */,
+				344C39483B5637DABDF25A6732E5C66F /* HTBatteryStats.m */,
+				BCB6E3B99D0DF117E1F3EB6C0711EA52 /* HTDatabase.h */,
+				65E2620EF462A37C31C2A06E3CC0D6CC /* HTDatabaseDataSource.h */,
+				3ED2E9DF3D1826AF77243C7129D3E1FC /* HTDatabaseDataSource.m */,
+				59198ECC62A24720A9A1C528EC683551 /* HTDatabaseDataSourceDefines.h */,
+				D79B73F0E0C71B085B3ECE01D5011C58 /* HTDeviceStats.h */,
+				C8B67868C8CFC274DF2C47ECAEE5610A /* HTDeviceStats.m */,
+				05867E7BA7656C2B4BEA805E65FC5866 /* HTDispatchQueue.h */,
+				8C7C2F21F157ECA05A9431630F0E7071 /* HTDispatchQueue.m */,
+				1549DBC4510DDAF170F12BE232897402 /* HTDriverStats.h */,
+				6D0FF11974B0AF832A2838A87E616C10 /* HTDriverStats.m */,
+				D46B46AA57BA95F781BCBDA1BFB9B02E /* HTDriverStatsCollector.h */,
+				34A5F1042ECD0FD77AFF59C20D6906A3 /* HTDriverStatsCollector.m */,
+				0E5B95AE629423D782CD203B48D8E0AD /* HTGetLogsDataSource.h */,
+				15E8C714F9B9B4154EF6685F26CDF5E9 /* HTJob.h */,
+				9CDD21A464811F6C6D938A6764453C43 /* HTJob.m */,
+				8723B1D55A515F17FF20032DB9481EDB /* HTJobIDGenerator.h */,
+				7F1A178234B119CE1C40923F87BCADA3 /* HTJobIDGenerator.m */,
+				1213AB0B67ED9AA16698912698C12469 /* HTJobProtocol.h */,
+				F3B3625A7A1C400CC08F8F38243EFEC4 /* HTJobScheduler.h */,
+				41F1C72445C06C28B9F7838017D441FD /* HTJobScheduler.m */,
+				E2349A713A7100FBDDB502FEE89F0817 /* HTJobScheduler_Private.h */,
+				02004DFF404CDA6704A0663DBAB5FEAD /* HTJobSchedulerDefines.h */,
+				623356E6B8F26E3BA6C035C0DF40609F /* HTLocationBatchManager.h */,
+				64B60AC5859A19922608F86B211FF832 /* HTLocationBatchManager.m */,
+				81A9616C237E0F78BFB65CE7C0318C8D /* HTLocationDataSource.h */,
+				772991D7982C1EE83F9E1518751A6D70 /* HTLocationDataSource.m */,
+				77BDFF8E9694A4DE2BE1C3CD2A4192D6 /* HTLocationDataSourceProtocol.h */,
+				051C01D162F9C94E1B39C5EDB0DFFC53 /* HTLocationManager.h */,
+				4F109900773C1928A815B9933AB4026D /* HTLocationManager.m */,
+				3077D849F867E1374818A8CAEDEFEEA3 /* HTLocationManagerDefines.h */,
+				1E4688E9B7056C2F8ABDCF0488EAD9BF /* HTLocationRequest.h */,
+				5218B36D32A9B17CF587641C8D2B2A43 /* HTLocationRequest.m */,
+				C757BB952021A978C5499E6A8815780E /* HTLocationRequestIDGenerator.h */,
+				1EF18B2A2B211FE1E3EAB975A81F5323 /* HTLocationRequestIDGenerator.m */,
+				4FE5270A1532F2A25A19353D121C0060 /* HTLocationService.h */,
+				596C09B4D72B08D4A7310E83300EFD86 /* HTLocationService.m */,
+				9BC993BD9DC1FCD0B29C942EFF54335B /* HTLocationStats.h */,
+				D0A9C8ECE16084CA20FE561A411C8297 /* HTLocationStats.m */,
+				CEFFCFDFA2B46B1F11764C0FE9CAD889 /* HTLocationTable.h */,
+				B961C0487D4B1EC436E20DBB8C675A3C /* HTLocationTable.m */,
+				8FE9BCCAD3DF3397D87C90A190009714 /* HTLogMessageTable.h */,
+				90BFA548FDE2485BFA1FFB1CE69B3C3F /* HTLogMessageTable.m */,
+				ADE7385478DFA03C20E061A952573621 /* HTMotionActivityManager.h */,
+				D67BC23083CDAC3ED0D6FE456A9D82C7 /* HTMotionActivityManager.m */,
+				544B991A50C243B4B15CD1622E270BE9 /* HTMQTTClient.h */,
+				ECC1D4583E5AE7A9AFFACC8E2905C211 /* HTMQTTClient.m */,
+				5C1F8292A49E7107A848925550A51B91 /* HTMQTTDefines.h */,
+				09B2AE8044394073E86CD622AB6C4D8B /* HTMQTTSubscription.h */,
+				D7FC28BB67305DBB14F8C19035E6355B /* HTMQTTSubscription.m */,
+				A59F38C65FA5C162DC4A24DBDA83454A /* HTMQTTSubscriptionIDGenerator.h */,
+				5746119C2D9512D63A9888775E9F5018 /* HTMQTTSubscriptionIDGenerator.m */,
+				370A3F77EF1057EA024E098618E47E41 /* HTNetworkJobScheduler.h */,
+				06A36BB718C224118660211DFEFBF5EC /* HTNetworkJobScheduler.m */,
+				083B83A5A3C38F5EDB7F7DE42027ABB1 /* HTNetworkRequest.h */,
+				6034515F9712C1B3CCCE9988E880293F /* HTNetworkRequest.m */,
+				8988123C13FAF7C18E567D3CFCCCB9A9 /* HTNetworkRequestDataSource.h */,
+				0B3973414663789195C445BE1123EC23 /* HTNetworkRequestDataSource.m */,
+				91471AC0A7667F62BCAADB1F1A66F664 /* HTNetworkRequestDataSourceProtocol.h */,
+				73E94C3F3437A146A7792A959D608059 /* HTNetworkRequestManager.h */,
+				36BE3CFB850AB1F4B1FDBEDD78BEEA3F /* HTNetworkRequestManager.m */,
+				984D14C56AE4BBCC2C90D00ECC7DEFA0 /* HTNetworkRequestManagerDefines.h */,
+				7390CB7D789DD514D0902CD26F058280 /* HTNetworkRequestProtocol.h */,
+				0BFAF2E94BA34EB4E4E5C3705F3EAC2C /* HTNetworkRequestTable.h */,
+				109B08BF849174AD966CCBB0D2210A79 /* HTNetworkRequestTable.m */,
+				1AA4D2B5E957524D9CB2339BE6749538 /* HTRadioStats.h */,
+				182E157605CF9066C3220A412A55D7A9 /* HTRadioStats.m */,
+				776DA14A8ACDA90088A1D4893BFE6FC1 /* HTReachability.h */,
+				DB5699DCF8AE6B4646F35BB007ECBF75 /* HTReachability.m */,
+				FEBCE0E71551E999AD8A78642321654F /* HTResponse.h */,
+				D1C53A59F8DBF9E59E0C2A0551CAE4E9 /* HTResponse.m */,
+				F0913A2BD31747B12466705D6DEE9B15 /* HTResponse_Private.h */,
+				2D412EB9803028CB58AFC410AA8AE629 /* HTScheduler.h */,
+				266FB0B711BC4E0D3D55532984AD87DC /* HTSDKControls.h */,
+				701629DA809E847FCB28475C48FEA4E4 /* HTSDKControls.m */,
+				8A52C808392FF17AAF34D9FA04635897 /* HTSDKControlsManager.h */,
+				3EB9F0CC38AD2EDC1E5B3FD23981B2F8 /* HTSDKControlsManager.m */,
+				86EA73E51D937AEF1EEBE46291FD1A61 /* HTShiftParams.h */,
+				BDD8D05DD992DCE885C7C8D98C152291 /* HTShiftParams.m */,
+				ACA85CEA08FA8229B073DD8C22FB69D0 /* HTSocket.h */,
+				5361678FF55B04B4ABEEE6AFEF9EA042 /* HTSocketPublishable.h */,
+				8241878FC5F8F17B5D0C44149BF39F22 /* HTSocketSubscribable.h */,
+				4E42A6C435510B6447330221B05D4B79 /* HTSQLiteDatabase.h */,
+				D3B1DE7AB27359D7807628BF2A81B2F2 /* HTSQLiteDatabase.m */,
+				D3505CBE876776C10459C14DF5E4C3D1 /* HTSQLiteDatabase+HTTransmitterClient.h */,
+				A947461FFDBACE99D30DADCD72DF7927 /* HTSQLiteDatabase+HTTransmitterClient.m */,
+				2385E07825184E5FE7D662FD38A0C2FB /* HTSQLiteDatabaseResult.h */,
+				7842AEA84C0950A9F193F23DAD5A6838 /* HTSQLiteDatabaseResult.m */,
+				555A613B85E48BD77723CAF4CEE491DE /* HTSQLiteStatement.h */,
+				131644821254E1735650EC0728C1BB93 /* HTSQLiteStatement.m */,
+				7D8C57387BF6451122F454247631B23C /* HTTaskParams.h */,
+				A4EAA79C2C8F40C6C93468011F9F1B61 /* HTTaskParams.m */,
+				6305D8E98BAF33389DAEC0215AA1D35E /* HTTransmitter.h */,
+				A487522AD5018E9294F4E0100BA80958 /* HTTransmitterClient.h */,
+				2C8442C767D4DB93FABBC4E9C3C33C11 /* HTTransmitterClient.m */,
+				F177D1B73AA85574F363B194588F97AE /* HTTransmitterConstants.h */,
+				21E8B15241DAF0CAA6411ED45D5076F4 /* HTTransmitterConstants.m */,
+				D61F9A3144728FAE54DCB2790A2D0500 /* HTTransmitterJobSchedulerListener.h */,
+				BC0838F7ED930F42F16AB2E2C50D3C12 /* HTTransmitterJobSchedulerListener.m */,
+				32F65421BD25BE9E41662100C6ECA5DC /* HTTrip.h */,
+				BD34EA20B13F5991D6364C08DC31C1DE /* HTTrip.m */,
+				9F45CF4C270E582AF4CD72D2EFA5B7CB /* HTTripParams.h */,
+				37920810FBD1431625D9549558D0BE53 /* HTTripParams.m */,
+				DD7F348248FFBEF905232E9557DB6EF8 /* NSArray+HTExtension.h */,
+				8D92745BB86A7D3B557505A4A022B227 /* NSArray+HTExtension.m */,
+				7C4A10519152EF184BFD30CBF3DDD4DD /* NSError+HTLocationManager.h */,
+				6D1104DF0D8B628E38DCD7AF0BEDF41F /* NSError+HTLocationManager.m */,
+				4A73D27AC97D369E72AF6E364C306714 /* NSError+HTNetworkRequestManager.h */,
+				DF535DFD389E75CA1719D55AC9F165E8 /* NSError+HTNetworkRequestManager.m */,
+				432C2BC0D50A5616D25C8BBF21A658E4 /* NSError+HTTransmitterClient.h */,
+				B3957160499EDC544BF714578403861E /* NSError+HTTransmitterClient.m */,
+				40FA706154571B67DEED6E22F64EF728 /* Support Files */,
+			);
+			path = HTTransmitter;
+			sourceTree = "<group>";
+		};
+		C27D40ECD59007A76E6E848345D65FFE /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E8B8D554D2CE8EF675D59E48822A56D /* Pods-ExampleHyperTrack */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C647880438F5F4128DC0F4BBF8B19759 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C718D1C60F007EC165C795D346A477BE /* HTCommon.modulemap */,
+				4EECE5E66A391B8D60D8514A33AEAEAF /* HTCommon.xcconfig */,
+				F58D8090E4E4BBC93C005E62CCEBE7F8 /* HTCommon-dummy.m */,
+				5FCF82E0FF0B769BAE8CAF0546DE4F5A /* HTCommon-prefix.pch */,
+				DFF5A63FE99BDA93D92F784454D004F0 /* HTCommon-umbrella.h */,
+				CB67A58FD0C0B7134250C912F6704217 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HTCommon";
+			sourceTree = "<group>";
+		};
+		D2B88941349AA1034A3D05937F49106D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9389CE5220898E4FEB297FF1DAD4BA34 /* Foundation.framework */,
+				1D392320558BBB63D3913AE930590BA9 /* SystemConfiguration.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D9A2DB73A2299349447B4F0036BA6D07 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				633A61A8E0A7C32B5CEADA6F4A11202C /* HTCommon */,
+				BC235098F46CA7D995D3B71041E3E8B4 /* HTTransmitter */,
+				80214DE31C004B6D88B7C10B6CA32A82 /* MQTTClient */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		57223729DDB7E106416FBFE4D9E50ADE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				745B7D6AF4D01CB27E2EAEA77A42221F /* HTBlocks.h in Headers */,
+				EA9BDEBE3DD9B05A1B5CE439FD47D1FA /* HTCommon-umbrella.h in Headers */,
+				E85E65D19E81EC24802ECFD4A81F7BED /* HTCommon.h in Headers */,
+				38621EEF39368CD7BBE2F6C4E4C3E17A /* HTConnectionStatus.h in Headers */,
+				63317E194FD128239C724E49FD97CD47 /* HTConstants.h in Headers */,
+				36DA8EB532FED6F0ABC4068C8B12CBFD /* HTDriver.h in Headers */,
+				61EFC44B1B18444606FAE39302C89556 /* HTError.h in Headers */,
+				658A6F11F1E2160B132A30D619D98F01 /* HTGPSLog.h in Headers */,
+				2FAB413C062CF10E91EB7D7A9920239E /* HTHTTPLogDataSource.h in Headers */,
+				57B7DB0992A72C9833F1485DC8D13B3D /* HTLocation.h in Headers */,
+				AC1293E7E35BC22B1C1AACD5B862A3DD /* HTLogDataSource.h in Headers */,
+				F4FDFFC16EF12872F1998D8D742ED1B3 /* HTLogger.h in Headers */,
+				89A769675F88D5654E3494966A4A2327 /* HTLoggerProtocol.h in Headers */,
+				2160A7AC59639EEBE0753EC4BA5CC90F /* HTPlace.h in Headers */,
+				DF26D8C112361980AEBBCF63CCE85F31 /* HTRestClient.h in Headers */,
+				59B6D748D374C7AF2A2188E78A15B71A /* HTRestClientDefines.h in Headers */,
+				CD6A73478372971DCDE77892E0231936 /* HTRestClientGetImageProtocol.h in Headers */,
+				02BD0FA2D2CFB1DF314CBEF8DF8A04DA /* HTRestClientGetProtocol.h in Headers */,
+				9AD1A88B9AEC10E8C95D37D140CACCEB /* HTRestClientPostProtocol.h in Headers */,
+				FBB2474CD87893FB44AFD29CA5FDB340 /* HTTask.h in Headers */,
+				ED7C378B05074F3FC4A8CE12A7B55969 /* HTTaskDisplay.h in Headers */,
+				8877B7AFD0D0F893C2340AC4CD21F6C2 /* HTUtility.h in Headers */,
+				4C49B7E6FD965A6A46C542DAD455245A /* HTVehicleType.h in Headers */,
+				4BEC17E7F80E7A32A95BDD6D367F296F /* HTWeakStrongMacros.h in Headers */,
+				3B2C726E9DFDCB5BC62B8F79A35974DC /* HyperTrack.h in Headers */,
+				CC567FC2B401ED53F5C606C2CCE0CDDE /* NSDate+Extention.h in Headers */,
+				866BB414828861B35A64DB03DF29C711 /* NSDateFormatter+HTExtension.h in Headers */,
+				4708F51B1B514A386E87704356653D11 /* NSDictionary+Extension.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75B88464F8A6B5B0F82E9ADD2DEA48EB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				183DA5706C3A65D3E3ADC624BE6F0887 /* MQTTCFSocketDecoder.h in Headers */,
+				5902C60EC52582B08384E362DA820575 /* MQTTCFSocketEncoder.h in Headers */,
+				6D492EBDC44CE772D63D9F86B2052153 /* MQTTCFSocketTransport.h in Headers */,
+				9D460FC7953C052EF57FD98F8105A6DB /* MQTTClient-umbrella.h in Headers */,
+				5C42FD0BE1D53C93151513D4AA604B55 /* MQTTClient.h in Headers */,
+				2344A1FE0DBD0429B67876075CC3F7B8 /* MQTTCoreDataPersistence.h in Headers */,
+				52928B948555496B2D0C9F702CA671A5 /* MQTTDecoder.h in Headers */,
+				5A185A3292DCF6B81552E339F46B47C5 /* MQTTInMemoryPersistence.h in Headers */,
+				E33BEF13B98051C3D52FB0DC6BE35064 /* MQTTLog.h in Headers */,
+				9A96B3294D6AAB97DA3547667E2D5FCD /* MQTTMessage.h in Headers */,
+				12091BB825675D490414CB3EB42FE797 /* MQTTPersistence.h in Headers */,
+				FDBC0F6CFA8DBB7AC9C332E20CA1DC8E /* MQTTSession.h in Headers */,
+				0AEE58DE13A5B6947F129D41295272F4 /* MQTTSessionLegacy.h in Headers */,
+				A7CA3BB9EC8F8CCBB1E93A951A44C348 /* MQTTSessionManager.h in Headers */,
+				7F249FD9DF264D43CEFF947F099788FF /* MQTTSessionSynchron.h in Headers */,
+				62433E52A20BE2B469F57F8FD28F871B /* MQTTSSLSecurityPolicy.h in Headers */,
+				49465854678A153B479B96B574AFCE6E /* MQTTSSLSecurityPolicyDecoder.h in Headers */,
+				9729D963A1496E7D81BC2B7A45F240B3 /* MQTTSSLSecurityPolicyEncoder.h in Headers */,
+				1BAEC75B5451DF2D8980DCC3B778ACCB /* MQTTSSLSecurityPolicyTransport.h in Headers */,
+				153191FD42625E1C7AB35FB32AEA28E8 /* MQTTTransport.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB41F634FECF3E92B0A7917A7B4C0280 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F807AD2BBBCD03CE12B6EE31CFD2806 /* HTActiveDriver.h in Headers */,
+				8C99DEF73843116D7F9518D04C09F0CD /* HTBatteryStats.h in Headers */,
+				E1D7052C50B1187C238490E48D169733 /* HTDatabase.h in Headers */,
+				004D8C82075DDE6E8DDC7DC1422C91CF /* HTDatabaseDataSource.h in Headers */,
+				61596194DC8F5D3403EA1EEE69A3608C /* HTDatabaseDataSourceDefines.h in Headers */,
+				AD487F9E090458985C3A0A627AA1C8A8 /* HTDeviceStats.h in Headers */,
+				0CAF782F90A47143596792F874450F9A /* HTDispatchQueue.h in Headers */,
+				97661830DFC631CB9F9940929F69AEFB /* HTDriverStats.h in Headers */,
+				86ABFC092BE5233937B206584949A349 /* HTDriverStatsCollector.h in Headers */,
+				AC834B3407C69733F38E2563E7D506AC /* HTGetLogsDataSource.h in Headers */,
+				AA8D0EECD337ECAB26368D8A243CFFCC /* HTJob.h in Headers */,
+				F6959D20E272CAA4DF0EF53EB864589B /* HTJobIDGenerator.h in Headers */,
+				BE32EB5A0CBE26A27CC6FFEF1C71AA20 /* HTJobProtocol.h in Headers */,
+				69224D1ECCBCD21BD80486E3F03A890D /* HTJobScheduler.h in Headers */,
+				DA2F54636542B315D82B976AA14D321D /* HTJobScheduler_Private.h in Headers */,
+				4824A03AF1B7E641DC818240D44DCF85 /* HTJobSchedulerDefines.h in Headers */,
+				5B81F688EA405123237D63E71B034F45 /* HTLocationBatchManager.h in Headers */,
+				856C4D2F4A3A3D1E95666B40DC794BEF /* HTLocationDataSource.h in Headers */,
+				29DB7FC216641555CD3D79FACAD4FB33 /* HTLocationDataSourceProtocol.h in Headers */,
+				C380266079D436B77613263D186CEAE7 /* HTLocationManager.h in Headers */,
+				9DBE2648235DED82897791686C1261C5 /* HTLocationManagerDefines.h in Headers */,
+				5A2A4CB5859FD51A109DF96E060D4F9F /* HTLocationRequest.h in Headers */,
+				3A95186F67195E4D9418F9C13EB6582A /* HTLocationRequestIDGenerator.h in Headers */,
+				7CCE648E30196D0AF743DB961ECB212A /* HTLocationService.h in Headers */,
+				59E5EF79F2A3025D9CBD7234BA02E0D9 /* HTLocationStats.h in Headers */,
+				077AEBEB846F30A5F43822C466ADD175 /* HTLocationTable.h in Headers */,
+				092A1E1302DD230CAD2A412866FBC08B /* HTLogMessageTable.h in Headers */,
+				C27E7AA69B22A5BF80777F6C2B420839 /* HTMotionActivityManager.h in Headers */,
+				64D6111B7833A1CACCE7A9C0AC8B2F53 /* HTMQTTClient.h in Headers */,
+				95B9788ED456646C951FD4CD0BAE9A6A /* HTMQTTDefines.h in Headers */,
+				091F7768D7CB566E2EFF771032E5624F /* HTMQTTSubscription.h in Headers */,
+				211F435ADFB497007FB50309209C2AF4 /* HTMQTTSubscriptionIDGenerator.h in Headers */,
+				421DE5BB471D7CBA0E9D62CF4DD8B46A /* HTNetworkJobScheduler.h in Headers */,
+				B83B67EC84F0C82A2F82513992A9F0F6 /* HTNetworkRequest.h in Headers */,
+				6EAABC77B9DFFEFEC25560E400709B63 /* HTNetworkRequestDataSource.h in Headers */,
+				15787D0F6912F306F2BAA4DA9B5161B8 /* HTNetworkRequestDataSourceProtocol.h in Headers */,
+				664BDEBAD079B9886C7193B42CE055A8 /* HTNetworkRequestManager.h in Headers */,
+				EFFAADFCB8AD36A5EFA94D79F0C808F0 /* HTNetworkRequestManagerDefines.h in Headers */,
+				9B9E9A508C4DFC6588632B1FDF5D0D45 /* HTNetworkRequestProtocol.h in Headers */,
+				F06944130540E855EAA79B212006C730 /* HTNetworkRequestTable.h in Headers */,
+				C0863115F38DEB42CCF019EC53014A3E /* HTRadioStats.h in Headers */,
+				4F64F578FC0C26C871D803BBCE1AE4C4 /* HTReachability.h in Headers */,
+				8C96AE19F60D269E18372E9F75B93CAD /* HTResponse.h in Headers */,
+				C9AAA6F4C951562656EBEEF21AABE9D5 /* HTResponse_Private.h in Headers */,
+				7B7812A5942BAD34B3857B65691236D4 /* HTScheduler.h in Headers */,
+				BCBC48DA6BAE6204B36FE6DEFC9260AF /* HTSDKControls.h in Headers */,
+				B14D4CCD97C0693C65EC44CA4A04399E /* HTSDKControlsManager.h in Headers */,
+				4A9F2F12CEB28781A56F4A1A160A4317 /* HTShiftParams.h in Headers */,
+				687D98AB3D91F7B314C28C19104B2CA5 /* HTSocket.h in Headers */,
+				320F57C2DA603FEB5841F066A7C6BCA4 /* HTSocketPublishable.h in Headers */,
+				E174EDD255679EE19FDA6002175EE129 /* HTSocketSubscribable.h in Headers */,
+				CDCC88907E6933858E15D10B6DD1B3ED /* HTSQLiteDatabase+HTTransmitterClient.h in Headers */,
+				6D25AA987880814B300CE0084ACBED51 /* HTSQLiteDatabase.h in Headers */,
+				3A14F4A50D1079994A0950031F602690 /* HTSQLiteDatabaseResult.h in Headers */,
+				63FB2C94849BC47985B728126D1151F0 /* HTSQLiteStatement.h in Headers */,
+				8241E5D9965B449900C6E00766AF01F5 /* HTTaskParams.h in Headers */,
+				E731D2753C54D62A8F9A1C7DE0C9E9F4 /* HTTransmitter-umbrella.h in Headers */,
+				3F7A7582B5EB29430D4A3A654C0D1868 /* HTTransmitter.h in Headers */,
+				512B1FD390A7BA11C7E5DD1C6777E3B7 /* HTTransmitterClient.h in Headers */,
+				EB7C523E2313076B9EF1B2BC93117AE6 /* HTTransmitterConstants.h in Headers */,
+				94CA761CFA6A9715B1B0DF0FFDC87D45 /* HTTransmitterJobSchedulerListener.h in Headers */,
+				BDDE3DE56359D28C1157BCABFBE6CE7A /* HTTrip.h in Headers */,
+				0E074172EB9166D599D4D5FE5BC5CC36 /* HTTripParams.h in Headers */,
+				6544ED844087A394141F4AF11AF138CB /* NSArray+HTExtension.h in Headers */,
+				AB6DD4376EBF0E82C7530D9EBD7C537F /* NSError+HTLocationManager.h in Headers */,
+				8CE70248BD94C31B09D66F7164D46F36 /* NSError+HTNetworkRequestManager.h in Headers */,
+				51A5B12609C611FFA6F7C0BE5E74FF2D /* NSError+HTTransmitterClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E94DB41D2E7264BFB03ECE7227248DC1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15C0B4C216C946219E401F1BBBFB92F8 /* Pods-ExampleHyperTrack-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		27BCE0728D43CA174FAC7DF0BA7BF32A /* Pods-ExampleHyperTrack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D7DA9C75F9E1B3A411A7CDA13151B8B /* Build configuration list for PBXNativeTarget "Pods-ExampleHyperTrack" */;
+			buildPhases = (
+				8A38D0B8FD5B0D924E42B8451BAAAEBA /* Sources */,
+				A741A8DA6BAB392B1EFE609FB50B39B0 /* Frameworks */,
+				E94DB41D2E7264BFB03ECE7227248DC1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B746E3E7A764C8BEFF191269A8A4AF8F /* PBXTargetDependency */,
+				D3F43BA32C1F0B12A9974B8D254891E8 /* PBXTargetDependency */,
+				45E440145470A1341B0CD35D0689C0DF /* PBXTargetDependency */,
+			);
+			name = "Pods-ExampleHyperTrack";
+			productName = "Pods-ExampleHyperTrack";
+			productReference = 4882E527D3C0BDAA626488878C204DFF /* Pods_ExampleHyperTrack.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		34A293283E43943122C07142865E3394 /* HTTransmitter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A641EA1A56994B0B516AD46DDF718BD /* Build configuration list for PBXNativeTarget "HTTransmitter" */;
+			buildPhases = (
+				DDB73BF99628B16C25EB220A99C47E03 /* Sources */,
+				7EAE478FC937DC3590BE61B2FD1538DE /* Frameworks */,
+				BB41F634FECF3E92B0A7917A7B4C0280 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCE4A9005D69C13445BBFAB247A6A5D3 /* PBXTargetDependency */,
+				DC69A019E215DAC87519EB6EDA722C45 /* PBXTargetDependency */,
+			);
+			name = HTTransmitter;
+			productName = HTTransmitter;
+			productReference = 6FE4151A99456B729DFB080DCDBE5C0B /* HTTransmitter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7A880C8DA8488A0A998688DD3E9ED07A /* HTCommon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 487ECA8D396B9E950A231DB14F67FD50 /* Build configuration list for PBXNativeTarget "HTCommon" */;
+			buildPhases = (
+				F2EB3FEA9C4BEAC0E958030D3CA59D8D /* Sources */,
+				6CB729BF026067252D78FABBBB4325F4 /* Frameworks */,
+				57223729DDB7E106416FBFE4D9E50ADE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HTCommon;
+			productName = HTCommon;
+			productReference = 493B4F6A7018C584C84AF23A88B93A2D /* HTCommon.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		997ED2786DE9E4782515D3BD0F710F77 /* MQTTClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F0781E49292194DE8FC75039995299F /* Build configuration list for PBXNativeTarget "MQTTClient" */;
+			buildPhases = (
+				BC486F9FDF39BE0C0AB97CCF0B591399 /* Sources */,
+				692CBE96971A03CA43A032646BF58DA6 /* Frameworks */,
+				75B88464F8A6B5B0F82E9ADD2DEA48EB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MQTTClient;
+			productName = MQTTClient;
+			productReference = 5E2456F332B32EC348FE9600055AD588 /* MQTTClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 30F39D5A17C2613703E4A8A992D4765E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A880C8DA8488A0A998688DD3E9ED07A /* HTCommon */,
+				34A293283E43943122C07142865E3394 /* HTTransmitter */,
+				997ED2786DE9E4782515D3BD0F710F77 /* MQTTClient */,
+				27BCE0728D43CA174FAC7DF0BA7BF32A /* Pods-ExampleHyperTrack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A38D0B8FD5B0D924E42B8451BAAAEBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3534541645181403FE3D43A1B38F479 /* Pods-ExampleHyperTrack-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC486F9FDF39BE0C0AB97CCF0B591399 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				645A5FD1B21CEAD381A04B14076B44D1 /* MQTTCFSocketDecoder.m in Sources */,
+				4A94817757BC65616041EC719081EF0E /* MQTTCFSocketEncoder.m in Sources */,
+				BCFD895DFEC8604B83947D17B7FE518A /* MQTTCFSocketTransport.m in Sources */,
+				F11C1D09080EA416A4C378497F01DDD5 /* MQTTClient-dummy.m in Sources */,
+				05D8C73A535E0977B9371E1AAB8F99BF /* MQTTCoreDataPersistence.m in Sources */,
+				388675BF9B68DD7D3A8A414C2C9C9C71 /* MQTTDecoder.m in Sources */,
+				FD9B62119F09036D31EFDB7647981311 /* MQTTInMemoryPersistence.m in Sources */,
+				9AE29169DE4869D4B06D4299C86A6648 /* MQTTMessage.m in Sources */,
+				80B926C2D488CABAB3A7E7DD2A1B4B3C /* MQTTSession.m in Sources */,
+				2B0B48E4378E5F3959CC3A22399F61BD /* MQTTSessionLegacy.m in Sources */,
+				B34DA88F0DAF313F71495AF2AEE04022 /* MQTTSessionManager.m in Sources */,
+				A6380B7806BF3586763A0EB4A08107B5 /* MQTTSessionSynchron.m in Sources */,
+				4E434BDE3231EE878A229E6F4AB7EC3A /* MQTTSSLSecurityPolicy.m in Sources */,
+				FF9F9122F64EBE63386B39DE95F63F95 /* MQTTSSLSecurityPolicyDecoder.m in Sources */,
+				25D8CF404A538A9786C6DE0E23FC8082 /* MQTTSSLSecurityPolicyEncoder.m in Sources */,
+				284C036DC527DC7C0FF4828D2FBFD259 /* MQTTSSLSecurityPolicyTransport.m in Sources */,
+				1EE65765BAD34E14B5474325BE7ECFD7 /* MQTTTransport.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDB73BF99628B16C25EB220A99C47E03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F65A0D44FE4D6B76B2D2B1ED434DE664 /* HTActiveDriver.m in Sources */,
+				04494D620B44B786A9EB43A75A10974A /* HTBatteryStats.m in Sources */,
+				2CFB8092F8647A00F4161826D9E6D6BA /* HTDatabaseDataSource.m in Sources */,
+				563480F7BB438F06CBC47851DC7CD82E /* HTDeviceStats.m in Sources */,
+				FAF4E4D696AB036B333C6BFC478C8562 /* HTDispatchQueue.m in Sources */,
+				B3459B83F0EE92F2EC7DEEAB1D226EA9 /* HTDriverStats.m in Sources */,
+				6505FB3E88B049D685CA959191974D57 /* HTDriverStatsCollector.m in Sources */,
+				1A27892BE998828492DCEC7F09CDC194 /* HTJob.m in Sources */,
+				1746817166D536BA0C36DF69473B0C8B /* HTJobIDGenerator.m in Sources */,
+				C8C20BBFC1D338C14F518362C025B281 /* HTJobScheduler.m in Sources */,
+				B432F3B7428B67CE93FED357F0E9B9ED /* HTLocationBatchManager.m in Sources */,
+				85B6A14AB1FCFA0F8F1AB26867C97275 /* HTLocationDataSource.m in Sources */,
+				12B5AD89FB8E9C1BE5D576246ED485CF /* HTLocationManager.m in Sources */,
+				45559D48F3CD3FF70F509168CE6CA693 /* HTLocationRequest.m in Sources */,
+				B59AECD18C11DA98676D802BB20A5DE1 /* HTLocationRequestIDGenerator.m in Sources */,
+				69D15F147271A3C58A82E6F5BA5A46E7 /* HTLocationService.m in Sources */,
+				86232D62B891018504C2178E0AFC4534 /* HTLocationStats.m in Sources */,
+				BC512A8994DBFF6465CB3914D94AE299 /* HTLocationTable.m in Sources */,
+				46BBD18946138C5AD7D478208BE2CFF4 /* HTLogMessageTable.m in Sources */,
+				926912C9AF373DFB9433D71B4ABFA59C /* HTMotionActivityManager.m in Sources */,
+				060A999485BBE44D8BAC4338C3A218C1 /* HTMQTTClient.m in Sources */,
+				93EC013E080A54B1C88603F3FEC54692 /* HTMQTTSubscription.m in Sources */,
+				9968A90DE50D5B7342F27CB1B18DE2DC /* HTMQTTSubscriptionIDGenerator.m in Sources */,
+				6AFF6C2F9C2903635FF682DE7625B05A /* HTNetworkJobScheduler.m in Sources */,
+				9B988B3E9648D12EB4B88545919A16B9 /* HTNetworkRequest.m in Sources */,
+				E0731057480DF84AD5C5AD6570DF557E /* HTNetworkRequestDataSource.m in Sources */,
+				82B9733319B51E85DCE013996C96B7A8 /* HTNetworkRequestManager.m in Sources */,
+				FA93493D3736B540BB281E3DBC2BB4E6 /* HTNetworkRequestTable.m in Sources */,
+				75FE733E28205F7872AD916D2F1F7C2D /* HTRadioStats.m in Sources */,
+				DD8B3ADB12E15B6506F526AF8B21988A /* HTReachability.m in Sources */,
+				40F11C127226A503558AEAB641BC60F2 /* HTResponse.m in Sources */,
+				ED97858B7291965C5750763D5BF03BF9 /* HTSDKControls.m in Sources */,
+				FD242C17C055DBEADA79065E596A3412 /* HTSDKControlsManager.m in Sources */,
+				2CB9A31E490D528B8127D32575AF1E08 /* HTShiftParams.m in Sources */,
+				9D18E51497C9D4D1F843EC633B41E1EC /* HTSQLiteDatabase+HTTransmitterClient.m in Sources */,
+				40A017B5DB62D33AFBB9837F003D1D8D /* HTSQLiteDatabase.m in Sources */,
+				8DBF1A57100C384D77DD38AF82C4C505 /* HTSQLiteDatabaseResult.m in Sources */,
+				16E63B75118F09285D426CFB7838C96E /* HTSQLiteStatement.m in Sources */,
+				17CAE96ACA09C7AA5AEE652467D1ABF2 /* HTTaskParams.m in Sources */,
+				202713CB8C2C1B482B293BB85DC38446 /* HTTransmitter-dummy.m in Sources */,
+				3F0EAB8DBA635C2F6ADBA13B274F8232 /* HTTransmitterClient.m in Sources */,
+				F2D4ACF777AD7749F1AC6611EEE32045 /* HTTransmitterConstants.m in Sources */,
+				24965E3B44217761FE694C2D762ED981 /* HTTransmitterJobSchedulerListener.m in Sources */,
+				AA95FEBC61093A3B810280F25B71333C /* HTTrip.m in Sources */,
+				A9150BEF3CD99F071156A1E7EB740359 /* HTTripParams.m in Sources */,
+				BFDDE4CCC3E4F9B13277B665CB846478 /* NSArray+HTExtension.m in Sources */,
+				E20BF1BE0F2B9401F6AE0BC6CBB6B41E /* NSError+HTLocationManager.m in Sources */,
+				700805B3847E0A6C2591060C55410212 /* NSError+HTNetworkRequestManager.m in Sources */,
+				684406982D4E7E9BD751406A8A58FE2A /* NSError+HTTransmitterClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2EB3FEA9C4BEAC0E958030D3CA59D8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				588D764FF78A7F1BE97B1E54712673B9 /* HTCommon-dummy.m in Sources */,
+				CCDA093B47241324D2EE285B0AEABBDD /* HTConnectionStatus.m in Sources */,
+				EC9565048E9F9A49808FCC0452624554 /* HTDriver.m in Sources */,
+				B5326FE31ADD2A34DC34D6F4633ACE82 /* HTError.m in Sources */,
+				10F3F57C05865013DBE678DFA636C24D /* HTGPSLog.m in Sources */,
+				31AFD916BA07A237BF4006E6BC005232 /* HTHTTPLogDataSource.m in Sources */,
+				32FB728680A5BF8F9ABCF2E477ACB0EB /* HTLocation.m in Sources */,
+				B408164B2A56E54EA34B505F692BE75E /* HTLogger.m in Sources */,
+				D3F97D247C51398D64A8027E0F54414D /* HTPlace.m in Sources */,
+				0105047FC86CEB8A844D73A6966C885F /* HTRestClient.m in Sources */,
+				6B6F41DF4E8EC458A5B2B081C21CF147 /* HTTask.m in Sources */,
+				DB2AD13C4510DC821AAB4A92F9F01F2C /* HTTaskDisplay.m in Sources */,
+				D73E02ECAFA9FCF8098EDA7100507DA2 /* HTUtility.m in Sources */,
+				0040E3C57AAD2B448E0289E1C5E55ED9 /* HTVehicleType.m in Sources */,
+				407C60A78F777669095C14570C2690E1 /* HyperTrack.m in Sources */,
+				C906306E4F39277DE02D77F0E8635CCB /* NSDate+Extention.m in Sources */,
+				557920E1D75269B6DEE73B1390AC5388 /* NSDateFormatter+HTExtension.m in Sources */,
+				B79ED5F4FB223D0B4F8AC3FA2285F266 /* NSDictionary+Extension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45E440145470A1341B0CD35D0689C0DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MQTTClient;
+			target = 997ED2786DE9E4782515D3BD0F710F77 /* MQTTClient */;
+			targetProxy = 44E54CF3616EEA39854F545D0B3C986D /* PBXContainerItemProxy */;
+		};
+		B746E3E7A764C8BEFF191269A8A4AF8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HTCommon;
+			target = 7A880C8DA8488A0A998688DD3E9ED07A /* HTCommon */;
+			targetProxy = F8132E1BF280712DA6D965C9C6D41AE6 /* PBXContainerItemProxy */;
+		};
+		CCE4A9005D69C13445BBFAB247A6A5D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HTCommon;
+			target = 7A880C8DA8488A0A998688DD3E9ED07A /* HTCommon */;
+			targetProxy = 28C32C8917C812788FD03EC5152FF513 /* PBXContainerItemProxy */;
+		};
+		D3F43BA32C1F0B12A9974B8D254891E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HTTransmitter;
+			target = 34A293283E43943122C07142865E3394 /* HTTransmitter */;
+			targetProxy = 251834B1B763A09D8517716ED693A3B8 /* PBXContainerItemProxy */;
+		};
+		DC69A019E215DAC87519EB6EDA722C45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MQTTClient;
+			target = 997ED2786DE9E4782515D3BD0F710F77 /* MQTTClient */;
+			targetProxy = 809053C81089811224D0BCCBF6A1816D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		220A33AC8BD9C95BDE2C69DE946BA41E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 378A25D733D34515C0CA358B0FC6E978 /* HTTransmitter.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HTTransmitter/HTTransmitter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HTTransmitter/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HTTransmitter/HTTransmitter.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = HTTransmitter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		268ACEA2B0362802F98B7CAFE80AF70A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AF4E0760F5D3D62255A87A4B61F7D82 /* MQTTClient.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MQTTClient/MQTTClient-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MQTTClient/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MQTTClient/MQTTClient.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MQTTClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		357F389B10073C03E6A2DA1EC20EADB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B57AE8459F4C0CDE46C7F479AC59DCC6 /* Pods-ExampleHyperTrack.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ExampleHyperTrack/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ExampleHyperTrack/Pods-ExampleHyperTrack.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ExampleHyperTrack;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4016266BD85AF3CF9CF7C38E4EA7BE47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AF4E0760F5D3D62255A87A4B61F7D82 /* MQTTClient.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MQTTClient/MQTTClient-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MQTTClient/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MQTTClient/MQTTClient.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MQTTClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6C9802A444A47604785833911828F7A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EECE5E66A391B8D60D8514A33AEAEAF /* HTCommon.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HTCommon/HTCommon-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HTCommon/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HTCommon/HTCommon.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = HTCommon;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8566F6932FBA17B815906450C7928072 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83ADF0B3664778F8FE8EBA16BFEC9AE8 /* Pods-ExampleHyperTrack.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ExampleHyperTrack/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ExampleHyperTrack/Pods-ExampleHyperTrack.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ExampleHyperTrack;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C27CE59E5E8EA0FEED315417226ECCA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 378A25D733D34515C0CA358B0FC6E978 /* HTTransmitter.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HTTransmitter/HTTransmitter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HTTransmitter/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HTTransmitter/HTTransmitter.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = HTTransmitter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FDA8565F2B38E1C7FAEACBE80EA69D7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EECE5E66A391B8D60D8514A33AEAEAF /* HTCommon.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HTCommon/HTCommon-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HTCommon/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HTCommon/HTCommon.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = HTCommon;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D7DA9C75F9E1B3A411A7CDA13151B8B /* Build configuration list for PBXNativeTarget "Pods-ExampleHyperTrack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				357F389B10073C03E6A2DA1EC20EADB5 /* Debug */,
+				8566F6932FBA17B815906450C7928072 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		487ECA8D396B9E950A231DB14F67FD50 /* Build configuration list for PBXNativeTarget "HTCommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C9802A444A47604785833911828F7A8 /* Debug */,
+				FDA8565F2B38E1C7FAEACBE80EA69D7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A641EA1A56994B0B516AD46DDF718BD /* Build configuration list for PBXNativeTarget "HTTransmitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				220A33AC8BD9C95BDE2C69DE946BA41E /* Debug */,
+				C27CE59E5E8EA0FEED315417226ECCA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F0781E49292194DE8FC75039995299F /* Build configuration list for PBXNativeTarget "MQTTClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4016266BD85AF3CF9CF7C38E4EA7BE47 /* Debug */,
+				268ACEA2B0362802F98B7CAFE80AF70A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
