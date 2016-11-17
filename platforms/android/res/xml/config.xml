@@ -22,7 +22,4 @@
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="HYPERTRACK_PK" value="pk_12345abcd" />
-    <feature name="HyperTrack">
-        <param name="android-package" value="io.hypertrack.cordova.HyperTrackWrapper" />
-    </feature>
 </widget>
