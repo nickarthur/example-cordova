@@ -5,8 +5,16 @@ Example app on hypertrack-cordova built on the official Cordova [plugin](https:/
 
 ## Usage
 ### iOS
+```
+$ cordova platform add ios
+$ cordova run ios
+```
 
 ### Android
+```
+$ cordova platform add android
+$ cordova run android
+```
 
 
 ### HyperTrack config
