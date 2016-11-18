@@ -18,7 +18,7 @@
 		DCFD00471DDE79620033D73D /* libMQTTClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFD00461DDE79620033D73D /* libMQTTClient.a */; };
 		DCFD00491DDE79650033D73D /* libHTTransmitter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFD00481DDE79650033D73D /* libHTTransmitter.a */; };
 		DCFD004B1DDE79F60033D73D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFD004A1DDE79F60033D73D /* libsqlite3.tbd */; };
-		DD260951EEA54BB6A84A2523 /* HyperTrackWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C41A2149806A40B6ADA522DD /* HyperTrackWrapper.m */; };
+		F41E9EBB61534B3CB356E4C3 /* HyperTrackWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B180617BBA94C388712690B /* HyperTrackWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,7 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = HelloCordova/config.xml; sourceTree = "<group>"; };
-		C41A2149806A40B6ADA522DD /* HyperTrackWrapper.m */ = {isa = PBXFileReference; name = "HyperTrackWrapper.m"; path = "cordova-plugin-hypertrack/HyperTrackWrapper.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		5B180617BBA94C388712690B /* HyperTrackWrapper.m */ = {isa = PBXFileReference; name = "HyperTrackWrapper.m"; path = "cordova-plugin-hypertrack/HyperTrackWrapper.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +179,7 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				C41A2149806A40B6ADA522DD /* HyperTrackWrapper.m */,
+				5B180617BBA94C388712690B /* HyperTrackWrapper.m */,
 			);
 			name = Plugins;
 			path = HelloCordova/Plugins;
@@ -356,7 +356,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				DD260951EEA54BB6A84A2523 /* HyperTrackWrapper.m in Sources */,
+				F41E9EBB61534B3CB356E4C3 /* HyperTrackWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

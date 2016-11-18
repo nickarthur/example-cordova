@@ -30,6 +30,10 @@
 - (void)startTrip:(CDVInvokedUrlCommand*)command
 {
     NSString* driverID = [command.arguments objectAtIndex:0];
+    [[HTTransmitterClient sharedClient] connectDriverWithDriverID:driverID completion:nil];
+    
+    NSString* pk = [HyperTrack publishableKey];
+
     NSMutableArray* taskIDs = [command.arguments objectAtIndex:1];
 
     __block CDVPluginResult* pluginResult = nil;
