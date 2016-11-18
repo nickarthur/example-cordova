@@ -12,13 +12,13 @@
 		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
 		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
 		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
+		362DE9198E46C506FE5076C8 /* libPods-HelloCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD40A857702A047C6B9DE8AD /* libPods-HelloCordova.a */; };
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
-		7CCC80625E56FBB0AFD1CF75 /* libPods-HelloCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7B4DC3438431DD9563746E /* libPods-HelloCordova.a */; };
-		DCFD00451DDE78BF0033D73D /* libHTCommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFD00441DDE78BF0033D73D /* libHTCommon.a */; };
-		DCFD00471DDE79620033D73D /* libMQTTClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFD00461DDE79620033D73D /* libMQTTClient.a */; };
-		DCFD00491DDE79650033D73D /* libHTTransmitter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFD00481DDE79650033D73D /* libHTTransmitter.a */; };
-		DCFD004B1DDE79F60033D73D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFD004A1DDE79F60033D73D /* libsqlite3.tbd */; };
-		F41E9EBB61534B3CB356E4C3 /* HyperTrackWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B180617BBA94C388712690B /* HyperTrackWrapper.m */; };
+		DCCA05E11DDEB60A005154E6 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCA05E01DDEB60A005154E6 /* libsqlite3.tbd */; };
+		DCFA253A1DDEB5940098EC24 /* libHTCommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFA25391DDEB5940098EC24 /* libHTCommon.a */; };
+		DCFA253C1DDEB5970098EC24 /* libHTTransmitter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFA253B1DDEB5970098EC24 /* libHTTransmitter.a */; };
+		DCFA253E1DDEB59B0098EC24 /* libMQTTClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFA253D1DDEB59B0098EC24 /* libMQTTClient.a */; };
+		4120B9CDD325472CA8AF8D9B /* HyperTrackWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F0AA99275E4BE8944358B0 /* HyperTrackWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,6 @@
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* HelloCordova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloCordova.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2B7B4DC3438431DD9563746E /* libPods-HelloCordova.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloCordova.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		301BF56E109A69640062928A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
 		302D95EE14D2391D003F00A1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -56,15 +55,16 @@
 		32CA4F630368D1EE00C91783 /* HelloCordova-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HelloCordova-Prefix.pch"; sourceTree = "<group>"; };
 		6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CDVLaunchScreen.storyboard; path = HelloCordova/CDVLaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* HelloCordova-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "HelloCordova-Info.plist"; path = "HelloCordova/HelloCordova-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = SOURCE_ROOT; };
-		DCFD00441DDE78BF0033D73D /* libHTCommon.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHTCommon.a; path = "../../../../Library/Developer/Xcode/DerivedData/HelloCordova-bdkppusxleodvkfxoyxqnsojsigy/Build/Products/Debug-iphonesimulator/HTCommon/libHTCommon.a"; sourceTree = "<group>"; };
-		DCFD00461DDE79620033D73D /* libMQTTClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMQTTClient.a; path = "../../../../Library/Developer/Xcode/DerivedData/HelloCordova-bdkppusxleodvkfxoyxqnsojsigy/Build/Products/Debug-iphonesimulator/MQTTClient/libMQTTClient.a"; sourceTree = "<group>"; };
-		DCFD00481DDE79650033D73D /* libHTTransmitter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHTTransmitter.a; path = "../../../../Library/Developer/Xcode/DerivedData/HelloCordova-bdkppusxleodvkfxoyxqnsojsigy/Build/Products/Debug-iphonesimulator/HTTransmitter/libHTTransmitter.a"; sourceTree = "<group>"; };
-		DCFD004A1DDE79F60033D73D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		BD40A857702A047C6B9DE8AD /* libPods-HelloCordova.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloCordova.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCCA05E01DDEB60A005154E6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		DCFA25391DDEB5940098EC24 /* libHTCommon.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHTCommon.a; path = "../../../../Library/Developer/Xcode/DerivedData/HelloCordova-bdkppusxleodvkfxoyxqnsojsigy/Build/Products/Debug-iphoneos/HTCommon/libHTCommon.a"; sourceTree = "<group>"; };
+		DCFA253B1DDEB5970098EC24 /* libHTTransmitter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHTTransmitter.a; path = "../../../../Library/Developer/Xcode/DerivedData/HelloCordova-bdkppusxleodvkfxoyxqnsojsigy/Build/Products/Debug-iphoneos/HTTransmitter/libHTTransmitter.a"; sourceTree = "<group>"; };
+		DCFA253D1DDEB59B0098EC24 /* libMQTTClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMQTTClient.a; path = "../../../../Library/Developer/Xcode/DerivedData/HelloCordova-bdkppusxleodvkfxoyxqnsojsigy/Build/Products/Debug-iphoneos/MQTTClient/libMQTTClient.a"; sourceTree = "<group>"; };
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = HelloCordova/config.xml; sourceTree = "<group>"; };
-		5B180617BBA94C388712690B /* HyperTrackWrapper.m */ = {isa = PBXFileReference; name = "HyperTrackWrapper.m"; path = "cordova-plugin-hypertrack/HyperTrackWrapper.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		06F0AA99275E4BE8944358B0 /* HyperTrackWrapper.m */ = {isa = PBXFileReference; name = "HyperTrackWrapper.m"; path = "cordova-plugin-hypertrack/HyperTrackWrapper.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,12 +72,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCFD004B1DDE79F60033D73D /* libsqlite3.tbd in Frameworks */,
-				DCFD00491DDE79650033D73D /* libHTTransmitter.a in Frameworks */,
-				DCFD00471DDE79620033D73D /* libMQTTClient.a in Frameworks */,
-				DCFD00451DDE78BF0033D73D /* libHTCommon.a in Frameworks */,
+				DCCA05E11DDEB60A005154E6 /* libsqlite3.tbd in Frameworks */,
+				DCFA253E1DDEB59B0098EC24 /* libMQTTClient.a in Frameworks */,
+				DCFA253C1DDEB5970098EC24 /* libHTTransmitter.a in Frameworks */,
+				DCFA253A1DDEB5940098EC24 /* libHTCommon.a in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
-				7CCC80625E56FBB0AFD1CF75 /* libPods-HelloCordova.a in Frameworks */,
+				362DE9198E46C506FE5076C8 /* libPods-HelloCordova.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +105,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		2371EE5D842444828F563C13 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +125,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				D9A43E62439A0B9246C79DD5 /* Pods */,
+				2371EE5D842444828F563C13 /* Pods */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -149,11 +156,11 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DCFD004A1DDE79F60033D73D /* libsqlite3.tbd */,
-				DCFD00481DDE79650033D73D /* libHTTransmitter.a */,
-				DCFD00461DDE79620033D73D /* libMQTTClient.a */,
-				DCFD00441DDE78BF0033D73D /* libHTCommon.a */,
-				2B7B4DC3438431DD9563746E /* libPods-HelloCordova.a */,
+				DCCA05E01DDEB60A005154E6 /* libsqlite3.tbd */,
+				DCFA253D1DDEB59B0098EC24 /* libMQTTClient.a */,
+				DCFA253B1DDEB5970098EC24 /* libHTTransmitter.a */,
+				DCFA25391DDEB5940098EC24 /* libHTCommon.a */,
+				BD40A857702A047C6B9DE8AD /* libPods-HelloCordova.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -179,18 +186,11 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				5B180617BBA94C388712690B /* HyperTrackWrapper.m */,
+				06F0AA99275E4BE8944358B0 /* HyperTrackWrapper.m */,
 			);
 			name = Plugins;
 			path = HelloCordova/Plugins;
 			sourceTree = SOURCE_ROOT;
-		};
-		D9A43E62439A0B9246C79DD5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Pods;
-			sourceTree = "<group>";
 		};
 		EB87FDF11871DA420020F90C /* Staging */ = {
 			isa = PBXGroup;
@@ -208,13 +208,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "HelloCordova" */;
 			buildPhases = (
-				5DCAE38ED3554FAF2FE9CB56 /* [CP] Check Pods Manifest.lock */,
+				D4CC4A9A99237425E4A6479F /* [CP] Check Pods Manifest.lock */,
 				304B58A110DAC018002A0835 /* Copy www directory */,
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
 				1D60588F0D05DD3D006BFB54 /* Frameworks */,
-				C6F0C43C219EA5DF94C8383B /* [CP] Embed Pods Frameworks */,
-				CAAF1A91FCD9992B42A7B9FA /* [CP] Copy Pods Resources */,
+				4E422E5326AB899067284306 /* [CP] Embed Pods Frameworks */,
+				F02D6DBF9785DAFB1CC0DC70 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -301,22 +301,7 @@
 			shellScript = "NODEJS_PATH=/usr/local/bin; NVM_NODE_PATH=~/.nvm/versions/node/`nvm version 2>/dev/null`/bin; N_NODE_PATH=`find /usr/local/n/versions/node/* -maxdepth 0 -type d 2>/dev/null | tail -1`/bin; XCODE_NODE_PATH=`xcode-select --print-path`/usr/share/xcs/Node/bin; PATH=$NODEJS_PATH:$NVM_NODE_PATH:$N_NODE_PATH:$XCODE_NODE_PATH:$PATH && node cordova/lib/copy-www-build-step.js";
 			showEnvVarsInLog = 0;
 		};
-		5DCAE38ED3554FAF2FE9CB56 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C6F0C43C219EA5DF94C8383B /* [CP] Embed Pods Frameworks */ = {
+		4E422E5326AB899067284306 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,7 +316,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloCordova/Pods-HelloCordova-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CAAF1A91FCD9992B42A7B9FA /* [CP] Copy Pods Resources */ = {
+		D4CC4A9A99237425E4A6479F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F02D6DBF9785DAFB1CC0DC70 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -356,7 +356,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				F41E9EBB61534B3CB356E4C3 /* HyperTrackWrapper.m in Sources */,
+				4120B9CDD325472CA8AF8D9B /* HyperTrackWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,10 +389,9 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "HelloCordova/HelloCordova-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/build/**";
-				PODS_ROOT = "$(SRCROOT)/Pods";
+				PODS_ROOT = "$(SRCROOT)/Pods/";
 				PRODUCT_NAME = HelloCordova;
 			};
 			name = Debug;
@@ -413,10 +412,9 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "HelloCordova/HelloCordova-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/build/**";
-				PODS_ROOT = "$(SRCROOT)/Pods";
+				PODS_ROOT = "$(SRCROOT)/Pods/";
 				PRODUCT_NAME = HelloCordova;
 			};
 			name = Release;
