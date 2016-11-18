@@ -15,6 +15,13 @@
 
 - (void)pluginInitialize
 {
+    [self setPk];
+//    NSString *driverID = ;
+//    [[HTTransmitterClient sharedClient] connectDriverWithDriverID:@"b4caf73c-87a4-4263-938f-08347612d96c" completion:nil];
+}
+
+- (void)setPk
+{
     NSString* publishableKey = [self.commandDelegate.settings objectForKey:[@"HYPERTRACK_PK" lowercaseString]];
     [HyperTrack setPublishableAPIKey:publishableKey];
 }
@@ -29,9 +36,8 @@
 
 - (void)startTrip:(CDVInvokedUrlCommand*)command
 {
+    [self setPk];
     NSString* driverID = [command.arguments objectAtIndex:0];
-    [[HTTransmitterClient sharedClient] connectDriverWithDriverID:driverID completion:nil];
-
     NSMutableArray* taskIDs = [command.arguments objectAtIndex:1];
 
     __block CDVPluginResult* pluginResult = nil;
@@ -39,6 +45,8 @@
     HTTripParams* tripParams = [[HTTripParams alloc] init];
     tripParams.driverID = driverID;
     tripParams.taskIDs = taskIDs;
+    
+    NSString *pk = [HyperTrack publishableKey];
 
     [[HTTransmitterClient sharedClient] startTripWithTripParams:tripParams completion:^(HTResponse <HTTrip *> * _Nullable response, NSError * _Nullable error) {
         if (error) {
@@ -57,6 +65,7 @@
 
 - (void)completeTask:(CDVInvokedUrlCommand*)command
 {
+    [self setPk];
     NSString* taskID = [command.arguments objectAtIndex:0];
     __block CDVPluginResult* pluginResult = nil;
     [[HTTransmitterClient sharedClient] completeTaskWithTaskID:taskID completion:^(HTResponse <HTTask *> * _Nullable response, NSError * _Nullable error) {
@@ -77,6 +86,7 @@
 
 - (void)endTrip:(CDVInvokedUrlCommand*)command
 {
+    [self setPk];
     NSString* tripID = [command.arguments objectAtIndex:0];
     __block CDVPluginResult* pluginResult = nil;
     [[HTTransmitterClient sharedClient] endTripWithTripID:tripID completion:^(HTResponse <HTTask *> * _Nullable response, NSError * _Nullable error) {

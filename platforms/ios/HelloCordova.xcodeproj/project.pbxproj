@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
@@ -13,12 +14,12 @@
 		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
 		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
 		362DE9198E46C506FE5076C8 /* libPods-HelloCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD40A857702A047C6B9DE8AD /* libPods-HelloCordova.a */; };
+		4120B9CDD325472CA8AF8D9B /* HyperTrackWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F0AA99275E4BE8944358B0 /* HyperTrackWrapper.m */; };
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
-		DCCA05E11DDEB60A005154E6 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCA05E01DDEB60A005154E6 /* libsqlite3.tbd */; };
+		DCC5C2201DDEC87100381209 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC5C21F1DDEC87100381209 /* libsqlite3.0.tbd */; };
 		DCFA253A1DDEB5940098EC24 /* libHTCommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFA25391DDEB5940098EC24 /* libHTCommon.a */; };
 		DCFA253C1DDEB5970098EC24 /* libHTTransmitter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFA253B1DDEB5970098EC24 /* libHTTransmitter.a */; };
 		DCFA253E1DDEB59B0098EC24 /* libMQTTClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFA253D1DDEB59B0098EC24 /* libMQTTClient.a */; };
-		4120B9CDD325472CA8AF8D9B /* HyperTrackWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F0AA99275E4BE8944358B0 /* HyperTrackWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		0207DA571B56EA530066E2B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = HelloCordova/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		06F0AA99275E4BE8944358B0 /* HyperTrackWrapper.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = HyperTrackWrapper.m; path = "cordova-plugin-hypertrack/HyperTrackWrapper.m"; sourceTree = "<group>"; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* HelloCordova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloCordova.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +58,7 @@
 		6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CDVLaunchScreen.storyboard; path = HelloCordova/CDVLaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* HelloCordova-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "HelloCordova-Info.plist"; path = "HelloCordova/HelloCordova-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = SOURCE_ROOT; };
 		BD40A857702A047C6B9DE8AD /* libPods-HelloCordova.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloCordova.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCC5C21F1DDEC87100381209 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		DCCA05E01DDEB60A005154E6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		DCFA25391DDEB5940098EC24 /* libHTCommon.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHTCommon.a; path = "../../../../Library/Developer/Xcode/DerivedData/HelloCordova-bdkppusxleodvkfxoyxqnsojsigy/Build/Products/Debug-iphoneos/HTCommon/libHTCommon.a"; sourceTree = "<group>"; };
 		DCFA253B1DDEB5970098EC24 /* libHTTransmitter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHTTransmitter.a; path = "../../../../Library/Developer/Xcode/DerivedData/HelloCordova-bdkppusxleodvkfxoyxqnsojsigy/Build/Products/Debug-iphoneos/HTTransmitter/libHTTransmitter.a"; sourceTree = "<group>"; };
@@ -64,7 +67,6 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = HelloCordova/config.xml; sourceTree = "<group>"; };
-		06F0AA99275E4BE8944358B0 /* HyperTrackWrapper.m */ = {isa = PBXFileReference; name = "HyperTrackWrapper.m"; path = "cordova-plugin-hypertrack/HyperTrackWrapper.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCCA05E11DDEB60A005154E6 /* libsqlite3.tbd in Frameworks */,
+				DCC5C2201DDEC87100381209 /* libsqlite3.0.tbd in Frameworks */,
 				DCFA253E1DDEB59B0098EC24 /* libMQTTClient.a in Frameworks */,
 				DCFA253C1DDEB5970098EC24 /* libHTTransmitter.a in Frameworks */,
 				DCFA253A1DDEB5940098EC24 /* libHTCommon.a in Frameworks */,
@@ -156,6 +158,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCC5C21F1DDEC87100381209 /* libsqlite3.0.tbd */,
 				DCCA05E01DDEB60A005154E6 /* libsqlite3.tbd */,
 				DCFA253D1DDEB59B0098EC24 /* libMQTTClient.a */,
 				DCFA253B1DDEB5970098EC24 /* libHTTransmitter.a */,
@@ -405,6 +408,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEVELOPMENT_TEAM = H4925W78YQ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

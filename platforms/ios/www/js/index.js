@@ -88,8 +88,8 @@ var app = {
 app.initialize();
 
 driverID = "b4caf73c-87a4-4263-938f-08347612d96c";
-taskID = "a5eeb1d3-3081-45ff-880b-9f12bc249729";
-tripID = "";
+taskID = "17f18397-1394-44ed-92db-da4894b709cb";
+tripID = "9cc960bd-1c40-445e-a3da-0e3c841dcab6";
 
 helloWorldButton = function() {
     app.configure();

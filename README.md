@@ -16,14 +16,15 @@ $ cordova run ios
 4. add linker libraries
 5. fix library search path $(SRCROOT)/build (recursive)
 6. link binary with libraries - sqlite3
-7. info plist location permissions
+7. info plist location, motion permissions
+8. cordova build for ios simulator and device
+9. cordova build for release - change build.xcconfig to set gcc preprocessor
 
 ### Android
 ```
 $ cordova platform add android
 $ cordova run android
 ```
-
 
 ### HyperTrack config
 The example app needs a HyperTrack publishable key, and valid driver and task id. To get the key, sign up [here](https://www.hypertrack.io/). The HyperTrack documentation is at [docs.hypertrack.io](http://docs.hypertrack.io/) which covers creating drivers/tasks.
