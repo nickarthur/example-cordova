@@ -81,14 +81,15 @@ var app = {
 
     endTrip: function() {
         var hypertrack = cordova.plugins.HyperTrack;
-        hypertrack.endTrip(app.success, app.error);
+        hypertrack.endTrip(tripID, app.success, app.error);
     },
 };
 
 app.initialize();
 
-driver_ID = "DRIVER_ID";
-taskID = "TASK_ID";
+driverID = "b4caf73c-87a4-4263-938f-08347612d96c";
+taskID = "a5eeb1d3-3081-45ff-880b-9f12bc249729";
+tripID = "";
 
 helloWorldButton = function() {
     app.configure();
@@ -103,9 +104,10 @@ completeTaskButton = function() {
 }
 
 endTripButton = function() {
-    app.endTrip();
+    app.endTrip(tripID);
 }
 
 document.getElementById("helloWorldButton").addEventListener("click", helloWorldButton);
+document.getElementById("startTripButton").addEventListener("click", startTripButton);
 document.getElementById("completeTaskButton").addEventListener("click", completeTaskButton);
-// document.getElementById("endTripButton").addEventListener("click", endTripButton);
+document.getElementById("endTripButton").addEventListener("click", endTripButton);
