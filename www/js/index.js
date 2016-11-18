@@ -87,6 +87,9 @@ var app = {
 
 app.initialize();
 
+driver_ID = "DRIVER_ID";
+taskID = "TASK_ID";
+
 helloWorldButton = function() {
     app.configure();
 }
@@ -104,5 +107,5 @@ endTripButton = function() {
 }
 
 document.getElementById("helloWorldButton").addEventListener("click", helloWorldButton);
-// document.getElementById("completeTaskButton").addEventListener("click", completeTaskButton);
+document.getElementById("completeTaskButton").addEventListener("click", completeTaskButton);
 // document.getElementById("endTripButton").addEventListener("click", endTripButton);

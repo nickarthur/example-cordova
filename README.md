@@ -16,6 +16,7 @@ $ cordova run ios
 4. add linker libraries
 5. fix library search path $(SRCROOT)/build (recursive)
 6. link binary with libraries - sqlite3
+7. info plist location permissions
 
 ### Android
 ```
