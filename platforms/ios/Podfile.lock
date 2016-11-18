@@ -1,0 +1,25 @@
+PODS:
+  - HTCommon (0.12.2)
+  - HTTransmitter (0.12.2):
+    - HTCommon (= 0.12.2)
+    - MQTTClient (~> 0.8.0)
+  - MQTTClient (0.8.5):
+    - MQTTClient/Core (= 0.8.5)
+  - MQTTClient/Core (0.8.5):
+    - MQTTClient/Manager
+    - MQTTClient/Min
+  - MQTTClient/Manager (0.8.5):
+    - MQTTClient/Min
+  - MQTTClient/Min (0.8.5)
+
+DEPENDENCIES:
+  - HTTransmitter
+
+SPEC CHECKSUMS:
+  HTCommon: 81af99772442643d182dc2830ccf690c96e1ea83
+  HTTransmitter: 995f66876898a714627f55580748c0e7beb0bc23
+  MQTTClient: fca939bcd74aa70af2d8ee35f3e44f258f4e9888
+
+PODFILE CHECKSUM: 3d2c6e417ed1aec80996dd77e7e9d61bbaabc264
+
+COCOAPODS: 1.1.1

@@ -1,0 +1,6 @@
+framework module HTCommon {
+  umbrella header "HTCommon-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,23 @@
+repositories {
+  maven { url 'http://hypertrack-android-sdk.s3-website-us-west-2.amazonaws.com/' }
+  maven { url "https://repo.eclipse.org/content/repositories/paho-releases/" }
+}
+
+dependencies {
+  // Might lead to merge issues. Should use framework in plugin.xml instead?
+  compile 'com.google.android.gms:play-services-gcm:8.4.0'
+  compile 'com.google.android.gms:play-services-location:8.4.0'
+
+  // HyperTrack SDK
+  compile('io.hypertrack:transmitter:1.4.7:release@aar') {
+    transitive = true;
+  }
+
+  // compile 'com.android.support:multidex:1.0.0'
+}
+
+// android {
+//   defaultConfig {
+//     multiDexEnabled true
+//   }
+// }

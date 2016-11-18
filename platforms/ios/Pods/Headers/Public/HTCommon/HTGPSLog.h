@@ -1,0 +1,1 @@
+../../../HTCommon/HTCommon/HTGPSLog.h

@@ -1,0 +1,1 @@
+../../../HTTransmitter/HTTransmitter/Internal/DatabaseLogger/HTLogMessageTable.h
