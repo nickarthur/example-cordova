@@ -155,11 +155,11 @@ public class HyperTrackWrapper extends CordovaPlugin {
         });
     }
 
-    private void endTrip(final CallbackContext callbackContext) {
+    private void endTrip(String tripID, final CallbackContext callbackContext) {
         Context context = this.cordova.getActivity().getApplicationContext();
         HTTransmitterService transmitterService = HTTransmitterService.getInstance(context);
 
-        transmitterService.completeTrip(new HTTripStatusCallback() {
+        transmitterService.completeTrip(tripID, new HTTripStatusCallback() {
             @Override
             public void onSuccess(boolean isOffline, HTTrip htTrip) {
                 try {

@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
@@ -19,7 +18,7 @@
 		DCFD00471DDE79620033D73D /* libMQTTClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFD00461DDE79620033D73D /* libMQTTClient.a */; };
 		DCFD00491DDE79650033D73D /* libHTTransmitter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFD00481DDE79650033D73D /* libHTTransmitter.a */; };
 		DCFD004B1DDE79F60033D73D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DCFD004A1DDE79F60033D73D /* libsqlite3.tbd */; };
-		F90C1AC9A1364801A69363AA /* HyperTrackWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2200FED408C74120A06DB70D /* HyperTrackWrapper.m */; };
+		DD260951EEA54BB6A84A2523 /* HyperTrackWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C41A2149806A40B6ADA522DD /* HyperTrackWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +43,6 @@
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* HelloCordova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloCordova.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2200FED408C74120A06DB70D /* HyperTrackWrapper.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = HyperTrackWrapper.m; path = "cordova-plugin-hypertrack/HyperTrackWrapper.m"; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2B7B4DC3438431DD9563746E /* libPods-HelloCordova.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloCordova.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
@@ -66,6 +64,7 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = HelloCordova/config.xml; sourceTree = "<group>"; };
+		C41A2149806A40B6ADA522DD /* HyperTrackWrapper.m */ = {isa = PBXFileReference; name = "HyperTrackWrapper.m"; path = "cordova-plugin-hypertrack/HyperTrackWrapper.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +179,7 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				2200FED408C74120A06DB70D /* HyperTrackWrapper.m */,
+				C41A2149806A40B6ADA522DD /* HyperTrackWrapper.m */,
 			);
 			name = Plugins;
 			path = HelloCordova/Plugins;
@@ -357,7 +356,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				F90C1AC9A1364801A69363AA /* HyperTrackWrapper.m in Sources */,
+				DD260951EEA54BB6A84A2523 /* HyperTrackWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
