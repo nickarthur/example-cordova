@@ -29,7 +29,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
-        this.configure();
+        this.helloWorld('test');
     },
 
     // Update DOM on a Received Event
@@ -44,55 +44,86 @@ var app = {
         console.log('Received Event: ' + id);
     },
 
-    configure: function() {
-        console.log('plugins', cordova.plugins);
-        var hypertrack = cordova.plugins.HyperTrack;
-        console.log('hypertrack', hypertrack);
-
-        hypertrack.helloWorld("arjun", this.success, this.error);
-    },
-
-    // success callback
-    success: function(text) {
-        console.log("success handler");
-        console.log(text);
-    },
-
-    // error callback
-    error: function(text) {
-        console.log("error handler");
-        console.log(text);
-    },
-
     helloWorld: function(text) {
         var hypertrack = cordova.plugins.HyperTrack;
-        hypertrack.helloWorld(text, app.success, app.error);
+        hypertrack.helloWorld(text,
+
+          // success callback
+          function(text) {
+            alert('callback: ' + text);
+          },
+
+          // error callback
+          function(error) {
+            alert('error: ' + error)
+          });
     },
 
     startTrip: function(driverID, taskIDs) {
         var hypertrack = cordova.plugins.HyperTrack;
-        hypertrack.startTrip(driverID, taskIDs, app.success, app.error);
+        hypertrack.startTrip(driverID, taskIDs,
+
+          // success callback
+          function(response) {
+            tripObj = JSON.parse(response.trip)
+            tripID = tripObj.id;
+            var status = tripObj.status;
+            alert('success: ' + tripID + ', ' + status);
+          },
+
+          // error callback
+          function (error) {
+            alert('error: ' + JSON.stringify(error));
+          });
     },
 
     completeTask: function(taskID) {
         var hypertrack = cordova.plugins.HyperTrack;
-        hypertrack.completeTask(taskID, app.success, app.error);
+        hypertrack.completeTask(taskID,
+
+          // success callback
+          function(response) {
+            alert('success: ' + JSON.stringify(response));
+          },
+
+          // error callback
+          function (error) {
+            alert('error: ' + JSON.stringify(error));
+          });
     },
 
-    endTrip: function() {
+    endTrip: function(tripID) {
+        if (tripID.length == 0) {
+          alert('no trip id');
+          return
+        }
+
         var hypertrack = cordova.plugins.HyperTrack;
-        hypertrack.endTrip(tripID, app.success, app.error);
-    },
+        hypertrack.endTrip(tripID,
+
+          // success callback
+          function(response) {
+            tripObj = JSON.parse(response.trip)
+            tripID = tripObj.id;
+            var status = tripObj.status;
+            alert('success: ' + tripID + ', ' + status);
+          },
+
+          // error callback
+          function (error) {
+            alert('error: ' + JSON.stringify(error));
+          });
+    }
 };
 
 app.initialize();
 
 driverID = "b4caf73c-87a4-4263-938f-08347612d96c";
 taskID = "17f18397-1394-44ed-92db-da4894b709cb";
-tripID = "9cc960bd-1c40-445e-a3da-0e3c841dcab6";
+tripID = "";
 
 helloWorldButton = function() {
-    app.configure();
+    app.helloWorld('hello world button');
 }
 
 startTripButton = function() {
