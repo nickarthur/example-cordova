@@ -1,0 +1,8 @@
+{
+    "HTTransmitter": {
+        "name": "HTTransmitter",
+        "type": "podspec",
+        "spec": "~> 0.12.2",
+        "count": 1
+    }
+}
