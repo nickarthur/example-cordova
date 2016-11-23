@@ -23,6 +23,36 @@ hypertrack.endTrip = function(tripID, success, error) {
 };
 
 
+hypertrack.startShift = function(driverID, success, error) {
+    exec(success, error, "HyperTrack", "startShift", [driverID])
+};
+
+
+hypertrack.endShift = function(success, error) {
+    exec(success, error, "HyperTrack", "endShift", [])
+};
+
+
+hypertrack.connectDriver = function(driverID, success, error) {
+    exec(success, error, "HyperTrack", "connectDriver", [driverID]);
+};
+
+
+hypertrack.isTransmitting = function(callback) {
+    exec(callback, null, "HyperTrack", "isTransmitting", []);
+};
+
+
+hypertrack.getActiveDriver = function(callback) {
+    exec(callback, null, "HyperTrack", "getActiveDriver", []);
+};
+
+
+hypertrack.getPublishableKey = function(callback) {
+    exec(callback, null, "HyperTrack", "getPublishableKey", []);
+};
+
+
 module.exports = hypertrack
 
 });

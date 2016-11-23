@@ -1,6 +1,0 @@
-framework module HTTransmitter {
-  umbrella header "HTTransmitter-umbrella.h"
-
-  export *
-  module * { export * }
-}

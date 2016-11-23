@@ -28,7 +28,6 @@
   </platform>
 
   <!-- iOS configuration -->
-  <!-- <dependency id="cordova-plugin-cocoapod-support"/> -->
 
   <platform name="ios">
     <config-file parent="/*" target="config.xml">
@@ -38,8 +37,9 @@
     </config-file>
     <source-file src="src/ios/HyperTrackWrapper.m" />
 
-    <!-- <pods-config ios-min-version="9.0" uses-frameworks="true"/> -->
-    <!-- <pod id="HTTransmitter" /> -->
+    <framework src="HTTransmitter" type="podspec" spec="~> 0.12.3" />
+    <framework src="libsqlite3.dylib" />
+
   </platform>
 
 </plugin>
