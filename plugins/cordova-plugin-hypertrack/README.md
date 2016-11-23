@@ -3,7 +3,7 @@ Cordova plugin wrapper for hypertrack-android and hypertrack-ios. The [example-c
 
 [![Slack Status](http://slack.hypertrack.io/badge.svg)](http://slack.hypertrack.io) [![npm version](https://badge.fury.io/js/cordova-plugin-hypertrack.svg)](https://badge.fury.io/js/cordova-plugin-hypertrack)
 
-> In case you are looking for an SDK to build an app with a common codebase for Android and iOS from scratch, we recommend using React Native instead. We have seen some configuration issues with iOS and Cordova - our solution is detailed out [here](ios-config.md). [react-native-hypertrack](https://github.com/hypertrack/react-native-hypertrack/) is our wrapper for RN.
+> In case you are looking for an SDK to build an app with a common codebase for Android and iOS from scratch, you can also use the [react-native-hypertrack](https://github.com/hypertrack/react-native-hypertrack/) wrapper.
 
 ## New app
 Refer to the **Create your first Cordova app** guide [here](https://cordova.apache.org/docs/en/latest/guide/cli/index.html) in case you are building a new app.
@@ -19,12 +19,6 @@ $ npm install -g cordova
 ## Usage
 Before you can set up the HyperTrack plugin, we need to first set-up the dependencies for iOS as given below. For Android, the plugin configures the dependencies automatically.
 
-### iOS
-The iOS native dependencies are to be installed using Cocoapods in your project's ios directory. Please follow the steps detailed out in [ios-config](ios-config.md).
-
-### Android
-The plugin includes the native dependencies for Android, and they will be automatically configured when you install and building with the plugin.
-
 ### Install the plugin
 To install the plugin, use the following command in your app directory.
 ```
@@ -36,7 +30,16 @@ In your app's `config.xml` set a new preference key `HYPERTRACK_PK` with your pu
 <preference name="HYPERTRACK_PK" value="pk_12345abcd" />
 ```
 
-To use the plugin in a Cordova application, just use the `hypertrack` object. All methods are defined in the [HyperTrack.js](https://github.com/hypertrack/hypertrack-cordova/blob/master/www/HyperTrack.js) file.
+### iOS
+The SDK requires Location (When in Use) and Motion permissions to track locations and activity. iOS requires you to set a reason for these permissions, which is displayed in the dialog box to the user. In your project's info settings, add the following Keys, with relevant Values.
+```
+Key: Privacy - Location When In Use Usage Description, Value: Required to access location data. (or your reason)
+Key: Privacy - Motion Usage Description, Value: Required to access activity data. (or your reason)
+```
+
+## Plugin methods
+To use the plugin in a Cordova application, just use the `hypertrack` object. All methods are defined below, and also in the [HyperTrack.js](https://github.com/hypertrack/hypertrack-cordova/blob/master/www/HyperTrack.js) file.
+
 ```
 var hypertrack = cordova.plugins.HyperTrack;
 hypertrack.helloWorld("hello, world", success, error); // simple test method for the plugin, which prints to console.log

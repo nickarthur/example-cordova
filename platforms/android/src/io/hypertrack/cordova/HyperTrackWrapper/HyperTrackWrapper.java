@@ -18,9 +18,13 @@ import android.content.Context;
 import io.hypertrack.lib.common.HyperTrack;
 import io.hypertrack.lib.transmitter.service.HTTransmitterService;
 import io.hypertrack.lib.transmitter.model.HTTrip;
+import io.hypertrack.lib.transmitter.model.HTShift;
 import io.hypertrack.lib.transmitter.model.HTTripParams;
+import io.hypertrack.lib.transmitter.model.HTShiftParams;
 import io.hypertrack.lib.transmitter.model.HTTripParamsBuilder;
+import io.hypertrack.lib.transmitter.model.HTShiftParamsBuilder;
 import io.hypertrack.lib.transmitter.model.callback.HTTripStatusCallback;
+import io.hypertrack.lib.transmitter.model.callback.HTShiftStatusCallback;
 import io.hypertrack.lib.transmitter.model.callback.HTCompleteTaskStatusCallback;
 
 
@@ -73,6 +77,38 @@ public class HyperTrackWrapper extends CordovaPlugin {
         if (action.equals("endTrip")) {
             String tripID = args.getString(0);
             this.endTrip(tripID, callbackContext);
+            return true;
+        }
+
+        if (action.equals("startShift")) {
+            String driverID = args.getString(0);
+            this.startShift(driverID, callbackContext);
+            return true;
+        }
+
+        if (action.equals("endShift")) {
+            this.endShift(callbackContext);
+            return true;
+        }
+
+        if (action.equals("connectDriver")) {
+            String driverID = args.getString(0);
+            this.connectDriver(driverID, callbackContext);
+            return true;
+        }
+
+        if (action.equals("isTransmitting")) {
+            this.isTransmitting(callbackContext);
+            return true;
+        }
+
+        if (action.equals("getActiveDriver")) {
+            this.getActiveDriver(callbackContext);
+            return true;
+        }
+
+        if (action.equals("getPublishableKey")) {
+            this.getPublishableKey(callbackContext);
             return true;
         }
 
@@ -196,5 +232,99 @@ public class HyperTrackWrapper extends CordovaPlugin {
                 }
             }
         });
+    }
+
+    private void startShift(String driverID, final CallbackContext callbackContext) {
+        Context context = this.cordova.getActivity().getApplicationContext();
+        HTTransmitterService transmitterService = HTTransmitterService.getInstance(context);
+
+        HTShiftParamsBuilder htShiftParamsBuilder = new HTShiftParamsBuilder();
+        HTShiftParams htShiftParams = htShiftParamsBuilder.setDriverID(driverID).createHTShiftParams();
+
+        transmitterService.startShift(htShiftParams, new HTShiftStatusCallback() {
+            @Override
+            public void onSuccess(HTShift htShift) {
+                try {
+                    Gson gson = new Gson();
+                    String shiftJson = gson.toJson(htShift);
+                    JSONObject result = new JSONObject();
+                    result.put("shift", shiftJson);
+                    callbackContext.success(result);
+                } catch (JSONException e) {
+                    callbackContext.success("");
+                }
+            }
+
+            @Override
+            public void onError(Exception e) {
+                try {
+                    JSONObject result = new JSONObject();
+                    if (e == null) {
+                        result.put("error", "");
+                    } else {
+                        result.put("error", e.toString());
+                    }
+                    callbackContext.error(result);
+                } catch (JSONException exception) {
+                    callbackContext.error("");
+                }
+            }
+        });
+    }
+
+    private void endShift(final CallbackContext callbackContext) {
+        Context context = this.cordova.getActivity().getApplicationContext();
+        HTTransmitterService transmitterService = HTTransmitterService.getInstance(context);
+
+        transmitterService.endShift(new HTShiftStatusCallback() {
+            @Override
+            public void onError(Exception e) {
+                //Log error.getMessage() here or do something
+                try {
+                    JSONObject result = new JSONObject();
+                    if (e == null) {
+                        result.put("error", "");
+                    } else {
+                        result.put("error", e.toString());
+                    }
+                    callbackContext.error(result);
+                } catch (JSONException exception) {
+                    callbackContext.error("");
+                }
+            }
+
+            @Override
+            public void onSuccess(HTShift htShift) {
+                try {
+                    Gson gson = new Gson();
+                    String shiftJson = gson.toJson(htShift);
+                    JSONObject result = new JSONObject();
+                    result.put("shift", shiftJson);
+                    callbackContext.success(result);
+                } catch (JSONException e) {
+                    callbackContext.success("");
+                }
+            }
+        });
+    }
+
+    private void connectDriver(String driverID, final CallbackContext callbackContext) {
+        Context context = this.cordova.getActivity().getApplicationContext();
+        HTTransmitterService transmitterService = HTTransmitterService.getInstance(context);
+    }
+
+    private void isTransmitting(final CallbackContext callbackContext) {
+        Context context = this.cordova.getActivity().getApplicationContext();
+        HTTransmitterService transmitterService = HTTransmitterService.getInstance(context);
+    }
+
+    private void getActiveDriver(final CallbackContext callbackContext) {
+        Context context = this.cordova.getActivity().getApplicationContext();
+        HTTransmitterService transmitterService = HTTransmitterService.getInstance(context);
+    }
+
+    private void getPublishableKey(final CallbackContext callbackContext) {
+        Context context = this.cordova.getActivity().getApplicationContext();
+        HTTransmitterService transmitterService = HTTransmitterService.getInstance(context);
     }
 }

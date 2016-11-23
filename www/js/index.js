@@ -66,9 +66,26 @@ var app = {
           // success callback
           function(response) {
             tripObj = JSON.parse(response.trip)
+            console.log(tripObj);
             tripID = tripObj.id;
             var status = tripObj.status;
             alert('success: ' + tripID + ', ' + status);
+          },
+
+          // error callback
+          function (error) {
+            alert('error: ' + JSON.stringify(error));
+          });
+    },
+
+    startShift: function(driverID) {
+        var hypertrack = cordova.plugins.HyperTrack;
+        hypertrack.startShift(driverID,
+
+          // success callback
+          function(response) {
+            shift = JSON.parse(response.shift)
+            alert('success: ' + shift);
           },
 
           // error callback
@@ -113,6 +130,21 @@ var app = {
           function (error) {
             alert('error: ' + JSON.stringify(error));
           });
+    },
+
+    endShift: function() {
+        var hypertrack = cordova.plugins.HyperTrack;
+        hypertrack.endShift(
+          // success callback
+          function(response) {
+            shift = JSON.parse(response.shift)
+            alert('success: ' + shift);
+          },
+
+          // error callback
+          function (error) {
+            alert('error: ' + JSON.stringify(error));
+          });
     }
 };
 
@@ -130,6 +162,10 @@ startTripButton = function() {
     app.startTrip(driverID, [taskID]);
 }
 
+startShiftButton = function() {
+    app.startShift(driverID);
+}
+
 completeTaskButton = function() {
     app.completeTask(taskID);
 }
@@ -138,7 +174,13 @@ endTripButton = function() {
     app.endTrip(tripID);
 }
 
+endShiftButton = function() {
+    app.endShift();
+}
+
 document.getElementById("helloWorldButton").addEventListener("click", helloWorldButton);
 document.getElementById("startTripButton").addEventListener("click", startTripButton);
 document.getElementById("completeTaskButton").addEventListener("click", completeTaskButton);
 document.getElementById("endTripButton").addEventListener("click", endTripButton);
+document.getElementById("startShiftButton").addEventListener("click", startShiftButton);
+document.getElementById("endShiftButton").addEventListener("click", endShiftButton);

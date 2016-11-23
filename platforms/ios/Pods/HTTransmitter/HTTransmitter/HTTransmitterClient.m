@@ -32,7 +32,7 @@
 #import "HTTransmitterClient.h"
 
 static HTTransmitterClient * _sharedInstance = nil;
-static const NSTimeInterval locationRequestTimeout = 30.0f;
+static const NSTimeInterval locationRequestTimeout = 2.0f;
 
 @interface HTTransmitterClient ()
 
@@ -165,10 +165,7 @@ static const NSTimeInterval locationRequestTimeout = 30.0f;
         return;
     }
     
-    [self.locationManager requestLocationWithTimeout:locationRequestTimeout
-                                               block:^(CLLocation *currentLocation, HTLocationStatus status) {
-                                                   [self startTripWithTripParams:tripParams location:currentLocation completion:completion];
-                                               }];
+    [self startTripWithTripParams:tripParams location:self.locationManager.lastLocation completion:completion];
 }
 
 - (void)startTripWithTripParams:(HTTripParams *)tripParams location:(CLLocation *)location completion:(HTTripBlock)completion {
@@ -180,7 +177,7 @@ static const NSTimeInterval locationRequestTimeout = 30.0f;
         [params ht_setNilSafeObject:startLocation.dictionaryValue forKey:@"start_location"];
     }
     
-    [params ht_setNilSafeObject:[NSDate date].ht_stringValue forKey:@"start_time"];
+    [params ht_setNilSafeObject:[NSDate date].ht_stringValue forKey:@"started_at"];
     
     NSString *tripAPIString = @"api/v1/trips/";
     if (tripParams.tripID && tripParams.tripID.length > 0) {
@@ -446,10 +443,7 @@ static const NSTimeInterval locationRequestTimeout = 30.0f;
         return;
     }
     
-    [self.locationManager requestLocationWithTimeout:locationRequestTimeout
-                                               block:^(CLLocation *currentLocation, HTLocationStatus status) {
-                                                   [self startShiftWithShiftParams:shiftParams location:currentLocation completion:completion];
-                                               }];
+    [self startShiftWithShiftParams:shiftParams location:self.locationManager.lastLocation completion:completion];
 }
 
 - (void)startShiftWithShiftParams:(HTShiftParams *)shiftParams location:(CLLocation *)location completion:(HTResponseBlock)completion {
@@ -460,7 +454,7 @@ static const NSTimeInterval locationRequestTimeout = 30.0f;
         [params ht_setNilSafeObject:startLocation.dictionaryValue forKey:@"start_location"];
     }
     
-    [params ht_setNilSafeObject:[NSDate date].ht_stringValue forKey:@"start_time"];
+    [params ht_setNilSafeObject:[NSDate date].ht_stringValue forKey:@"started_at"];
     
     HTNetworkRequest *request = [[HTNetworkRequest alloc] initWithMethodType:HTNetworkRequestMethodTypePost
                                                                    APIString:[NSString stringWithFormat:@"api/v1/drivers/%@/start_shift/", shiftParams.driverID]

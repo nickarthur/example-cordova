@@ -12,6 +12,12 @@
 - (void)startTrip:(CDVInvokedUrlCommand*)command;
 - (void)completeTask:(CDVInvokedUrlCommand*)command;
 - (void)endTrip:(CDVInvokedUrlCommand*)command;
+- (void)startShift:(CDVInvokedUrlCommand*)command;
+- (void)endShift:(CDVInvokedUrlCommand*)command;
+- (void)isTransmitting:(CDVInvokedUrlCommand*)command;
+- (void)getActiveDriver:(CDVInvokedUrlCommand*)command;
+- (void)connectDriver:(CDVInvokedUrlCommand*)command;
+- (void)getPublishableKey:(CDVInvokedUrlCommand*)command;
 
 @end
 
@@ -48,8 +54,6 @@
     tripParams.driverID = driverID;
     tripParams.taskIDs = taskIDs;
 
-    NSString *pk = [HyperTrack publishableKey];
-
     [[HTTransmitterClient sharedClient] startTripWithTripParams:tripParams completion:^(HTResponse <HTTrip *> * _Nullable response, NSError * _Nullable error) {
         if (error) {
             // Handle error and try again.
@@ -58,6 +62,29 @@
         } else {
             // If there is no error, use the tripID received in the callback in your app.
             NSDictionary *success = @{@"trip" : response.result.dictionaryValue.jsonString};
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:success];
+        }
+
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    }];
+}
+
+- (void)startShift:(CDVInvokedUrlCommand*)command
+{
+    NSString* driverID = [command.arguments objectAtIndex:0];
+    __block CDVPluginResult* pluginResult = nil;
+
+    HTShiftParams *shiftParams = [[HTShiftParams alloc] init];
+    shiftParams.driverID = driverID;
+
+    [[HTTransmitterClient sharedClient] startShiftWithShiftParams:shiftParams completion:^(HTResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) {
+            // Handle error and try again.
+            NSDictionary *failure = @{@"error" : error.localizedDescription};
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsDictionary:failure];
+        } else {
+            // If there is no error, use the tripID received in the callback in your app.
+            NSDictionary *success = @{@"shift" : @""};
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:success];
         }
 
@@ -99,12 +126,73 @@
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsDictionary:failure];
         } else {
             // If there is no error, use the taskID received in the callback in your app.
-            NSDictionary *success = @{@"task" : response.result.dictionaryValue.jsonString};
+            NSDictionary *success = @{@"trip" : response.result.dictionaryValue.jsonString};
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:success];
         }
 
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }];
+}
+
+- (void)endShift:(CDVInvokedUrlCommand*)command
+{
+    __block CDVPluginResult* pluginResult = nil;
+    [[HTTransmitterClient sharedClient] endShiftWithCompletion:^(HTResponse * _Nullable response, NSError * _Nullable error) {
+
+        if (error) {
+            // Handle error and try again.
+            NSDictionary *failure = @{@"error" : error.localizedDescription};
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsDictionary:failure];
+        } else {
+            // If there is no error, use the taskID received in the callback in your app.
+            NSDictionary *success = @{@"shift" : @""};
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:success];
+        }
+
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    }];
+}
+
+- (void)isTransmitting:(CDVInvokedUrlCommand*)command
+{
+    CDVPluginResult* pluginResult = nil;
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
+                                       messageAsBool:[[HTTransmitterClient sharedClient] transmitingLocation]];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+- (void)getActiveDriver:(CDVInvokedUrlCommand*)command
+{
+    NSString *driverID = [[HTTransmitterClient sharedClient] activeDriverID];
+
+    if (!driverID) {
+        driverID = @"";
+    }
+
+    CDVPluginResult* pluginResult = nil;
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
+                                     messageAsString:driverID];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+- (void)connectDriver:(CDVInvokedUrlCommand*)command
+{
+    NSString* driverID = [command.arguments objectAtIndex:0];
+    [[HTTransmitterClient sharedClient] connectDriverWithDriverID:driverID completion:nil];
+}
+
+- (void)getPublishableKey:(CDVInvokedUrlCommand*)command
+{
+    NSString *publishableKey = [HyperTrack publishableKey];
+
+    if (!publishableKey) {
+        publishableKey = @"";
+    }
+
+    CDVPluginResult* pluginResult = nil;
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
+                                     messageAsString:publishableKey];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
 @end

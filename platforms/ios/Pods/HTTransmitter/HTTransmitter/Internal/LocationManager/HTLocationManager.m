@@ -319,6 +319,10 @@ const NSTimeInterval minimumTimeInterval = 1.0f;
     return HTLocationStatusSuccess;
 }
 
+- (CLLocation *)lastLocation {
+    return self.locationManager.location;
+}
+
 #pragma mark CLLocationManagerDelegate methods
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {

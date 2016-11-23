@@ -357,7 +357,7 @@ static const NSInteger maxRetryCount = 10;
 - (BOOL)requestsProcessedOffline:(NSArray <id <HTNetworkRequestProtocol>> *)requests {
     BOOL processed = YES;
     for (id <HTNetworkRequestProtocol> request in requests) {
-        if (!request.processed) {
+        if (!request.responseOffline) {
             processed = NO;
             break;
         }

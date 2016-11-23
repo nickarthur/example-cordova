@@ -65,7 +65,27 @@ var app = {
 
           // success callback
           function(response) {
-            alert('success: ' + JSON.stringify(response));
+            tripObj = JSON.parse(response.trip)
+            console.log(tripObj);
+            tripID = tripObj.id;
+            var status = tripObj.status;
+            alert('success: ' + tripID + ', ' + status);
+          },
+
+          // error callback
+          function (error) {
+            alert('error: ' + JSON.stringify(error));
+          });
+    },
+
+    startShift: function(driverID) {
+        var hypertrack = cordova.plugins.HyperTrack;
+        hypertrack.startShift(driverID,
+
+          // success callback
+          function(response) {
+            shift = JSON.parse(response.shift)
+            alert('success: ' + shift);
           },
 
           // error callback
@@ -89,13 +109,36 @@ var app = {
           });
     },
 
-    endTrip: function() {
+    endTrip: function(tripID) {
+        if (tripID.length == 0) {
+          alert('no trip id');
+          return
+        }
+
         var hypertrack = cordova.plugins.HyperTrack;
         hypertrack.endTrip(tripID,
 
           // success callback
           function(response) {
-            alert('success: ' + JSON.stringify(response));
+            tripObj = JSON.parse(response.trip)
+            tripID = tripObj.id;
+            var status = tripObj.status;
+            alert('success: ' + tripID + ', ' + status);
+          },
+
+          // error callback
+          function (error) {
+            alert('error: ' + JSON.stringify(error));
+          });
+    },
+
+    endShift: function() {
+        var hypertrack = cordova.plugins.HyperTrack;
+        hypertrack.endShift(
+          // success callback
+          function(response) {
+            shift = JSON.parse(response.shift)
+            alert('success: ' + shift);
           },
 
           // error callback
@@ -109,7 +152,7 @@ app.initialize();
 
 driverID = "b4caf73c-87a4-4263-938f-08347612d96c";
 taskID = "17f18397-1394-44ed-92db-da4894b709cb";
-tripID = "9cc960bd-1c40-445e-a3da-0e3c841dcab6";
+tripID = "";
 
 helloWorldButton = function() {
     app.helloWorld('hello world button');
@@ -117,6 +160,10 @@ helloWorldButton = function() {
 
 startTripButton = function() {
     app.startTrip(driverID, [taskID]);
+}
+
+startShiftButton = function() {
+    app.startShift(driverID);
 }
 
 completeTaskButton = function() {
@@ -127,7 +174,13 @@ endTripButton = function() {
     app.endTrip(tripID);
 }
 
+endShiftButton = function() {
+    app.endShift();
+}
+
 document.getElementById("helloWorldButton").addEventListener("click", helloWorldButton);
 document.getElementById("startTripButton").addEventListener("click", startTripButton);
 document.getElementById("completeTaskButton").addEventListener("click", completeTaskButton);
 document.getElementById("endTripButton").addEventListener("click", endTripButton);
+document.getElementById("startShiftButton").addEventListener("click", startShiftButton);
+document.getElementById("endShiftButton").addEventListener("click", endShiftButton);

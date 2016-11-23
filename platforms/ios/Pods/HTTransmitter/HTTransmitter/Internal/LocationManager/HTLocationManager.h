@@ -20,6 +20,7 @@
 @interface HTLocationManager : NSObject
 
 - (instancetype)initWithLogger:(id<HTLoggerProtocol>)logger NS_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly) CLLocation *lastLocation;
 
 + (BOOL)isLocationAuthorized;
 + (BOOL)isAuthorizationDenied;
