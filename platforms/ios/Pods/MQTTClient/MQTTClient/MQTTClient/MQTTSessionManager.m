@@ -3,7 +3,7 @@
 //  MQTTClient
 //
 //  Created by Christoph Krey on 09.07.14.
-//  Copyright © 2013-2016 Christoph Krey. All rights reserved.
+//  Copyright © 2013-2017 Christoph Krey. All rights reserved.
 //
 
 #import "MQTTSessionManager.h"
@@ -49,9 +49,11 @@
 @property (nonatomic) NSUInteger maxWindowSize;
 @property (nonatomic) NSUInteger maxSize;
 @property (nonatomic) NSUInteger maxMessages;
+@property (nonatomic) BOOL shouldConnectInForeground;
 
 @property (strong, nonatomic) NSDictionary<NSString *, NSNumber *> *internalSubscriptions;
 @property (strong, nonatomic) NSDictionary<NSString *, NSNumber *> *effectiveSubscriptions;
+@property (strong, nonatomic) NSLock *subscriptionLock;
 
 @end
 
@@ -75,7 +77,7 @@
 - (id)init {
     self = [super init];
 
-    self.state = MQTTSessionManagerStateStarting;
+    [self updateState:MQTTSessionManagerStateStarting];
     self.internalSubscriptions = [[NSMutableDictionary alloc] init];
     self.effectiveSubscriptions = [[NSMutableDictionary alloc] init];
     
@@ -84,11 +86,7 @@
     self.maxSize = MQTT_MAX_SIZE;
     self.maxMessages = MQTT_MAX_MESSAGES;
     self.maxWindowSize = MQTT_MAX_WINDOW_SIZE;
-
-    self.persistent = MQTT_PERSISTENT;
-    self.maxWindowSize = MQTT_MAX_WINDOW_SIZE;
-    self.maxSize = MQTT_MAX_SIZE;
-    self.maxMessages = MQTT_MAX_MESSAGES;
+    self.shouldConnectInForeground = YES;
 
 #if TARGET_OS_IPHONE == 1
     self.backgroundTask = UIBackgroundTaskInvalid;
@@ -110,6 +108,21 @@
                           name:UIApplicationDidBecomeActiveNotification
                         object:nil];
 #endif
+    self.subscriptionLock = [[NSLock alloc] init];
+    return self;
+}
+
+- (MQTTSessionManager *)initWithPersistence:(BOOL)persistent
+                              maxWindowSize:(NSUInteger)maxWindowSize
+                                maxMessages:(NSUInteger)maxMessages
+                                    maxSize:(NSUInteger)maxSize
+                        connectInForeground:(BOOL)connectInForeground {
+    self = [self init];
+    self.persistent = persistent;
+    self.maxWindowSize = maxWindowSize;
+    self.maxSize = maxSize;
+    self.maxMessages = maxMessages;
+    self.shouldConnectInForeground = connectInForeground;
     return self;
 }
 
@@ -117,32 +130,38 @@
                               maxWindowSize:(NSUInteger)maxWindowSize
                                 maxMessages:(NSUInteger)maxMessages
                                     maxSize:(NSUInteger)maxSize {
-    self = [self init];
-    self.persistent = persistent;
-    self.maxWindowSize = maxWindowSize;
-    self.maxSize = maxSize;
-    self.maxMessages = maxMessages;
+    self = [self initWithPersistence:persistent
+                       maxWindowSize:maxWindowSize
+                         maxMessages:maxMessages
+                             maxSize:maxSize
+                 connectInForeground:YES];
     return self;
 }
 
 #if TARGET_OS_IPHONE == 1
 - (void)appWillResignActive {
-    [self disconnect];
+    if (self.shouldConnectInForeground) {
+        [self disconnect];
+    }
 }
 
 - (void)appDidEnterBackground {
-    __weak MQTTSessionManager *weakSelf = self;
-    self.backgroundTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
-        __strong MQTTSessionManager *strongSelf = weakSelf;
-        if (strongSelf.backgroundTask) {
-            [[UIApplication sharedApplication] endBackgroundTask:strongSelf.backgroundTask];
-            strongSelf.backgroundTask = UIBackgroundTaskInvalid;
-        }
-    }];
+    if (self.shouldConnectInForeground) {
+        __weak MQTTSessionManager *weakSelf = self;
+        self.backgroundTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+            __strong MQTTSessionManager *strongSelf = weakSelf;
+            if (strongSelf.backgroundTask) {
+                [[UIApplication sharedApplication] endBackgroundTask:strongSelf.backgroundTask];
+                strongSelf.backgroundTask = UIBackgroundTaskInvalid;
+            }
+        }];
+    }
 }
 
 - (void)appDidBecomeActive {
-    [self connectToLast];
+    if (self.shouldConnectInForeground) {
+        [self connectToLast];
+    }
 }
 #endif
 
@@ -348,12 +367,21 @@
 
 - (void)disconnect
 {
-    self.state = MQTTSessionManagerStateClosing;
+    [self updateState:MQTTSessionManagerStateClosing];
     [self.session close];
 
     if (self.reconnectTimer) {
         [self.reconnectTimer invalidate];
         self.reconnectTimer = nil;
+    }
+}
+
+- (void)updateState:(MQTTSessionManagerState)newState
+{
+    self.state = newState;
+    
+    if ([self.delegate respondsToSelector:@selector(sessionManager:didChangeState:)]) {
+        [self.delegate sessionManager:self didChangeState:newState];
     }
 }
 
@@ -377,19 +405,19 @@
         case MQTTSessionEventConnected:
         {
             self.lastErrorCode = nil;
-            self.state = MQTTSessionManagerStateConnected;
+            [self updateState:MQTTSessionManagerStateConnected];
             break;
         }
         case MQTTSessionEventConnectionClosed:
         case MQTTSessionEventConnectionClosedByBroker:
-            self.state = MQTTSessionManagerStateClosed;
+            [self updateState:MQTTSessionManagerStateClosed];
 #if TARGET_OS_IPHONE == 1
             if (self.backgroundTask) {
                 [[UIApplication sharedApplication] endBackgroundTask:self.backgroundTask];
                 self.backgroundTask = UIBackgroundTaskInvalid;
             }
 #endif
-            self.state = MQTTSessionManagerStateStarting;
+            [self updateState:MQTTSessionManagerStateStarting];
             break;
         case MQTTSessionEventProtocolError:
         case MQTTSessionEventConnectionRefused:
@@ -404,7 +432,7 @@
                       forMode:NSDefaultRunLoopMode];
 
             self.lastErrorCode = error;
-            self.state = MQTTSessionManagerStateError;
+            [self updateState:MQTTSessionManagerStateError];
             break;
         }
         default:
@@ -422,9 +450,9 @@
 - (void)connected:(MQTTSession *)session sessionPresent:(BOOL)sessionPresent {
     if (self.clean || !self.reconnectFlag || !sessionPresent) {
         NSDictionary *subscriptions = [self.internalSubscriptions copy];
-        @synchronized(self.effectiveSubscriptions) {
-            self.effectiveSubscriptions = [[NSMutableDictionary alloc] init];
-        }
+        [self.subscriptionLock lock];
+        self.effectiveSubscriptions = [[NSMutableDictionary alloc] init];
+        [self.subscriptionLock unlock];
         if (subscriptions.count) {
             [self.session subscribeToTopics:subscriptions subscribeHandler:^(NSError *error, NSArray<NSNumber *> *gQoss) {
                 if (!error) {
@@ -432,11 +460,11 @@
                     for (int i = 0; i < allTopics.count; i++) {
                         NSString *topic = allTopics[i];
                         NSNumber *gQos = gQoss[i];
-                        @synchronized(self.effectiveSubscriptions) {
-                            NSMutableDictionary *newEffectiveSubscriptions = [self.subscriptions mutableCopy];
-                            [newEffectiveSubscriptions setObject:gQos forKey:topic];
-                            self.effectiveSubscriptions = newEffectiveSubscriptions;
-                        }
+                        [self.subscriptionLock lock];
+                        NSMutableDictionary *newEffectiveSubscriptions = [self.subscriptions mutableCopy];
+                        [newEffectiveSubscriptions setObject:gQos forKey:topic];
+                        self.effectiveSubscriptions = newEffectiveSubscriptions;
+                        [self.subscriptionLock unlock];
                     }
                 }
             }];
@@ -459,7 +487,7 @@
 {
     if (self.state == MQTTSessionManagerStateStarting
         && self.session != nil) {
-        self.state = MQTTSessionManagerStateConnecting;
+        [self updateState:MQTTSessionManagerStateConnecting];
         [self.session connectToHost:self.host
                                port:self.port
                            usingSSL:self.tls];
@@ -469,7 +497,7 @@
 - (void)reconnect
 {
     self.reconnectTimer = nil;
-    self.state = MQTTSessionManagerStateStarting;
+    [self updateState:MQTTSessionManagerStateStarting];
 
     if (self.reconnectTime < RECONNECT_TIMER_MAX) {
         self.reconnectTime *= 2;
@@ -497,11 +525,11 @@
             if (![newSubscriptions objectForKey:topicFilter]) {
                 [self.session unsubscribeTopic:topicFilter unsubscribeHandler:^(NSError *error) {
                     if (!error) {
-                        @synchronized(self.effectiveSubscriptions) {
-                            NSMutableDictionary *newEffectiveSubscriptions = [self.subscriptions mutableCopy];
-                            [newEffectiveSubscriptions removeObjectForKey:topicFilter];
-                            self.effectiveSubscriptions = newEffectiveSubscriptions;
-                        }
+                        [self.subscriptionLock lock];
+                        NSMutableDictionary *newEffectiveSubscriptions = [self.subscriptions mutableCopy];
+                        [newEffectiveSubscriptions removeObjectForKey:topicFilter];
+                        self.effectiveSubscriptions = newEffectiveSubscriptions;
+                        [self.subscriptionLock unlock];
                     }
                 }];
             }
@@ -514,11 +542,11 @@
                 [self.session subscribeToTopic:topicFilter atLevel:qos subscribeHandler:^(NSError *error, NSArray<NSNumber *> *gQoss) {
                     if (!error) {
                         NSNumber *gQos = gQoss[0];
-                        @synchronized(self.effectiveSubscriptions) {
-                            NSMutableDictionary *newEffectiveSubscriptions = [self.subscriptions mutableCopy];
-                            [newEffectiveSubscriptions setObject:gQos forKey:topicFilter];
-                            self.effectiveSubscriptions = newEffectiveSubscriptions;
-                        }
+                        [self.subscriptionLock lock];
+                        NSMutableDictionary *newEffectiveSubscriptions = [self.subscriptions mutableCopy];
+                        [newEffectiveSubscriptions setObject:gQos forKey:topicFilter];
+                        self.effectiveSubscriptions = newEffectiveSubscriptions;
+                        [self.subscriptionLock unlock];
                     }
                 }];
             }

@@ -117,8 +117,10 @@ static HTLogLevel LogLevel = HTLogLevelWarning;
     
     NSString *deviceUUID = HT_IDENTIFIER_FOR_VENDOR;
     NSString *timestamp = [[NSDateFormatter ht_remoteLoggerFormatter] stringFromDate:[NSDate date]];
+    NSString *newMessage = [[message componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] componentsJoinedByString:@" "];
+
     
-    return [NSString stringWithFormat:@"%@ %@/%@ %@: %@-%@ | %@ | %@", timestamp, self.userAgent, HTSDKVersion, publishableKey, device, osVersion, deviceUUID, message];
+    return [NSString stringWithFormat:@"%@ %@/%@ %@: %@-%@ | %@ | %@", timestamp, self.userAgent, HTSDKVersion, publishableKey, device, osVersion, deviceUUID, newMessage];
 }
 
 ///--------------------------------------

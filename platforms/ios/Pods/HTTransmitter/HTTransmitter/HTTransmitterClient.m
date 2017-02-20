@@ -9,6 +9,7 @@
 #import <HTCommon/HTCommon.h>
 
 #import "HTTrip.h"
+#import "HTShift.h"
 #import "HTLocationManager.h"
 #import "HTTripParams.h"
 #import "HTTransmitterConstants.h"
@@ -421,7 +422,7 @@ static const NSTimeInterval locationRequestTimeout = 2.0f;
 
 #pragma mark - Shift Methods
 
-- (void)startShiftWithShiftParams:(HTShiftParams *)shiftParams completion:(HTResponseBlock)completion {
+- (void)startShiftWithShiftParams:(HTShiftParams *)shiftParams completion:(HTShiftBlock)completion {
     [self.logger info:@"Trying to start shift"];
     [self.logger debug:@"Shift Params : %@", shiftParams];
     
@@ -446,7 +447,7 @@ static const NSTimeInterval locationRequestTimeout = 2.0f;
     [self startShiftWithShiftParams:shiftParams location:self.locationManager.lastLocation completion:completion];
 }
 
-- (void)startShiftWithShiftParams:(HTShiftParams *)shiftParams location:(CLLocation *)location completion:(HTResponseBlock)completion {
+- (void)startShiftWithShiftParams:(HTShiftParams *)shiftParams location:(CLLocation *)location completion:(HTShiftBlock)completion {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     
     if (location) {
@@ -471,7 +472,8 @@ static const NSTimeInterval locationRequestTimeout = 2.0f;
                                                                         [self.logger info:@"Shift Started for driverID : %@!", shiftParams.driverID];
                                                                         [self.locationService startForDriverID:shiftParams.driverID];
                                                                         [self.locationService updateSDKControls];
-                                                                        HTResponse *response = [[HTResponse alloc] initWithResult:responseObject offline:error.networkError];
+                                                                        HTShift *shift = [[HTShift alloc] initWithResponseObject:responseObject];
+                                                                        HTResponse <HTShift *> *response = [[HTResponse <HTShift *> alloc] initWithResult:shift offline:error.networkError];
                                                                         InvokeBlock(completion, response, nil);
                                                                     }];
     request.cached = YES;
@@ -481,7 +483,7 @@ static const NSTimeInterval locationRequestTimeout = 2.0f;
     [self.requestManager processRequest:request];
 }
 
-- (void)endShiftWithCompletion:(HTResponseBlock)completion {
+- (void)endShiftWithCompletion:(HTShiftBlock)completion {
     NSString *driverID = self.locationService.driverID;
     if (!self.locationService.active || !driverID) {
         [self.logger warn:@"No active driver. Cannot end shift"];
@@ -499,7 +501,7 @@ static const NSTimeInterval locationRequestTimeout = 2.0f;
     }];
 }
 
-- (void)endShiftForDriverID:(NSString *)driverID location:(CLLocation *)location completion:(HTResponseBlock)completion {
+- (void)endShiftForDriverID:(NSString *)driverID location:(CLLocation *)location completion:(HTShiftBlock)completion {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     if (location) {
         HTLocation *htLocation = [[HTLocation alloc] initWithCoordinate:location.coordinate];
@@ -522,7 +524,8 @@ static const NSTimeInterval locationRequestTimeout = 2.0f;
                                                                         
                                                                         [self.logger info:@"Shift ended successfully for driverID :%@", driverID];
                                                                         [self.locationService updateSDKControls];
-                                                                        HTResponse *response = [[HTResponse alloc] initWithResult:responseObject offline:error.networkError];
+                                                                        HTShift *shift = [[HTShift alloc] initWithResponseObject:responseObject];
+                                                                        HTResponse<HTShift *> *response = [[HTResponse <HTShift *> alloc] initWithResult:shift offline:error.networkError];
                                                                         InvokeBlock(completion, response, nil);
                                                                     }];
     request.cached = YES;

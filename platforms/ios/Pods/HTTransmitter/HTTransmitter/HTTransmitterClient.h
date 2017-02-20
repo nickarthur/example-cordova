@@ -13,6 +13,7 @@
 
 @class HTTask;
 @class HTTrip;
+@class HTShift;
 
 /**-----------------------------------------------------------------------------
  * @name Blocks
@@ -39,13 +40,14 @@ typedef void(^ _Nullable HTTripBlock)(HTResponse <HTTrip *> * _Nullable response
 typedef void(^ _Nullable HTTaskBlock)(HTResponse <HTTask *> * _Nullable response, NSError * _Nullable error);
 
 /**
- *  A C block, passed as a paramater to the methods which has `task` specific callbacks. The block has no return value and takes two arguments: response, and error object.
+ *  A C block, passed as a paramater to the methods which has `shift` specific callbacks. The block has no return value and takes two arguments: response, and error object.
  *
- *  @param  response    Hypertrack response object
- *  @param  error   Error object in case of failure
+ *  @param response HyperTrack shift response. Will be nil if an error occurs.
+ *  @param error    Error returned from the response, or nil in one occurs.
  *
+ *  @since  v0.12.5
  */
-typedef void(^ _Nullable HTResponseBlock)(HTResponse * _Nullable response, NSError * _Nullable error);
+typedef void(^ _Nullable HTShiftBlock)(HTResponse <HTShift *> * _Nullable response, NSError * _Nullable error);
 
 /**
  *  Posted immediately after the location service is terminated.
@@ -198,7 +200,7 @@ FOUNDATION_EXPORT NSString * const _Nonnull HTLocationServiceDidTerminate;
  *  @since  v0.7.0
  */
 - (void)startShiftWithShiftParams:(nonnull HTShiftParams *)shiftParams
-                       completion:(HTResponseBlock)completion NS_SWIFT_NAME(startShift(params:completion:));
+                       completion:(HTShiftBlock)completion NS_SWIFT_NAME(startShift(params:completion:));
 
 /**
  *  End HyperTrack Shift
@@ -209,7 +211,7 @@ FOUNDATION_EXPORT NSString * const _Nonnull HTLocationServiceDidTerminate;
  *
  *  @since  v0.7.0
  */
-- (void)endShiftWithCompletion:(HTResponseBlock)completion NS_SWIFT_NAME(endShift(completion:));
+- (void)endShiftWithCompletion:(HTShiftBlock)completion NS_SWIFT_NAME(endShift(completion:));
 
 ///--------------------------------------
 /// @name Location Service Management

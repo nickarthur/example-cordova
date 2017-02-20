@@ -5,11 +5,11 @@ repositories {
 
 dependencies {
   // Might lead to merge issues. Should use framework in plugin.xml instead?
-  compile 'com.google.android.gms:play-services-gcm:8.4.0'
-  compile 'com.google.android.gms:play-services-location:8.4.0'
+  compile 'com.google.android.gms:play-services-gcm:10.0.1'
+  compile 'com.google.android.gms:play-services-location:10.0.1'
 
   // HyperTrack SDK
-  compile('io.hypertrack:transmitter:1.4.7:release@aar') {
+  compile('io.hypertrack:transmitter:1.5.13:release@aar') {
     transitive = true;
   }
 

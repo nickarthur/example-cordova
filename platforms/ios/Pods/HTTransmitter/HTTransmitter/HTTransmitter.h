@@ -19,6 +19,7 @@ FOUNDATION_EXPORT const unsigned char HTTransmitterVersionString[];
 #import "HTTransmitterClient.h"
 #import "HTTripParams.h"
 #import "HTTrip.h"
+#import "HTShift.h"
 #import "HTTaskParams.h"
 #import "HTShiftParams.h"
 #import "HTResponse.h"

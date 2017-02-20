@@ -243,7 +243,7 @@ const NSInteger DefaultRequestID = -1;
 - (void)updateWithSDKControls:(HTSDKControls *)sdkControls updated:(HTSDKControlsUpdate *)update {
     [self.logger info:@"SDK Controls updated"];
     
-    if (update.activeStatusChanged && sdkControls.isActive) {
+    if (sdkControls.isActive) {
         [self.logger info:@"Driver active changed"];
         BOOL active = sdkControls.isActive.boolValue;
         if (!active) {
@@ -445,9 +445,29 @@ const NSInteger DefaultRequestID = -1;
                                                              }
                                                              
                                                              [self.logger info:@"Subscribed to SDK Controls. DriverID : %@", self.driverID];
+                                                             [self publishSubscribeDriverIDSuccess];
                                                              InvokeBlock(completion, nil);
                                                          }];
     
+    [self.networkManager processRequest:request];
+}
+
+- (void) publishSubscribeDriverIDSuccess {
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setObject:self.driverID forKey:@"driver_id"];
+    [params setObject:@YES forKey:@"is_connected"];
+    
+    HTNetworkRequest *request = [[HTNetworkRequest alloc] initWithMethodType:HTNetworkRequestMethodTypePost
+                                                                   APIString:@""
+                                                                      params:params
+                                                                    callback:nil];
+    request.parallel = YES;
+    request.hasTimeout = NO;
+    request.cached = NO;
+    request.type = HTNetworkRequestTypeMQTT;
+    request.topic = [NSString stringWithFormat:@"DriverConnection/%@", self.driverID];
+    
+    [self.logger info:@"Publish successful DriverConnection"];
     [self.networkManager processRequest:request];
 }
 
