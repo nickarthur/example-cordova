@@ -7,7 +7,7 @@
  Using MQTT in your Objective-C application
  
  @author Christoph Krey krey.christoph@gmail.com
- @copyright Copyright © 2013-2016, Christoph Krey 
+ @copyright Copyright © 2013-2017, Christoph Krey. All rights reserved.
  
  based on Copyright (c) 2011, 2013, 2lemetry LLC
     All rights reserved. This program and the accompanying materials
@@ -409,6 +409,11 @@ typedef void (^MQTTPublishHandler)(NSError *error);
 
 /** certificates an NSArray holding client certificates or nil */
 @property (strong, nonatomic) NSArray *certificates;
+
+/** Require for VoIP background service
+ * defaults to NO
+ */
+@property (nonatomic) BOOL voip;
 
 /** connect to the given host through the given transport with the given
  *  MQTT session parameters asynchronously

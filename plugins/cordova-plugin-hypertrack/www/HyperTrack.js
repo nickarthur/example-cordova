@@ -17,8 +17,8 @@ hypertrack.completeTask = function(taskID, success, error) {
 };
 
 
-hypertrack.endTrip = function(tripID, success, error) {
-    exec(success, error, "HyperTrack", "endTrip", [tripID])
+hypertrack.endTrip = function(success, error) {
+    exec(success, error, "HyperTrack", "endTrip", [])
 };
 
 

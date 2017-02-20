@@ -35,7 +35,6 @@
 
 @property (nonatomic, strong) NSDictionary <NSString *, HTMQTTSubscription *> *subscribers;
 @property (nonatomic, strong) NSArray <HTMQTTSubscription *> *pendingSubscriptions;
-@property (nonatomic, strong) NSArray <HTMQTTSubscription *> *pendingUnsubscriptions;
 
 @property (nonatomic, strong) dispatch_queue_t dispatchQueue;
 
@@ -72,7 +71,6 @@ static const NSTimeInterval ReconnectRetryInterval = 5.0f;
         
         self.subscribers = @{};
         self.pendingSubscriptions = @[];
-        self.pendingUnsubscriptions = @[];
         
         [self setupSession];
         [self connectSessionIfNeeded];
@@ -91,7 +89,6 @@ static const NSTimeInterval ReconnectRetryInterval = 5.0f;
     self.session.transport = transport;
     self.session.keepAliveInterval = MQTTKeepAliveInterval;
     self.session.willRetainFlag = NO;
-    self.session.cleanSessionFlag = NO;
     
     self.session.delegate = self;
 }
@@ -205,19 +202,8 @@ static const NSTimeInterval ReconnectRetryInterval = 5.0f;
     NSString *prefixedTopic = [self prefixedTopic:topic];
     HTMQTTSubscription *subscription = [self.subscribers valueForKey:prefixedTopic];
     
-    if (!subscription) {
-        return;
-    }
-    
+    [self.session unsubscribeTopic:prefixedTopic];
     [self removeSubscriber:subscription];
-    if (self.session.status != MQTTSessionStatusConnected) {
-        [self.logger warn:@"MQTTSession not connected. Unsubscription added to pending"];
-        [self addPendingUnSubscription:subscription];
-        [self stopReconnectTimer];
-        [self connectSessionIfNeeded];
-    } else {
-        [self.session unsubscribeTopic:prefixedTopic];
-    }
 }
 
 #pragma mark - Subscriber Management Methods
@@ -292,29 +278,6 @@ static const NSTimeInterval ReconnectRetryInterval = 5.0f;
     }
 }
 
-- (void)removePendingUnSubscription:(HTMQTTSubscription *)subscription {
-    NSMutableArray *mutablePendingUnSubscriptions = [NSMutableArray arrayWithArray:self.pendingUnsubscriptions];
-    [mutablePendingUnSubscriptions removeObject:subscription];
-    self.pendingUnsubscriptions = mutablePendingUnSubscriptions;
-}
-
-- (void)addPendingUnSubscription:(HTMQTTSubscription *)subscription {
-    NSMutableArray *mutablePendingUnSubscriptions = [NSMutableArray arrayWithArray:self.pendingUnsubscriptions];
-    [mutablePendingUnSubscriptions addObject:subscription];
-    self.pendingUnsubscriptions = mutablePendingUnSubscriptions;
-}
-
-- (void)unsubscribeSubscriptions {
-    if (self.pendingUnsubscriptions.count > 0) {
-        [self.logger info:@"Pending unsubscriptions present"];
-        
-        for (HTMQTTSubscription *subscription in self.pendingUnsubscriptions) {
-            [self.session unsubscribeTopic:subscription.topic];
-            [self removePendingUnSubscription:subscription];
-        }
-    }
-}
-
 #pragma mark - Connection Methods
 
 - (void)registerToNotifications {
@@ -353,7 +316,6 @@ static const NSTimeInterval ReconnectRetryInterval = 5.0f;
                 [self startReconnectTimerIfNeeded];
             } else {
                 [self.logger info:@"Connection to MQTT Broker is successful"];
-                [self unsubscribeSubscriptions];
                 [self movePendingToSubscription];
                 [self stopReconnectTimer];
             }

@@ -14,7 +14,7 @@
 /// @name Version
 ///--------------------------------------
 
-static NSString *const _Nonnull HTSDKVersion = @"0.12.3";
+static NSString *const _Nonnull HTSDKVersion = @"0.12.6";
 
 @interface HyperTrack : NSObject
 

@@ -1,25 +1,25 @@
 PODS:
-  - HTCommon (0.12.3)
-  - HTTransmitter (0.12.3):
-    - HTCommon (= 0.12.3)
+  - HTCommon (0.12.6)
+  - HTTransmitter (0.12.6):
+    - HTCommon (= 0.12.6)
     - MQTTClient (~> 0.8.0)
-  - MQTTClient (0.8.5):
-    - MQTTClient/Core (= 0.8.5)
-  - MQTTClient/Core (0.8.5):
+  - MQTTClient (0.8.7):
+    - MQTTClient/Core (= 0.8.7)
+  - MQTTClient/Core (0.8.7):
     - MQTTClient/Manager
     - MQTTClient/Min
-  - MQTTClient/Manager (0.8.5):
+  - MQTTClient/Manager (0.8.7):
     - MQTTClient/Min
-  - MQTTClient/Min (0.8.5)
+  - MQTTClient/Min (0.8.7)
 
 DEPENDENCIES:
-  - HTTransmitter (~> 0.12.3)
+  - HTTransmitter (~> 0.12.6)
 
 SPEC CHECKSUMS:
-  HTCommon: 550f34126fec1a25d28aaca45e2cd35b55e009ad
-  HTTransmitter: 17746e1850482911ad46d5d03f4b679d142101bf
-  MQTTClient: fca939bcd74aa70af2d8ee35f3e44f258f4e9888
+  HTCommon: e3cb718588d4e8370a10b03e1a014960f119ed08
+  HTTransmitter: cf36bb968414e0bf3050c90ed32b79b39b2055c8
+  MQTTClient: 2842bdeab5a65eec75e0fcbbbd2a300946690fee
 
-PODFILE CHECKSUM: 518518ebb2fa438509b6abb94ad36f2daf6a4d0b
+PODFILE CHECKSUM: 52e92d969cb29e1d52389518b4def8957747d708
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0

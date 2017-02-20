@@ -37,7 +37,7 @@
     </config-file>
     <source-file src="src/ios/HyperTrackWrapper.m" />
 
-    <framework src="HTTransmitter" type="podspec" spec="~> 0.12.3" />
+    <framework src="HTTransmitter" type="podspec" spec="~> 0.12.6" />
     <framework src="libsqlite3.dylib" />
 
   </platform>

@@ -9,8 +9,10 @@
     },
     "cordova-plugin-hypertrack": {
         "source": {
-            "type": "local",
-            "path": "../hypertrack-cordova"
+            "type": "git",
+            "url": "https://github.com/hypertrack/hypertrack-cordova.git",
+            "subdir": ".",
+            "ref": "develop"
         },
         "is_top_level": true,
         "variables": {}

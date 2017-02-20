@@ -75,8 +75,7 @@ public class HyperTrackWrapper extends CordovaPlugin {
         }
 
         if (action.equals("endTrip")) {
-            String tripID = args.getString(0);
-            this.endTrip(tripID, callbackContext);
+            this.endTrip(callbackContext);
             return true;
         }
 
@@ -135,17 +134,21 @@ public class HyperTrackWrapper extends CordovaPlugin {
 
         transmitterService.startTrip(htTripParams, new HTTripStatusCallback() {
             @Override
-            public void onSuccess(boolean isOffline, HTTrip htTrip) {
+            public void onSuccess(HTTrip htTrip) {
                 try {
                     Gson gson = new Gson();
                     String tripJson = gson.toJson(htTrip);
                     JSONObject result = new JSONObject();
-                    result.put("is_offline", isOffline);
                     result.put("trip", tripJson);
                     callbackContext.success(result);
                 } catch (JSONException e) {
                     callbackContext.success("");
                 }
+            }
+
+            @Override
+            public void onOfflineSuccess() {
+                callbackContext.success("");
             }
 
             @Override
@@ -182,6 +185,11 @@ public class HyperTrackWrapper extends CordovaPlugin {
             }
 
             @Override
+            public void onOfflineSuccess() {
+                callbackContext.success("");
+            }
+
+            @Override
             public void onError(Exception e) {
                 try {
                     JSONObject result = new JSONObject();
@@ -198,23 +206,27 @@ public class HyperTrackWrapper extends CordovaPlugin {
         });
     }
 
-    private void endTrip(String tripID, final CallbackContext callbackContext) {
+    private void endTrip(final CallbackContext callbackContext) {
         Context context = this.cordova.getActivity().getApplicationContext();
         HTTransmitterService transmitterService = HTTransmitterService.getInstance(context);
 
-        transmitterService.endTrip(tripID, new HTTripStatusCallback() {
+        transmitterService.endTrip(new HTTripStatusCallback() {
             @Override
-            public void onSuccess(boolean isOffline, HTTrip htTrip) {
+            public void onSuccess(HTTrip htTrip) {
                 try {
                     Gson gson = new Gson();
                     String tripJson = gson.toJson(htTrip);
                     JSONObject result = new JSONObject();
-                    result.put("is_offline", isOffline);
                     result.put("trip", tripJson);
                     callbackContext.success(result);
                 } catch (JSONException e) {
                     callbackContext.success("");
                 }
+            }
+
+            @Override
+            public void onOfflineSuccess() {
+                callbackContext.success("");
             }
 
             @Override
@@ -253,6 +265,11 @@ public class HyperTrackWrapper extends CordovaPlugin {
                 } catch (JSONException e) {
                     callbackContext.success("");
                 }
+            }
+
+            @Override
+            public void onOfflineSuccess() {
+                callbackContext.success("");
             }
 
             @Override
@@ -304,6 +321,11 @@ public class HyperTrackWrapper extends CordovaPlugin {
                 } catch (JSONException e) {
                     callbackContext.success("");
                 }
+            }
+
+            @Override
+            public void onOfflineSuccess() {
+                callbackContext.success("");
             }
         });
     }

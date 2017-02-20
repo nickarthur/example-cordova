@@ -109,15 +109,9 @@ var app = {
           });
     },
 
-    endTrip: function(tripID) {
-        if (tripID.length == 0) {
-          alert('no trip id');
-          return
-        }
-
+    endTrip: function() {
         var hypertrack = cordova.plugins.HyperTrack;
-        hypertrack.endTrip(tripID,
-
+        hypertrack.endTrip(
           // success callback
           function(response) {
             tripObj = JSON.parse(response.trip)
@@ -159,7 +153,7 @@ helloWorldButton = function() {
 }
 
 startTripButton = function() {
-    app.startTrip(driverID, [taskID]);
+    app.startTrip(driverID, []);
 }
 
 startShiftButton = function() {
@@ -171,7 +165,7 @@ completeTaskButton = function() {
 }
 
 endTripButton = function() {
-    app.endTrip(tripID);
+    app.endTrip();
 }
 
 endShiftButton = function() {

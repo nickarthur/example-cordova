@@ -41,6 +41,16 @@
 @property (strong, nonatomic, readonly, nullable) NSDate *ETA;
 
 /**
+ *  Current Status of the trip
+ */
+@property (copy, nonatomic, readonly, nullable) NSString *status;
+
+/**
+ *  Current Connection Status of the trip
+ */
+@property (copy, nonatomic, readonly, nullable) NSString *connectionStatus;
+
+/**
  *  Distance covered in the trip
  */
 @property (strong, nonatomic, readonly, nullable) NSNumber *distance;
@@ -49,6 +59,11 @@
  *  Encoded polyline for the location being traced in the trip
  */
 @property (strong, nonatomic, readonly, nullable) NSString *encodedPolyline;
+
+/**
+ *  Encoded TimeAware polyline for the location being traced in the trip
+ */
+@property (strong, nonatomic, readonly, nullable) NSString *timeAwarePolyline;
 
 /**
  *  Start location for the trip
@@ -74,6 +89,11 @@
  *  List of taskIDs being tracked in the trip
  */
 @property (strong, nonatomic, readonly, nullable) NSArray<NSString *> *taskIDs;
+
+/**
+ *  Bool to indicate whether current Trip has Ordered tasks
+ */
+@property (strong, nonatomic, readonly, nullable) NSNumber *hasOrderedTasks;
 
 /**
  *  Vehicle type used for the trip

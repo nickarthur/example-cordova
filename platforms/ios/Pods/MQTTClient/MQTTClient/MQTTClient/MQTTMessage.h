@@ -2,7 +2,7 @@
 // MQTTMessage.h
 // MQTTClient.framework
 //
-// Copyright © 2013-2016, Christoph Krey
+// Copyright © 2013-2017, Christoph Krey. All rights reserved.
 //
 // based on
 //
@@ -32,7 +32,8 @@ typedef NS_ENUM(UInt8, MQTTQosLevel) {
  */
 typedef NS_ENUM(UInt8, MQTTProtocolVersion) {
     MQTTProtocolVersion31 = 3,
-    MQTTProtocolVersion311 = 4
+    MQTTProtocolVersion311 = 4,
+    MQTTProtocolVersion50 = 5
 };
 
 typedef NS_ENUM(UInt8, MQTTCommandType) {

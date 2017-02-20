@@ -2,5 +2,5 @@
 platform :ios, '8.0'
 target 'HelloCordova' do
 	project 'HelloCordova.xcodeproj'
-	pod 'HTTransmitter', '~> 0.12.3'
+	pod 'HTTransmitter', '~> 0.12.6'
 end
