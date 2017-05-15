@@ -35,6 +35,7 @@ var app = {
         this.getOrCreateUser();
         this.startTracking();
         this.getCurrentLocation();
+        this.stopTracking();
     },
 
     getOrCreateUser() {
@@ -54,7 +55,11 @@ var app = {
 
     getCurrentLocation () {
         var hypertrack = cordova.plugins.HyperTrack;
-        hypertrack.getCurrentLocation((e) => {console.log('success', e)}, (e) => {console.log('error', e)})
+        hypertrack.getCurrentLocation(
+            (e) => {console.log('success', e);
+                    var obj = JSON.parse(e);
+                    alert(obj.mLatitude + ', ' + obj.mLongitude)},
+            (e) => {console.log('error', e)})
     },
 
     // Update DOM on a Received Event

@@ -24,5 +24,5 @@
         <allow-intent href="itms-apps:*" />
     </platform>
 
-    <preference name="HYPERTRACK_PK" value="pk_1507af78ef9dca2d250bdd6cf835e315bde4ad96" />
+    <preference name="HYPERTRACK_PK" value="YOUR_PUBLISHABLE_KEY" />
 </widget>
