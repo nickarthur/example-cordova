@@ -31,6 +31,30 @@ var app = {
 
         var hypertrack = cordova.plugins.HyperTrack;
         console.log(hypertrack);
+
+        this.getOrCreateUser();
+        this.startTracking();
+        this.getCurrentLocation();
+    },
+
+    getOrCreateUser() {
+        var hypertrack = cordova.plugins.HyperTrack;
+        hypertrack.getOrCreateUser("name", "phone", "lookup", (e) => {console.log('success', e)}, (e) => {console.log('error', e)})
+    },
+
+    startTracking() {
+        var hypertrack = cordova.plugins.HyperTrack;
+        hypertrack.startTracking((e) => {console.log('success', e)}, (e) => {console.log('error', e)})
+    },
+
+    stopTracking() {
+        var hypertrack = cordova.plugins.HyperTrack;
+        hypertrack.stopTracking((e) => {console.log('success', e)}, (e) => {console.log('error', e)})
+    },
+
+    getCurrentLocation () {
+        var hypertrack = cordova.plugins.HyperTrack;
+        hypertrack.getCurrentLocation((e) => {console.log('success', e)}, (e) => {console.log('error', e)})
     },
 
     // Update DOM on a Received Event

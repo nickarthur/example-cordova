@@ -24,4 +24,5 @@
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
+    <preference name="HYPERTRACK_PK" value="pk_1507af78ef9dca2d250bdd6cf835e315bde4ad96" />
 </widget>
