@@ -26,6 +26,10 @@ import com.hypertrack.lib.internal.transmitter.models.HyperTrackEvent;
 import com.hypertrack.lib.models.ErrorResponse;
 import com.hypertrack.lib.models.SuccessResponse;
 import com.hypertrack.lib.models.User;
+import com.hypertrack.lib.models.Place;
+import com.hypertrack.lib.models.Action;
+import com.hypertrack.lib.models.ActionParams;
+import com.hypertrack.lib.models.ActionParamsBuilder;
 
 /**
  * This class calls SDK methods.
@@ -82,6 +86,18 @@ public class HyperTrackWrapper extends CordovaPlugin {
             return true;
         }
 
+        if (action.equals("createAndAssignAction")) {
+            String type = args.getString(0);
+            String lookupId = args.getString(1);
+            String expectedPlaceAddress = args.getString(2);
+            Double expectedPlaceLatitude = args.getDouble(3);
+            Double expectedPlaceLongitude = args.getDouble(4);
+            this.createAndAssignAction(type, lookupId, expectedPlaceAddress,
+                                       expectedPlaceLatitude, expectedPlaceLongitude,
+                                       callbackContext);
+            return true;
+        }
+
         return false;
     }
 
@@ -113,6 +129,7 @@ public class HyperTrackWrapper extends CordovaPlugin {
 
     private void setUserId(String userId, final CallbackContext callbackContext) {
         HyperTrack.setUserId(userId);
+        callbackContext.success();
     }
 
     private void startTracking(final CallbackContext callbackContext) {
@@ -134,10 +151,12 @@ public class HyperTrackWrapper extends CordovaPlugin {
 
     private void stopTracking(final CallbackContext callbackContext) {
         HyperTrack.stopTracking();
+        callbackContext.success();
     }
 
     private void completeAction(String actionId, final CallbackContext callbackContext) {
         HyperTrack.completeAction(actionId);
+        callbackContext.success();
     }
 
     private void getCurrentLocation(final CallbackContext callbackContext) {
@@ -153,6 +172,35 @@ public class HyperTrackWrapper extends CordovaPlugin {
             @Override
             public void onError(@NonNull ErrorResponse errorResponse) {
                 // Handle getCurrentLocation API error here
+                String serializedError = new GsonBuilder().create().toJson(errorResponse);
+                callbackContext.error(serializedError);
+            }
+        });
+    }
+
+    private void createAndAssignAction(String type, String lookupId, String expectedPlaceAddress,
+                                       Double expectedPlaceLatitude, Double expectedPlaceLongitude,
+                                       final CallbackContext callbackContext) {
+        Place expectedPlace = new Place().setLocation(expectedPlaceLatitude, expectedPlaceLongitude)
+            .setAddress(expectedPlaceAddress);
+
+        ActionParams actionParams = new ActionParamsBuilder()
+            .setExpectedPlace(expectedPlace)
+            .setType(type)
+            .build();
+
+        HyperTrack.createAndAssignAction(actionParams, new HyperTrackCallback() {
+            @Override
+            public void onSuccess(@NonNull SuccessResponse response) {
+                // Handle createAndAssignAction success here
+                Action action = (Action) response.getResponseObject();
+                String serializedAction = new GsonBuilder().create().toJson(action);
+                callbackContext.success(serializedAction);
+            }
+
+            @Override
+            public void onError(@NonNull ErrorResponse errorResponse) {
+                // Handle createAndAssignAction error here
                 String serializedError = new GsonBuilder().create().toJson(errorResponse);
                 callbackContext.error(serializedError);
             }

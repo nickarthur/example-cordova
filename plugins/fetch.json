@@ -9,8 +9,8 @@
     },
     "cordova-plugin-hypertrack": {
         "source": {
-            "type": "registry",
-            "id": "cordova-plugin-hypertrack"
+            "type": "local",
+            "path": "/Users/Arjun/hypertrack/hypertrack-cordova"
         },
         "is_top_level": true,
         "variables": {}
