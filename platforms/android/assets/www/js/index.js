@@ -35,12 +35,26 @@ var app = {
         this.getOrCreateUser();
         this.startTracking();
         this.getCurrentLocation();
-        this.stopTracking();
+        // this.stopTracking();
+        this.createAction();
     },
 
     getOrCreateUser() {
         var hypertrack = cordova.plugins.HyperTrack;
         hypertrack.getOrCreateUser("name", "phone", "lookup", (e) => {console.log('success', e)}, (e) => {console.log('error', e)})
+    },
+
+    createAction() {
+        console.log('create action')
+        var hypertrack = cordova.plugins.HyperTrack;
+        hypertrack.createAndAssignAction(
+            'visit', 'lookupId', 'Ferry building, San Francisco', 37.79557, -122.39550,
+
+            (e) => {console.log('success', e);
+                    var obj = JSON.parse(e);
+                    console.log('trying to complete', obj.id, hypertrack.completeAction)
+                    hypertrack.completeAction(obj.id, (e) => {console.log('complete success', e)}, (e) => {console.log('complete error', e)})},
+            (e) => {console.log('error', e)})
     },
 
     startTracking() {
@@ -58,7 +72,7 @@ var app = {
         hypertrack.getCurrentLocation(
             (e) => {console.log('success', e);
                     var obj = JSON.parse(e);
-                    alert(obj.mLatitude + ', ' + e.mLongitude)},
+                    alert(obj.mLatitude + ', ' + obj.mLongitude)},
             (e) => {console.log('error', e)})
     },
 

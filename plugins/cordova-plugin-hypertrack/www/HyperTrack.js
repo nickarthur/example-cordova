@@ -34,6 +34,12 @@ hypertrack.stopTracking = function(success, error) {
 };
 
 
+// Method to create and assign an action.
+hypertrack.createAndAssignAction = function(type, lookupId, expectedPlaceAddress, expectedPlaceLatitude, expectedPlaceLongitude, success, error) {
+    exec(success, error, "HyperTrack", "createAndAssignAction", [type, lookupId, expectedPlaceAddress, expectedPlaceLatitude, expectedPlaceLongitude])
+}
+
+
 // Method to mark a specific action as complete.
 hypertrack.completeAction = function(actionId, success, error) {
     exec(success, error, "HyperTrack", "completeAction", [actionId])
