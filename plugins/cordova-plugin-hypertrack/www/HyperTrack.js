@@ -28,12 +28,6 @@ hypertrack.startTracking = function(success, error) {
 };
 
 
-// Method to stop tracking.
-hypertrack.stopTracking = function(success, error) {
-    exec(success, error, "HyperTrack", "stopTracking", [])
-};
-
-
 // Method to create and assign an action.
 hypertrack.createAndAssignAction = function(type, lookupId, expectedPlaceAddress, expectedPlaceLatitude, expectedPlaceLongitude, success, error) {
     exec(success, error, "HyperTrack", "createAndAssignAction", [type, lookupId, expectedPlaceAddress, expectedPlaceLatitude, expectedPlaceLongitude])
@@ -46,9 +40,46 @@ hypertrack.completeAction = function(actionId, success, error) {
 };
 
 
+// Method to mark a specific action as complete using a lookupId 
+// specified while creating an action as parameter.
+hypertrack.completeActionWithLookupId = function(lookupId, success, error) {
+    exec(success, error, "HyperTrack", "completeActionWithLookupId", [lookupId])
+};
+
+
+// Method to stop tracking.
+hypertrack.stopTracking = function(success, error) {
+    exec(success, error, "HyperTrack", "stopTracking", [])
+};
+
+
 // Method to get current location in callback
 hypertrack.getCurrentLocation = function(success, error) {
     exec(success, error, "HyperTrack", "getCurrentLocation", [])
+};
+
+
+// Method to check if Location Permission is available to the app or not
+hypertrack.checkLocationPermission = function (success, error) {
+	exec(success, error, "HyperTrack", "checkLocationPermission", [])
+};
+
+
+// Method to request user for granting location permission to the app
+hypertrack.requestPermissions = function (success, error) {
+	exec(success, error, "HyperTrack", "requestPermissions", [])
+};
+
+
+// Method to check if Location Services are enabled on the device or not
+hypertrack.checkLocationServices = function (success, error) {
+	exec(success, error, "HyperTrack", "checkLocationServices", [])
+};
+
+
+// Method to request user to enable location services on the device
+hypertrack.requestLocationServices = function (success, error) {
+	exec(success, error, "HyperTrack", "requestLocationServices", [])
 };
 
 

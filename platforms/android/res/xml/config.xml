@@ -4,6 +4,9 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="Toast">
+        <param name="android-package" value="nl.xservices.plugins.Toast" />
+    </feature>
     <feature name="HyperTrack">
         <param name="android-package" value="io.hypertrack.cordova.HyperTrackWrapper" />
     </feature>
@@ -24,5 +27,5 @@
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
-    <preference name="HYPERTRACK_PK" value="pk_1507af78ef9dca2d250bdd6cf835e315bde4ad96" />
+    <preference name="HYPERTRACK_PK" value="YOUR_PUBLISHABLE_KEY" />
 </widget>

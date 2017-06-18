@@ -1,6 +1,5 @@
 repositories {
   maven { url 'http://hypertrack-android-sdk.s3-website-us-west-2.amazonaws.com/' }
-  maven { url "https://repo.eclipse.org/content/repositories/paho-releases/" }
 }
 
 dependencies {
@@ -11,7 +10,7 @@ dependencies {
   compile 'com.google.firebase:firebase-messaging:10.2.0'
 
   // HyperTrack SDK
-  compile('com.hypertrack:android:0.2.1:release@aar') {
+  compile('com.hypertrack:android:0.3.2:release@aar') {
     transitive = true;
   }
 

@@ -70,22 +70,6 @@ public class HyperTrackWrapper extends CordovaPlugin {
             return true;
         }
 
-        if (action.equals("stopTracking")) {
-            this.stopTracking(callbackContext);
-            return true;
-        }
-
-        if (action.equals("completeAction")) {
-            String actionId = args.getString(0);
-            this.completeAction(actionId, callbackContext);
-            return true;
-        }
-
-        if (action.equals("getCurrentLocation")) {
-            this.getCurrentLocation(callbackContext);
-            return true;
-        }
-
         if (action.equals("createAndAssignAction")) {
             String type = args.getString(0);
             String lookupId = args.getString(1);
@@ -95,6 +79,48 @@ public class HyperTrackWrapper extends CordovaPlugin {
             this.createAndAssignAction(type, lookupId, expectedPlaceAddress,
                                        expectedPlaceLatitude, expectedPlaceLongitude,
                                        callbackContext);
+            return true;
+        }
+
+        if (action.equals("completeAction")) {
+            String actionId = args.getString(0);
+            this.completeAction(actionId, callbackContext);
+            return true;
+        }
+
+        if (action.equals("completeActionWithLookupId")) {
+            String lookupId = args.getString(0);
+            this.completeActionWithLookupId(lookupId, callbackContext);
+            return true;
+        }
+
+        if (action.equals("stopTracking")) {
+            this.stopTracking(callbackContext);
+            return true;
+        }
+
+        if (action.equals("getCurrentLocation")) {
+            this.getCurrentLocation(callbackContext);
+            return true;
+        }
+
+        if (action.equals("checkLocationPermission")) {
+            this.checkLocationPermission(callbackContext);
+            return true;
+        }
+
+        if (action.equals("requestPermissions")) {
+            this.requestPermissions();
+            return true;
+        }
+
+        if (action.equals("checkLocationServices")) {
+            this.checkLocationServices(callbackContext);
+            return true;
+        }
+
+        if (action.equals("requestLocationServices")) {
+            this.requestLocationServices();
             return true;
         }
 
@@ -149,35 +175,6 @@ public class HyperTrackWrapper extends CordovaPlugin {
         });
     }
 
-    private void stopTracking(final CallbackContext callbackContext) {
-        HyperTrack.stopTracking();
-        callbackContext.success();
-    }
-
-    private void completeAction(String actionId, final CallbackContext callbackContext) {
-        HyperTrack.completeAction(actionId);
-        callbackContext.success();
-    }
-
-    private void getCurrentLocation(final CallbackContext callbackContext) {
-        HyperTrack.getCurrentLocation(new HyperTrackCallback() {
-            @Override
-            public void onSuccess(@NonNull SuccessResponse response) {
-                // Handle getCurrentLocation API success here
-                Location location = (Location) response.getResponseObject();
-                String serializedLocation = new GsonBuilder().create().toJson(location);
-                callbackContext.success(serializedLocation);
-            }
-
-            @Override
-            public void onError(@NonNull ErrorResponse errorResponse) {
-                // Handle getCurrentLocation API error here
-                String serializedError = new GsonBuilder().create().toJson(errorResponse);
-                callbackContext.error(serializedError);
-            }
-        });
-    }
-
     private void createAndAssignAction(String type, String lookupId, String expectedPlaceAddress,
                                        Double expectedPlaceLatitude, Double expectedPlaceLongitude,
                                        final CallbackContext callbackContext) {
@@ -205,5 +202,63 @@ public class HyperTrackWrapper extends CordovaPlugin {
                 callbackContext.error(serializedError);
             }
         });
+    }
+
+    private void completeAction(String actionId, final CallbackContext callbackContext) {
+        HyperTrack.completeAction(actionId);
+        callbackContext.success();
+    }
+
+    private void completeActionWithLookupId(String lookupId, final CallbackContext callbackContext) {
+        HyperTrack.completeActionWithLookupId(lookupId);
+        callbackContext.success();
+    }
+
+    private void stopTracking(final CallbackContext callbackContext) {
+        HyperTrack.stopTracking();
+        callbackContext.success();
+    }
+
+    private void getCurrentLocation(final CallbackContext callbackContext) {
+        HyperTrack.getCurrentLocation(new HyperTrackCallback() {
+            @Override
+            public void onSuccess(@NonNull SuccessResponse response) {
+                // Handle getCurrentLocation API success here
+                Location location = (Location) response.getResponseObject();
+                String serializedLocation = new GsonBuilder().create().toJson(location);
+                callbackContext.success(serializedLocation);
+            }
+
+            @Override
+            public void onError(@NonNull ErrorResponse errorResponse) {
+                // Handle getCurrentLocation API error here
+                String serializedError = new GsonBuilder().create().toJson(errorResponse);
+                callbackContext.error(serializedError);
+            }
+        });
+    }
+
+    private void checkLocationPermission(final CallbackContext callbackContext) {
+        if (HyperTrack.checkLocationPermission(this.cordova.getActivity().getApplicationContext())) {
+            callbackContext.success("true");
+        } else {
+            callbackContext.success("false");
+        }
+    }
+
+    private void requestPermissions() {
+        HyperTrack.requestPermissions(this.cordova.getActivity());
+    }
+
+    private void checkLocationServices(final CallbackContext callbackContext) {
+        if (HyperTrack.checkLocationServices(this.cordova.getActivity().getApplicationContext())) {
+            callbackContext.success("true");
+        } else {
+            callbackContext.success("false");
+        }
+    }
+
+    private void requestLocationServices() {
+        HyperTrack.requestLocationServices(this.cordova.getActivity(), null);
     }
 }

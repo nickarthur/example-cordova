@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var app = {
+ var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
@@ -32,48 +32,134 @@ var app = {
         var hypertrack = cordova.plugins.HyperTrack;
         console.log(hypertrack);
 
-        this.getOrCreateUser();
-        this.startTracking();
-        this.getCurrentLocation();
+        // Check for Location Settings, Create User and call startTracking
+        this.checkLocationSettings();
+
+        // Uncomment this to getCurrentLocation
+        // this.getCurrentLocation();
+
+        // Uncomment this to call stopTracking API
         // this.stopTracking();
-        this.createAction();
+
+        // Uncomment this to call createAndAssignAction
+        // and completeAction APIs
+        // this.createAction();
+    },
+
+    checkLocationSettings() {
+        var hypertrack = cordova.plugins.HyperTrack;
+        hypertrack.checkLocationPermission(
+            (e) => {
+                if (e == "false") {
+                    console.log('LocationPermission is denied. Requesting for LocationPermissions. Run the app again once granted.')
+                    window.plugins.toast.showShortBottom('LocationPermission is denied. Requesting for LocationPermissions. Run the app again once granted.')
+                    this.requestPermissions()
+
+                } else {
+                    this.checkLocationServices()
+                }   
+            })
+    },
+
+    checkLocationServices() {
+        var hypertrack = cordova.plugins.HyperTrack;
+        hypertrack.checkLocationServices(
+            (e) => {
+                if (e == "false") {
+                    console.log('LocationServices is disabled. Requesting for LocationServices. Run the app again once enabled.')
+                    window.plugins.toast.showShortBottom('LocationServices is disabled. Requesting for LocationServices. Run the app again once enabled.')
+                    this.requestLocationServices()
+
+                } else {
+                    this.getOrCreateUser()
+                }
+            })
+    },
+
+    requestPermissions() {
+        var hypertrack = cordova.plugins.HyperTrack;
+        hypertrack.requestPermissions()
+    },
+
+    requestLocationServices() {
+        var hypertrack = cordova.plugins.HyperTrack;
+        hypertrack.requestLocationServices()
     },
 
     getOrCreateUser() {
         var hypertrack = cordova.plugins.HyperTrack;
-        hypertrack.getOrCreateUser("name", "phone", "lookup", (e) => {console.log('success', e)}, (e) => {console.log('error', e)})
-    },
+        hypertrack.getOrCreateUser("name", "phone", "lookup", 
+            (e) => {
+                console.log('getOrCreateUser success', e)
+                window.plugins.toast.showShortBottom("getOrCreateUser success" + e)
 
-    createAction() {
-        console.log('create action')
-        var hypertrack = cordova.plugins.HyperTrack;
-        hypertrack.createAndAssignAction(
-            'visit', 'lookupId', 'Ferry building, San Francisco', 37.79557, -122.39550,
-
-            (e) => {console.log('success', e);
-                    var obj = JSON.parse(e);
-                    console.log('trying to complete', obj.id, hypertrack.completeAction)
-                    hypertrack.completeAction(obj.id, (e) => {console.log('complete success', e)}, (e) => {console.log('complete error', e)})},
-            (e) => {console.log('error', e)})
+                // Call startTracking once, user is successfully created
+                this.startTracking();
+            },
+            (e) => {
+                console.log('getOrCreateUser error', e)
+                window.plugins.toast.showShortBottom("getOrCreateUser error" + e)
+            })
     },
 
     startTracking() {
         var hypertrack = cordova.plugins.HyperTrack;
-        hypertrack.startTracking((e) => {console.log('success', e)}, (e) => {console.log('error', e)})
+        hypertrack.startTracking(
+            (e) => {
+                console.log('startTracking success. Now you can see the user being tracked', e)
+                window.plugins.toast.showShortBottom("startTracking success. Now you can see the user being tracked" + e)
+            },
+            (e) => {
+                console.log('startTracking error', e)
+                window.plugins.toast.showShortBottom("startTracking error" + e)
+            })
+    },
+
+    createAction() {
+        console.log('creating action')
+        var hypertrack = cordova.plugins.HyperTrack;
+        hypertrack.createAndAssignAction(
+            'visit', 'lookupId', 'Ferry building, San Francisco', 37.79557, -122.39550,
+
+            (e) => {
+                console.log('createAndAssignAction success', e);
+                window.plugins.toast.showShortBottom("createAndAssignAction success" + e)
+                var obj = JSON.parse(e);
+                console.log('trying to complete action', obj.id, hypertrack.completeAction)
+                hypertrack.completeAction(obj.id, (e) => {console.log('completeAction success', e)}, (e) => {console.log('completeAction error', e)})
+            },
+            (e) => {
+                console.log('createAndAssignAction error', e)
+                window.plugins.toast.showShortBottom("createAndAssignAction error" + e)
+            })
     },
 
     stopTracking() {
         var hypertrack = cordova.plugins.HyperTrack;
-        hypertrack.stopTracking((e) => {console.log('success', e)}, (e) => {console.log('error', e)})
+        hypertrack.stopTracking(
+            (e) => {
+                console.log('stopTracking success', e)
+                window.plugins.toast.showShortBottom("stopTracking success" + e)
+            }, 
+            (e) => {
+                console.log('stopTracking error', e)
+                window.plugins.toast.showShortBottom("stopTracking error" + e)
+            })
     },
 
     getCurrentLocation () {
         var hypertrack = cordova.plugins.HyperTrack;
         hypertrack.getCurrentLocation(
-            (e) => {console.log('success', e);
-                    var obj = JSON.parse(e);
-                    alert(obj.mLatitude + ', ' + obj.mLongitude)},
-            (e) => {console.log('error', e)})
+            (e) => {
+                console.log('getCurrentLocation success', e);
+                var obj = JSON.parse(e);
+                alert(obj.mLatitude + ', ' + obj.mLongitude)
+                window.plugins.toast.showShortBottom("getCurrentLocation success" + e)
+            },
+            (e) => {
+                console.log('getCurrentLocation error', e)
+                window.plugins.toast.showShortBottom("getCurrentLocation error" + e)
+            })
     },
 
     // Update DOM on a Received Event

@@ -56,6 +56,9 @@ hypertrack.startTracking(success, error);
 
 // To stop tracking
 hypertrack.stopTracking(success, error);
+
+// To create an action, pass action type, action lookup id, action expected place address, expected place latitude, expected place longitude (all fields are optional)
+hypertrack.createAndAssignAction('visit', 'lookupId', 'Ferry building, San Francisco', 37.79557, -122.39550, success, error);
 ```
 
 ## Documentation
