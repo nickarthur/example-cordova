@@ -33,13 +33,13 @@
         console.log(hypertrack);
 
         // Check for Location Settings, Create User and call startTracking
-        this.checkLocationSettings();
+        // this.checkLocationSettings();
 
         // Uncomment this to getCurrentLocation
         // this.getCurrentLocation();
 
         // Uncomment this to call stopTracking API
-        // this.stopTracking();
+        this.stopTracking();
 
         // Uncomment this to call createAndAssignAction
         // and completeAction APIs
@@ -88,7 +88,7 @@
 
     getOrCreateUser() {
         var hypertrack = cordova.plugins.HyperTrack;
-        hypertrack.getOrCreateUser("name", "phone", "lookup", 
+        hypertrack.getOrCreateUser("cordova-photo-test", "phone", "https://scontent.fdel1-1.fna.fbcdn.net/v/t31.0-8/19221515_1407738472636221_550707151637861761_o.jpg?oh=68c4e66369e521546ebe33f72021ca5a&oe=59CE8692", "lookupId",
             (e) => {
                 console.log('getOrCreateUser success', e)
                 window.plugins.toast.showShortBottom("getOrCreateUser success" + e)

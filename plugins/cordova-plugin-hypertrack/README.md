@@ -25,9 +25,9 @@ To install the plugin, use the following command in your app directory.
 $ cordova plugin add cordova-plugin-hypertrack
 ```
 
-In your app's `config.xml` set a new preference key `HYPERTRACK_PK` with your publishable key as the value. This key will be used by the native SDKs. Read this to [get API keys](http://docs.hypertrack.io/docs/get-api-keys), if you don't have them already.
+In your app's `config.xml` set a new preference key `HYPERTRACK_PK` with your publishable key as the value. This key will be used by the native SDKs. Read this to [get API keys](https://docs.hypertrack.com/gettingstarted/authentication.html), if you don't have them already.
 ```
-<preference name="HYPERTRACK_PK" value="pk_12345abcd" />
+<preference name="HYPERTRACK_PK" value="YOUR_PUBLISHABLE_KEY" />
 ```
 
 ### iOS

@@ -88,7 +88,13 @@
 
     getOrCreateUser() {
         var hypertrack = cordova.plugins.HyperTrack;
-        hypertrack.getOrCreateUser("name", "phone", "lookup", 
+        
+        String name = "name"
+        String phoneNo = "phoneNo"
+        String photoUrl = ""
+        String lookupId = "lookupId"
+
+        hypertrack.getOrCreateUser(name, photoUrl, photoUrl, lookupId,
             (e) => {
                 console.log('getOrCreateUser success', e)
                 window.plugins.toast.showShortBottom("getOrCreateUser success" + e)

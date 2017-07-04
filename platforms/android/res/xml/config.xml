@@ -7,9 +7,6 @@
     <feature name="Toast">
         <param name="android-package" value="nl.xservices.plugins.Toast" />
     </feature>
-    <feature name="HyperTrack">
-        <param name="android-package" value="io.hypertrack.cordova.HyperTrackWrapper" />
-    </feature>
     <name>HyperTrackExample</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -27,5 +24,8 @@
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
-    <preference name="HYPERTRACK_PK" value="YOUR_PUBLISHABLE_KEY" />
+    <preference name="HYPERTRACK_PK" value="pk_e70bae5aa53ea98097f64cec1e6612e8819ebc75" />
+    <feature name="HyperTrack">
+        <param name="android-package" value="io.hypertrack.cordova.HyperTrackWrapper" />
+    </feature>
 </widget>

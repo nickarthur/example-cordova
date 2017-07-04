@@ -10,10 +10,11 @@ hypertrack.helloWorld = function(text, success, error) {
 
 
 // Method to get or create a new user. Use name to specify the name of the user.
-// phone to specify phone number, and lookupId to specify internal id of the user.
+// phone to specify phone number, lookupId to specify internal id of the user, 
+// and user's photo (either as a URL or a Base64 converted string)
 // lookupId is used to check if a new user is to be created.
-hypertrack.getOrCreateUser = function(name, phone, lookupId, success, error) {
-    exec(success, error, "HyperTrack", "getOrCreateUser", [name, phone, lookupId]);
+hypertrack.getOrCreateUser = function(name, phone, photo, lookupId, success, error) {
+    exec(success, error, "HyperTrack", "getOrCreateUser", [name, phone, photo, lookupId]);
 };
 
 

@@ -41,6 +41,7 @@ public class HyperTrackWrapper extends CordovaPlugin {
         super.initialize(cordova, webView);
         Context context = this.cordova.getActivity().getApplicationContext();
         HyperTrack.initialize(context, this.getHyperTrackKey());
+        HyperTrack.setSDKPlatform("Cordova");
     }
 
     @Override
@@ -54,8 +55,9 @@ public class HyperTrackWrapper extends CordovaPlugin {
         if (action.equals("getOrCreateUser")) {
             String name = args.getString(0);
             String phone = args.getString(1);
-            String lookupId = args.getString(2);
-            this.getOrCreateUser(name, phone, lookupId, callbackContext);
+            String photo = args.getString(2);
+            String lookupId = args.getString(3);
+            this.getOrCreateUser(name, phone, photo, lookupId, callbackContext);
             return true;
         }
 
@@ -135,8 +137,8 @@ public class HyperTrackWrapper extends CordovaPlugin {
         callbackContext.success(name);
     }
 
-    private void getOrCreateUser(String name, String phone, String lookupId, final CallbackContext callbackContext) {
-        HyperTrack.getOrCreateUser(name, phone, lookupId, new HyperTrackCallback() {
+    private void getOrCreateUser(String name, String phone, String photo, String lookupId, final CallbackContext callbackContext) {
+        HyperTrack.getOrCreateUser(name, phone, photo, lookupId, new HyperTrackCallback() {
             @Override
             public void onSuccess(@NonNull SuccessResponse response) {
                 // Return User object in successCallback
@@ -183,6 +185,7 @@ public class HyperTrackWrapper extends CordovaPlugin {
 
         ActionParams actionParams = new ActionParamsBuilder()
             .setExpectedPlace(expectedPlace)
+            .setLookupId(lookupId)
             .setType(type)
             .build();
 
