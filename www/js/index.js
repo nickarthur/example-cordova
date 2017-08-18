@@ -94,7 +94,7 @@
         String photoUrl = ""
         String lookupId = "lookupId"
 
-        hypertrack.getOrCreateUser(name, photoUrl, photoUrl, lookupId,
+        hypertrack.getOrCreateUser(name, phoneNo, photoUrl, lookupId,
             (e) => {
                 console.log('getOrCreateUser success', e)
                 window.plugins.toast.showShortBottom("getOrCreateUser success" + e)
