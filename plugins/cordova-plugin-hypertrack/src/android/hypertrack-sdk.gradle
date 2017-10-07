@@ -10,15 +10,7 @@ dependencies {
   compile 'com.google.firebase:firebase-messaging:10.2.0'
 
   // HyperTrack SDK
-  compile('com.hypertrack:android:0.3.5:release@aar') {
+  compile('com.hypertrack:android:0.4.16:release@aar') {
     transitive = true;
   }
-
-  // compile 'com.android.support:multidex:1.0.0'
 }
-
-// android {
-//   defaultConfig {
-//     multiDexEnabled true
-//   }
-// }

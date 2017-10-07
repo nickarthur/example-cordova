@@ -27,6 +27,8 @@ module.exports.metadata =
 {
     "cordova-plugin-whitelist": "1.3.2",
     "cordova-plugin-x-toast": "2.6.0",
+    "cordova-plugin-add-swift-support": "1.7.0",
+    "cordova-plugin-cocoapod-support": "1.3.0",
     "cordova-plugin-hypertrack": "0.1.0"
 };
 // BOTTOM OF METADATA

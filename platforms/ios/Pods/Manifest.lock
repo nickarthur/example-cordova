@@ -1,0 +1,23 @@
+PODS:
+  - Alamofire (4.4.0)
+  - GzipSwift (4.0.0)
+  - HyperTrack (0.4.61):
+    - Alamofire (= 4.4.0)
+    - GzipSwift
+    - SQLite.swift (= 0.11.2)
+  - SQLite.swift (0.11.2):
+    - SQLite.swift/standard (= 0.11.2)
+  - SQLite.swift/standard (0.11.2)
+
+DEPENDENCIES:
+  - HyperTrack
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  GzipSwift: 1aab4a3d3b2f2509f78c7405bbaf535184ac6c7f
+  HyperTrack: 51fb345390e7fce4ae63b824796e4fa22dee42f2
+  SQLite.swift: 670c3e9e0a806bbfd56a3de5d530768dc0e6fe7c
+
+PODFILE CHECKSUM: 6c74e7cd4ee5449e683ed23b223da09304340c4f
+
+COCOAPODS: 1.1.1

@@ -22,10 +22,6 @@
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 
-    // deviceready Event Handler
-    //
-    // Bind any cordova events here. Common events are:
-    // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
 
@@ -33,7 +29,7 @@
         console.log(hypertrack);
 
         // Check for Location Settings, Create User and call startTracking
-        this.checkLocationSettings();
+        // this.checkLocationSettings();
 
         // Uncomment this to getCurrentLocation
         // this.getCurrentLocation();
@@ -45,6 +41,7 @@
         // and completeAction APIs
         // this.createAction();
     },
+
 
     checkLocationSettings() {
         var hypertrack = cordova.plugins.HyperTrack;
@@ -88,11 +85,11 @@
 
     getOrCreateUser() {
         var hypertrack = cordova.plugins.HyperTrack;
-        
-        String name = "name"
-        String phoneNo = "phoneNo"
-        String photoUrl = ""
-        String lookupId = "lookupId"
+
+        var name = "name"
+        var phoneNo = "phoneNo"
+        var photoUrl = ""
+        var lookupId = "lookupId"
 
         hypertrack.getOrCreateUser(name, phoneNo, photoUrl, lookupId,
             (e) => {

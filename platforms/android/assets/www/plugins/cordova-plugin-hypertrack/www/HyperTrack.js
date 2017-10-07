@@ -85,6 +85,12 @@ hypertrack.requestLocationServices = function (success, error) {
 };
 
 
+// Method to ask for motion usage permission (iOS only)
+hypertrack.requestMotionAuthorization = function (success, error) {
+  exec(success, error, "HyperTrack", "requestMotionAuthorization", [])
+}
+
+
 module.exports = hypertrack
 
 });

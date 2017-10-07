@@ -24,7 +24,7 @@
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
-    <preference name="HYPERTRACK_PK" value="pk_e70bae5aa53ea98097f64cec1e6612e8819ebc75" />
+    <preference name="HYPERTRACK_PK" value="pk_3ed061e7d917901be2b5a181fc995bb0ffbe8b47" />
     <feature name="HyperTrack">
         <param name="android-package" value="io.hypertrack.cordova.HyperTrackWrapper" />
     </feature>

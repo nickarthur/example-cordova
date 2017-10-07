@@ -1,0 +1,10 @@
+{
+	"pods": {
+		"HyperTrack": {
+			"name": "HyperTrack"
+		}
+	},
+	"sources": {},
+	"iosMinVersion": "8.0",
+	"useFrameworks": true
+}

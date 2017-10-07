@@ -13,6 +13,12 @@
         "cordova-plugin-x-toast": {
             "PACKAGE_NAME": "com.hypertrack.hello"
         },
+        "cordova-plugin-add-swift-support": {
+            "PACKAGE_NAME": "com.hypertrack.hello"
+        },
+        "cordova-plugin-cocoapod-support": {
+            "PACKAGE_NAME": "com.hypertrack.hello"
+        },
         "cordova-plugin-hypertrack": {
             "PACKAGE_NAME": "com.hypertrack.hello"
         }

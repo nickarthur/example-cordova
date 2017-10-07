@@ -15,6 +15,22 @@
         "is_top_level": true,
         "variables": {}
     },
+    "cordova-plugin-add-swift-support": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-add-swift-support@~1.7.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-cocoapod-support": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-cocoapod-support"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
     "cordova-plugin-hypertrack": {
         "source": {
             "type": "registry",
